@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <rect x="0" y="0" width="200" height="200" fill="#F8F9FA" opacity="0" />
+  
+  <!-- Quiz Card -->
+  <rect x="40" y="40" width="120" height="120" rx="10" ry="10" fill="#F8F9FA" stroke="#4A6CF7" stroke-width="2" />
+  
+  <!-- Question Mark -->
+  <text x="100" y="80" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="#4A6CF7" text-anchor="middle" dominant-baseline="middle">?</text>
+  
+  <!-- Multiple Choice Options -->
+  <rect x="60" y="100" width="80" height="15" rx="7.5" ry="7.5" fill="#E9ECEF" />
+  <circle cx="70" y="107.5" r="5" fill="#4A6CF7" />
+  
+  <rect x="60" y="125" width="80" height="15" rx="7.5" ry="7.5" fill="#E9ECEF" />
+  <circle cx="70" y="132.5" r="5" fill="white" stroke="#4A6CF7" stroke-width="1" />
+  
+  <rect x="60" y="150" width="80" height="15" rx="7.5" ry="7.5" fill="#E9ECEF" />
+  <circle cx="70" y="157.5" r="5" fill="white" stroke="#4A6CF7" stroke-width="1" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="30" y="30" r="10" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="170" y="170" r="15" fill="#4A6CF7" opacity="0.3" />
+  
+  <!-- Checkmark -->
+  <circle cx="160" y="50" r="10" fill="#6FCF97" />
+  <path d="M155 50 L160 55 L165 45" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+</svg>

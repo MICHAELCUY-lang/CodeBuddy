@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <!-- Background -->
+  <rect x="0" y="0" width="300" height="200" fill="#F8F9FA" opacity="0" />
+  
+  <!-- Books Stack -->
+  <rect x="70" y="120" width="160" height="20" rx="2" ry="2" fill="#4A6CF7" />
+  <rect x="75" y="100" width="160" height="20" rx="2" ry="2" fill="#6FCF97" />
+  <rect x="80" y="80" width="160" height="20" rx="2" ry="2" fill="#F2994A" />
+  <rect x="85" y="60" width="160" height="20" rx="2" ry="2" fill="#EB5757" />
+  <rect x="90" y="40" width="160" height="20" rx="2" ry="2" fill="#BB6BD9" />
+  
+  <!-- Book Titles -->
+  <text x="150" y="55" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">HTML & CSS</text>
+  <text x="150" y="75" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">JavaScript</text>
+  <text x="150" y="95" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">Responsive Web</text>
+  <text x="150" y="115" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">Web Projects</text>
+  <text x="150" y="135" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">Advanced Topics</text>
+  
+  <!-- Graduation Cap -->
+  <path d="M150 20 L190 35 L150 50 L110 35 Z" fill="#333" />
+  <rect x="145" y="20" width="10" height="10" fill="#333" />
+  <path d="M150 50 L150 70" stroke="#333" stroke-width="2" />
+  <path d="M130 40 L130 60 Q150 70 170 60 L170 40" fill="none" stroke="#333" stroke-width="2" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" y="50" r="10" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="250" y="150" r="15" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="70" y="170" r="12" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="230" y="30" r="8" fill="#4A6CF7" opacity="0.3" />
+</svg>

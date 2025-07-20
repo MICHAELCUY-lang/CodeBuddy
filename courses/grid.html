@@ -1,0 +1,1892 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid - CodeBuddy</title>
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <a href="../courses.html" class="back-button">
+                ← Kembali ke Kursus
+            </a>
+            <div class="course-info">
+                <h2>CSS Grid</h2>
+                <p>Pelajari CSS Grid untuk membuat layout 2D yang kompleks dan responsif. Kursus ini akan mengajarkan Anda cara menggunakan Grid untuk mengatur elemen dalam baris dan kolom.</p>
+                <div class="course-meta">
+                    <span>🔲 CSS Grid</span>
+                    <span>⏰ 5 Pelajaran</span>
+                    <span>👤 Lanjutan</span>
+                    <span>⭐ 4.9/5</span>
+                </div>
+            </div>
+            <div class="course-progress">
+                <h3>Progress Kursus</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="courseProgress" style="width: 0%"></div>
+                </div>
+                <span class="progress-text" id="progressText">0% (0/5 pelajaran)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            <div class="course-layout">
+                <aside class="lesson-sidebar">
+                    <h3>Daftar Pelajaran</h3>
+                    <ul>
+                        <li><a href="#lesson1" class="lesson-link active">1. Pengenalan Grid</a></li>
+                        <li><a href="#lesson2" class="lesson-link">2. Grid Container</a></li>
+                        <li><a href="#lesson3" class="lesson-link">3. Grid Items</a></li>
+                        <li><a href="#lesson4" class="lesson-link">4. Grid Areas & Templates</a></li>
+                        <li><a href="#lesson5" class="lesson-link">5. Responsive Grid</a></li>
+                    </ul>
+                    <div class="progress-sidebar">
+                        <h4>Progress Kursus</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% (0/5 pelajaran)</span>
+                    </div>
+                </aside>
+
+                <main class="lesson-main">
+                    <!-- Lesson 1: Pengenalan Grid -->
+                    <div id="lesson1" class="lesson-content active">
+                        <h2>Pelajaran 1: Pengenalan CSS Grid</h2>
+                        <p>CSS Grid adalah sistem layout 2D yang memungkinkan kita mengatur elemen dalam baris dan kolom secara bersamaan. Grid memberikan kontrol yang lebih powerful dibanding Flexbox untuk layout kompleks.</p>
+                        
+                        <h3>Grid vs Flexbox</h3>
+                        <ul>
+                            <li><strong>Grid:</strong> Layout 2D (baris dan kolom)</li>
+                            <li><strong>Flexbox:</strong> Layout 1D (satu arah)</li>
+                            <li><strong>Grid:</strong> Cocok untuk layout halaman utama</li>
+                            <li><strong>Flexbox:</strong> Cocok untuk komponen kecil</li>
+                            <li><strong>Grid:</strong> Item bisa overlap</li>
+                            <li><strong>Flexbox:</strong> Item tidak bisa overlap</li>
+                        </ul>
+
+                        <h3>Basic Grid Setup</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Membuat grid container */
+.grid-container {
+    display: grid;
+}
+
+/* Atau inline-grid */
+.inline-grid {
+    display: inline-grid;
+}
+
+/* Basic 3x3 grid */
+.basic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 100px 100px;
+    gap: 10px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.grid-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 4px;
+}</code></pre>
+                        </div>
+
+                        <h3>Grid Terminology</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Grid Container - parent element dengan display: grid */
+.grid-container {
+    display: grid;
+    /* Grid Lines - garis yang membagi grid */
+    /* Grid Tracks - space antara dua grid lines */
+    /* Grid Cells - intersection antara row dan column */
+    /* Grid Areas - rectangular area yang terdiri dari satu atau lebih cells */
+}
+
+/* Grid Items - child elements dari grid container */
+.grid-item {
+    /* Setiap child otomatis menjadi grid item */
+}
+
+/* Contoh dengan komentar */
+.example-grid {
+    display: grid;
+    
+    /* Defines 3 columns */
+    grid-template-columns: 200px 1fr 100px;
+    
+    /* Defines 2 rows */
+    grid-template-rows: 80px 1fr;
+    
+    /* Gap between grid items */
+    gap: 20px;
+    
+    /* Grid container properties */
+    height: 400px;
+    border: 2px solid #333;
+}</code></pre>
+                        </div>
+
+                        <h3>Grid Units</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* fr (fraction) unit - distribusi space yang tersisa */
+.fr-example {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* 1:2:1 ratio */
+}
+
+/* Fixed units */
+.fixed-units {
+    display: grid;
+    grid-template-columns: 200px 300px 150px; /* Fixed pixels */
+    grid-template-rows: 100px 200px; /* Fixed heights */
+}
+
+/* Percentage units */
+.percentage-units {
+    display: grid;
+    grid-template-columns: 25% 50% 25%;
+    grid-template-rows: 30% 70%;
+}
+
+/* Mixed units */
+.mixed-units {
+    display: grid;
+    grid-template-columns: 200px 1fr 100px; /* Fixed-Flexible-Fixed */
+    grid-template-rows: auto 1fr auto; /* Content-Flexible-Content */
+}
+
+/* min-content, max-content, auto */
+.content-units {
+    display: grid;
+    grid-template-columns: min-content max-content auto;
+}
+
+/* repeat() function */
+.repeat-example {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Same as: 1fr 1fr 1fr */
+    grid-template-rows: repeat(2, 100px); /* Same as: 100px 100px */
+}
+
+/* repeat with mixed values */
+.repeat-mixed {
+    display: grid;
+    grid-template-columns: 200px repeat(3, 1fr) 100px;
+}</code></pre>
+                        </div>
+
+                        <h3>Simple Grid Examples</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Simple 2x2 grid */
+.simple-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 10px;
+    height: 300px;
+}
+
+/* Photo gallery grid */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.photo-grid img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Card layout grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Sidebar layout */
+.sidebar-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 20px;
+    min-height: 100vh;
+}
+
+/* Header-Content-Footer layout */
+.page-layout {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.page-layout .header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+}
+
+.page-layout .content {
+    padding: 2rem;
+}
+
+.page-layout .footer {
+    background: #f5f5f5;
+    padding: 1rem;
+    text-align: center;
+}</code></pre>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 2: Grid Container -->
+                    <div id="lesson2" class="lesson-content">
+                        <h2>Pelajaran 2: Grid Container Properties</h2>
+                        <p>Grid container adalah parent element yang menggunakan display: grid. Container memiliki berbagai properties untuk mengontrol struktur dan behavior grid.</p>
+                        
+                        <h3>grid-template-columns & grid-template-rows</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Explicit grid definition */
+.explicit-grid {
+    display: grid;
+    
+    /* Define 3 columns */
+    grid-template-columns: 100px 200px 1fr;
+    
+    /* Define 2 rows */
+    grid-template-rows: 80px 120px;
+}
+
+/* Using repeat() */
+.repeat-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+}
+
+/* Mixed repeat patterns */
+.mixed-repeat {
+    display: grid;
+    grid-template-columns: 200px repeat(3, 1fr) 100px;
+    grid-template-rows: auto repeat(2, 1fr) auto;
+}
+
+/* Named grid lines */
+.named-lines {
+    display: grid;
+    grid-template-columns: 
+        [sidebar-start] 250px 
+        [sidebar-end main-start] 1fr 
+        [main-end];
+    grid-template-rows: 
+        [header-start] 80px 
+        [header-end content-start] 1fr 
+        [content-end footer-start] 60px 
+        [footer-end];
+}
+
+/* Using minmax() */
+.minmax-grid {
+    display: grid;
+    grid-template-columns: 
+        minmax(200px, 300px) 
+        minmax(300px, 1fr) 
+        minmax(100px, 200px);
+    grid-template-rows: 
+        minmax(80px, auto) 
+        minmax(200px, 1fr);
+}
+
+/* fit-content() */
+.fit-content-grid {
+    display: grid;
+    grid-template-columns: 
+        fit-content(200px) 
+        1fr 
+        fit-content(150px);
+}</code></pre>
+                        </div>
+
+                        <h3>grid-auto-columns & grid-auto-rows</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Implicit grid sizing */
+.implicit-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Only 2 columns defined, but we have more items */
+    
+    /* Size for auto-generated rows */
+    grid-auto-rows: 100px;
+    
+    /* Size for auto-generated columns */
+    grid-auto-columns: 150px;
+}
+
+/* Auto-sizing with minmax */
+.auto-minmax {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    gap: 10px;
+}
+
+/* Different auto sizes */
+.auto-sizes {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-rows: 80px;
+    grid-auto-columns: 200px;
+}
+
+/* Auto with content-based sizing */
+.auto-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: max-content;
+    gap: 15px;
+}</code></pre>
+                        </div>
+
+                        <h3>grid-auto-flow</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Controls how auto-placed items flow */
+
+/* row (default) - fill rows first */
+.flow-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row;
+    gap: 10px;
+}
+
+/* column - fill columns first */
+.flow-column {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-auto-flow: column;
+    grid-auto-columns: 1fr;
+    gap: 10px;
+}
+
+/* dense - fill holes in grid */
+.flow-dense {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-flow: row dense;
+    gap: 10px;
+}
+
+/* Some items with specific placement */
+.flow-dense .item-large {
+    grid-column: span 2;
+}
+
+/* row dense */
+.flow-row-dense {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-flow: row dense;
+    gap: 10px;
+}
+
+/* column dense */
+.flow-column-dense {
+    display: grid;
+    grid-template-rows: repeat(3, 100px);
+    grid-auto-flow: column dense;
+    grid-auto-columns: 1fr;
+    gap: 10px;
+}</code></pre>
+                        </div>
+
+                        <h3>gap (grid-gap)</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Gap between grid items */
+
+/* Single value - same for rows and columns */
+.gap-single {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+/* Two values - row-gap column-gap */
+.gap-double {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px 10px; /* 20px row gap, 10px column gap */
+}
+
+/* Individual gap properties */
+.gap-individual {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 25px;
+    column-gap: 15px;
+}
+
+/* Responsive gaps */
+.gap-responsive {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 15px;
+}
+
+@media (min-width: 768px) {
+    .gap-responsive {
+        gap: 30px;
+    }
+}
+
+/* No gap */
+.no-gap {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+}
+
+/* Large gaps for spacing effect */
+.large-gap {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    padding: 50px;
+}</code></pre>
+                        </div>
+
+                        <h3>justify-items & align-items</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Align items within their grid cells */
+
+/* justify-items - horizontal alignment */
+.justify-start {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 100px);
+    justify-items: start; /* left align */
+    gap: 10px;
+}
+
+.justify-end {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 100px);
+    justify-items: end; /* right align */
+    gap: 10px;
+}
+
+.justify-center {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 100px);
+    justify-items: center; /* center align */
+    gap: 10px;
+}
+
+.justify-stretch {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 100px);
+    justify-items: stretch; /* fill width (default) */
+    gap: 10px;
+}
+
+/* align-items - vertical alignment */
+.align-start {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    align-items: start; /* top align */
+    gap: 10px;
+}
+
+.align-end {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    align-items: end; /* bottom align */
+    gap: 10px;
+}
+
+.align-center {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    align-items: center; /* middle align */
+    gap: 10px;
+}
+
+.align-stretch {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 150px);
+    align-items: stretch; /* fill height (default) */
+    gap: 10px;
+}
+
+/* place-items shorthand */
+.place-items-center {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 150px);
+    place-items: center; /* center both horizontally and vertically */
+    gap: 10px;
+}
+
+.place-items-mixed {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 150px);
+    place-items: start end; /* align-items: start, justify-items: end */
+    gap: 10px;
+}</code></pre>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 3: Grid Items -->
+                    <div id="lesson3" class="lesson-content">
+                        <h2>Pelajaran 3: Grid Items Properties</h2>
+                        <p>Grid items adalah child elements dari grid container. Setiap item dapat ditempatkan secara spesifik dalam grid menggunakan berbagai properties.</p>
+                        
+                        <h3>grid-column & grid-row</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Positioning items with line numbers */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+/* grid-column: start / end */
+.item-1 {
+    grid-column: 1 / 3; /* From line 1 to line 3 (spans 2 columns) */
+    grid-row: 1 / 2;
+}
+
+.item-2 {
+    grid-column: 3 / 5; /* From line 3 to line 5 (spans 2 columns) */
+    grid-row: 1 / 2;
+}
+
+.item-3 {
+    grid-column: 1 / 5; /* Full width (spans all 4 columns) */
+    grid-row: 2 / 3;
+}
+
+/* Using span keyword */
+.item-span {
+    grid-column: span 2; /* Span 2 columns from current position */
+    grid-row: span 1;
+}
+
+/* Negative line numbers (count from end) */
+.item-negative {
+    grid-column: 1 / -1; /* From first line to last line */
+    grid-row: 3 / -1;
+}
+
+/* Individual properties */
+.item-individual {
+    grid-column-start: 2;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    grid-row-end: 3;
+}</code></pre>
+                        </div>
+
+                        <h3>Named Grid Lines</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Using named lines for positioning */
+.named-grid {
+    display: grid;
+    grid-template-columns: 
+        [sidebar-start] 250px 
+        [sidebar-end main-start] 1fr 
+        [main-end aside-start] 200px 
+        [aside-end];
+    grid-template-rows: 
+        [header-start] 80px 
+        [header-end content-start] 1fr 
+        [content-end footer-start] 60px 
+        [footer-end];
+    gap: 10px;
+    height: 100vh;
+}
+
+/* Positioning with named lines */
+.header {
+    grid-column: sidebar-start / aside-end;
+    grid-row: header-start / header-end;
+    background: #333;
+    color: white;
+}
+
+.sidebar {
+    grid-column: sidebar-start / sidebar-end;
+    grid-row: content-start / content-end;
+    background: #f0f0f0;
+}
+
+.main {
+    grid-column: main-start / main-end;
+    grid-row: content-start / content-end;
+    background: white;
+}
+
+.aside {
+    grid-column: aside-start / aside-end;
+    grid-row: content-start / content-end;
+    background: #f9f9f9;
+}
+
+.footer {
+    grid-column: sidebar-start / aside-end;
+    grid-row: footer-start / footer-end;
+    background: #333;
+    color: white;
+}
+
+/* Multiple names for same line */
+.multi-named {
+    display: grid;
+    grid-template-columns: 
+        [start sidebar-start] 250px 
+        [sidebar-end content-start main-start] 1fr 
+        [content-end main-end end];
+}</code></pre>
+                        </div>
+
+                        <h3>grid-area</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* grid-area shorthand: row-start / column-start / row-end / column-end */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    gap: 10px;
+}
+
+/* Using grid-area with line numbers */
+.area-1 {
+    grid-area: 1 / 1 / 3 / 3; /* row 1-3, column 1-3 */
+    background: #ff6b6b;
+}
+
+.area-2 {
+    grid-area: 1 / 3 / 2 / 5; /* row 1-2, column 3-5 */
+    background: #4ecdc4;
+}
+
+.area-3 {
+    grid-area: 2 / 3 / 4 / 4; /* row 2-4, column 3-4 */
+    background: #45b7d1;
+}
+
+.area-4 {
+    grid-area: 2 / 4 / 4 / 5; /* row 2-4, column 4-5 */
+    background: #96ceb4;
+}
+
+.area-5 {
+    grid-area: 3 / 1 / 5 / 3; /* row 3-5, column 1-3 */
+    background: #feca57;
+}
+
+/* Using grid-area with named lines */
+.named-area {
+    grid-area: header-start / sidebar-start / content-end / main-end;
+}
+
+/* Using span with grid-area */
+.span-area {
+    grid-area: 1 / 1 / span 2 / span 3;
+}
+
+/* Overlapping areas */
+.overlap-1 {
+    grid-area: 1 / 1 / 3 / 3;
+    background: rgba(255, 107, 107, 0.8);
+    z-index: 1;
+}
+
+.overlap-2 {
+    grid-area: 2 / 2 / 4 / 4;
+    background: rgba(78, 205, 196, 0.8);
+    z-index: 2;
+}</code></pre>
+                        </div>
+
+                        <h3>justify-self & align-self</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Override container alignment for individual items */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 150px);
+    justify-items: center; /* Default for all items */
+    align-items: center;
+    gap: 10px;
+}
+
+/* justify-self - horizontal alignment */
+.justify-start {
+    justify-self: start; /* Override to left align */
+}
+
+.justify-end {
+    justify-self: end; /* Override to right align */
+}
+
+.justify-center {
+    justify-self: center; /* Same as container default */
+}
+
+.justify-stretch {
+    justify-self: stretch; /* Fill the cell width */
+}
+
+/* align-self - vertical alignment */
+.align-start {
+    align-self: start; /* Override to top align */
+}
+
+.align-end {
+    align-self: end; /* Override to bottom align */
+}
+
+.align-center {
+    align-self: center; /* Same as container default */
+}
+
+.align-stretch {
+    align-self: stretch; /* Fill the cell height */
+}
+
+/* place-self shorthand */
+.place-start {
+    place-self: start; /* Both align-self and justify-self to start */
+}
+
+.place-end {
+    place-self: end; /* Both align-self and justify-self to end */
+}
+
+.place-center {
+    place-self: center; /* Both align-self and justify-self to center */
+}
+
+.place-stretch {
+    place-self: stretch; /* Both align-self and justify-self to stretch */
+}
+
+.place-mixed {
+    place-self: start end; /* align-self: start, justify-self: end */
+}
+
+/* Practical example */
+.card {
+    place-self: center;
+    width: 150px;
+    height: 100px;
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card.special {
+    place-self: stretch;
+    width: auto;
+    height: auto;
+}</code></pre>
+                        </div>
+
+                        <h3>Grid Item Stacking (z-index)</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Grid items can overlap and be stacked */
+.stacking-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    gap: 10px;
+}
+
+/* Overlapping items */
+.stack-item-1 {
+    grid-area: 1 / 1 / 3 / 3;
+    background: rgba(255, 107, 107, 0.9);
+    z-index: 1;
+}
+
+.stack-item-2 {
+    grid-area: 2 / 2 / 4 / 4;
+    background: rgba(78, 205, 196, 0.9);
+    z-index: 2;
+}
+
+.stack-item-3 {
+    grid-area: 1 / 2 / 2 / 4;
+    background: rgba(69, 183, 209, 0.9);
+    z-index: 3;
+}
+
+/* Image overlay example */
+.image-overlay {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+}
+
+.image-overlay > * {
+    grid-area: 1 / 1; /* All children in same cell */
+}
+
+.image-overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.image-overlay .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+
+/* Card with floating badge */
+.card-with-badge {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    position: relative;
+}
+
+.card-with-badge .card-content {
+    grid-area: 1 / 1;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.card-with-badge .badge {
+    grid-area: 1 / 1;
+    justify-self: end;
+    align-self: start;
+    background: #ff6b6b;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 0 8px 0 8px;
+    font-size: 0.8rem;
+    z-index: 2;
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 4: Grid Areas & Templates -->
+                    <div id="lesson4" class="lesson-content">
+                        <h2>Pelajaran 4: Grid Areas & Templates</h2>
+                        <p>Grid template areas memungkinkan kita mendefinisikan layout dengan nama area yang mudah dibaca dan dipahami. Ini adalah cara yang powerful untuk membuat layout kompleks.</p>
+                        
+                        <h3>grid-template-areas</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Defining layout with named areas */
+.page-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr 200px;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main aside"
+        "footer footer footer";
+    gap: 10px;
+    height: 100vh;
+}
+
+/* Assigning items to areas */
+.header {
+    grid-area: header;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background: #f0f0f0;
+    padding: 20px;
+}
+
+.main {
+    grid-area: main;
+    background: white;
+    padding: 20px;
+}
+
+.aside {
+    grid-area: aside;
+    background: #f9f9f9;
+    padding: 20px;
+}
+
+.footer {
+    grid-area: footer;
+    background: #333;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Alternative layout without aside */
+.simple-layout {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    grid-template-rows: 80px 1fr 60px;
+    grid-template-areas: 
+        "header header"
+        "sidebar main"
+        "footer footer";
+    gap: 10px;
+    height: 100vh;
+}</code></pre>
+                        </div>
+
+                        <h3>Complex Grid Templates</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Magazine-style layout */
+.magazine-layout {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 80px 200px 150px 150px 60px;
+    grid-template-areas: 
+        "header header header header header header"
+        "hero hero hero hero sidebar sidebar"
+        "article1 article1 article2 article2 sidebar sidebar"
+        "article3 article4 article4 article5 article5 ads"
+        "footer footer footer footer footer footer";
+    gap: 15px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.magazine-layout .header {
+    grid-area: header;
+}
+
+.magazine-layout .hero {
+    grid-area: hero;
+    background: #ff6b6b;
+}
+
+.magazine-layout .sidebar {
+    grid-area: sidebar;
+    background: #f0f0f0;
+}
+
+.magazine-layout .article1 {
+    grid-area: article1;
+    background: #4ecdc4;
+}
+
+.magazine-layout .article2 {
+    grid-area: article2;
+    background: #45b7d1;
+}
+
+.magazine-layout .article3 {
+    grid-area: article3;
+    background: #96ceb4;
+}
+
+.magazine-layout .article4 {
+    grid-area: article4;
+    background: #feca57;
+}
+
+.magazine-layout .article5 {
+    grid-area: article5;
+    background: #ff9ff3;
+}
+
+.magazine-layout .ads {
+    grid-area: ads;
+    background: #54a0ff;
+}
+
+.magazine-layout .footer {
+    grid-area: footer;
+}
+
+/* Dashboard layout */
+.dashboard {
+    display: grid;
+    grid-template-columns: 60px 200px 1fr 300px;
+    grid-template-rows: 60px 1fr;
+    grid-template-areas: 
+        "nav-icon nav-main header-main header-profile"
+        "nav-icon nav-main content sidebar";
+    height: 100vh;
+    gap: 0;
+}
+
+.dashboard .nav-icon {
+    grid-area: nav-icon;
+    background: #2c3e50;
+}
+
+.dashboard .nav-main {
+    grid-area: nav-main;
+    background: #34495e;
+}
+
+.dashboard .header-main {
+    grid-area: header-main;
+    background: white;
+    border-bottom: 1px solid #ddd;
+}
+
+.dashboard .header-profile {
+    grid-area: header-profile;
+    background: white;
+    border-bottom: 1px solid #ddd;
+    border-left: 1px solid #ddd;
+}
+
+.dashboard .content {
+    grid-area: content;
+    background: #f8f9fa;
+    padding: 20px;
+}
+
+.dashboard .sidebar {
+    grid-area: sidebar;
+    background: white;
+    border-left: 1px solid #ddd;
+    padding: 20px;
+}</code></pre>
+                        </div>
+
+                        <h3>Empty Cells & Dots</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Using dots (.) for empty cells */
+.layout-with-gaps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 100px);
+    grid-template-areas: 
+        "header header header header"
+        "sidebar . . aside"
+        "sidebar content content aside"
+        "footer footer footer footer";
+    gap: 10px;
+}
+
+/* Multiple dots for multiple empty cells */
+.sparse-layout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 100px);
+    grid-template-areas: 
+        "logo . . . user"
+        ". content content content ."
+        "footer footer footer footer footer";
+    gap: 10px;
+}
+
+/* Asymmetric layout */
+.asymmetric {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header header"
+        ". main sidebar"
+        "footer footer .";
+    gap: 20px;
+    min-height: 100vh;
+}
+
+/* Card layout with gaps */
+.card-layout {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 200px);
+    grid-template-areas: 
+        "card1 . card2"
+        ". card3 ."
+        "card4 . card5";
+    gap: 20px;
+    padding: 20px;
+}
+
+.card-layout .card1 { grid-area: card1; }
+.card-layout .card2 { grid-area: card2; }
+.card-layout .card3 { grid-area: card3; }
+.card-layout .card4 { grid-area: card4; }
+.card-layout .card5 { grid-area: card5; }
+
+.card-layout > div {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}</code></pre>
+                        </div>
+
+                        <h3>Responsive Grid Templates</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mobile-first responsive grid */
+.responsive-layout {
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Mobile layout - single column */
+.responsive-layout {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "main"
+        "sidebar"
+        "footer";
+}
+
+/* Tablet layout */
+@media (min-width: 768px) {
+    .responsive-layout {
+        grid-template-columns: 250px 1fr;
+        grid-template-areas: 
+            "header header"
+            "sidebar main"
+            "footer footer";
+    }
+}
+
+/* Desktop layout */
+@media (min-width: 1024px) {
+    .responsive-layout {
+        grid-template-columns: 250px 1fr 200px;
+        grid-template-areas: 
+            "header header header"
+            "sidebar main aside"
+            "footer footer footer";
+    }
+}
+
+/* Complex responsive dashboard */
+.responsive-dashboard {
+    display: grid;
+    gap: 10px;
+    padding: 10px;
+}
+
+/* Mobile - stacked layout */
+.responsive-dashboard {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "sidebar"
+        "footer";
+}
+
+/* Tablet - sidebar on side */
+@media (min-width: 768px) {
+    .responsive-dashboard {
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "header header"
+            "nav main"
+            "sidebar main"
+            "footer footer";
+    }
+}
+
+/* Desktop - full layout */
+@media (min-width: 1024px) {
+    .responsive-dashboard {
+        grid-template-columns: 60px 200px 1fr 250px;
+        grid-template-rows: 60px 1fr;
+        grid-template-areas: 
+            "nav-icon nav-main header sidebar"
+            "nav-icon nav-main main sidebar";
+        height: 100vh;
+    }
+}
+
+/* Responsive magazine layout */
+.responsive-magazine {
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Mobile */
+.responsive-magazine {
+    grid-template-columns: 1fr;
+    grid-template-areas: 
+        "header"
+        "hero"
+        "article1"
+        "article2"
+        "article3"
+        "sidebar"
+        "footer";
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .responsive-magazine {
+        grid-template-columns: 2fr 1fr;
+        grid-template-areas: 
+            "header header"
+            "hero sidebar"
+            "article1 sidebar"
+            "article2 article3"
+            "footer footer";
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .responsive-magazine {
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas: 
+            "header header header header"
+            "hero hero hero sidebar"
+            "article1 article2 article3 sidebar"
+            "footer footer footer footer";
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 5: Responsive Grid -->
+                    <div id="lesson5" class="lesson-content">
+                        <h2>Pelajaran 5: Responsive Grid</h2>
+                        <p>CSS Grid sangat powerful untuk membuat layout responsif. Mari pelajari teknik-teknik untuk membuat grid yang beradaptasi dengan berbagai ukuran layar.</p>
+                        
+                        <h3>auto-fit vs auto-fill</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* auto-fit - columns collapse when empty */
+.auto-fit-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* auto-fill - maintains column structure even when empty */
+.auto-fill-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Practical example - responsive card grid */
+.card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    padding: 25px;
+}
+
+.card-grid .card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 20px;
+    transition: transform 0.2s;
+}
+
+.card-grid .card:hover {
+    transform: translateY(-4px);
+}
+
+/* Gallery with auto-fill */
+.photo-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 15px;
+}
+
+.photo-gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Product grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 30px;
+}
+
+/* Different breakpoints with minmax */
+.flexible-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 350px), 1fr));
+    gap: 20px;
+}</code></pre>
+                        </div>
+
+                        <h3>Responsive Grid with Media Queries</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mobile-first approach */
+.responsive-grid {
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+}
+
+/* Mobile (default) - single column */
+.responsive-grid {
+    grid-template-columns: 1fr;
+}
+
+/* Small tablets */
+@media (min-width: 480px) {
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Tablets */
+@media (min-width: 768px) {
+    .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+        padding: 25px;
+    }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+    .responsive-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+        padding: 30px;
+    }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    .responsive-grid {
+        grid-template-columns: repeat(5, 1fr);
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+}
+
+/* Responsive layout with different structures */
+.layout-responsive {
+    display: grid;
+    gap: 15px;
+    padding: 15px;
+    min-height: 100vh;
+}
+
+/* Mobile - stacked */
+.layout-responsive {
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-areas: 
+        "header"
+        "nav"
+        "main"
+        "footer";
+}
+
+/* Tablet - sidebar */
+@media (min-width: 768px) {
+    .layout-responsive {
+        grid-template-columns: 200px 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "header header"
+            "nav main"
+            "footer footer";
+    }
+}
+
+/* Desktop - full layout */
+@media (min-width: 1024px) {
+    .layout-responsive {
+        grid-template-columns: 250px 1fr 200px;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            "header header header"
+            "nav main aside"
+            "footer footer footer";
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Container Queries (Modern Approach)</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Container queries for component-based responsive design */
+.card-container {
+    container-type: inline-size;
+    container-name: card-grid;
+}
+
+.card-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+}
+
+/* Container query - when container is wider than 400px */
+@container card-grid (min-width: 400px) {
+    .card-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Container query - when container is wider than 600px */
+@container card-grid (min-width: 600px) {
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Container query - when container is wider than 800px */
+@container card-grid (min-width: 800px) {
+    .card-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}
+
+/* Fallback for browsers without container query support */
+@supports not (container-type: inline-size) {
+    .card-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    }
+}
+
+/* Component-specific container queries */
+.sidebar {
+    container-type: inline-size;
+    container-name: sidebar;
+}
+
+.sidebar-content {
+    display: grid;
+    gap: 10px;
+}
+
+@container sidebar (min-width: 250px) {
+    .sidebar-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Advanced Responsive Patterns</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* RAM (Repeat, Auto, Minmax) pattern */
+.ram-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+    gap: 20px;
+}
+
+/* Pancake stack - header, flexible content, footer */
+.pancake-stack {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+/* Sidebar says - flexible sidebar width */
+.sidebar-says {
+    display: grid;
+    grid-template-columns: fit-content(20ch) 1fr;
+    gap: 20px;
+}
+
+/* Pancake - header and footer full width, content centered */
+.pancake {
+    display: grid;
+    grid-template-columns: 1fr min(60ch, 100%) 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+}
+
+.pancake > * {
+    grid-column: 2;
+}
+
+.pancake .full-width {
+    grid-column: 1 / -1;
+}
+
+/* Holy grail with flexible sidebar */
+.holy-grail-flex {
+    display: grid;
+    grid-template-columns: 
+        fit-content(200px) 
+        minmax(0, 1fr) 
+        fit-content(150px);
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas: 
+        "header header header"
+        "sidebar main aside"
+        "footer footer footer";
+    min-height: 100vh;
+    gap: 20px;
+}
+
+/* Responsive typography with clamp */
+.responsive-text {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    line-height: 1.5;
+}
+
+/* Responsive grid with clamp */
+.clamp-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(clamp(250px, 30vw, 400px), 1fr));
+    gap: clamp(15px, 3vw, 30px);
+    padding: clamp(15px, 3vw, 30px);
+}
+
+/* Aspect ratio grid */
+.aspect-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.aspect-grid .item {
+    aspect-ratio: 16 / 9;
+    background: #f0f0f0;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.aspect-grid .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Masonry-like effect with grid */
+.masonry-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-auto-rows: 10px;
+    gap: 15px;
+}
+
+.masonry-grid .item {
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    padding: 15px;
+}
+
+.masonry-grid .item.small {
+    grid-row: span 20;
+}
+
+.masonry-grid .item.medium {
+    grid-row: span 30;
+}
+
+.masonry-grid .item.large {
+    grid-row: span 40;
+}</code></pre>
+                        </div>
+
+                        <h3>Performance & Accessibility</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .grid-item {
+        transition: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .grid-item {
+        border: 2px solid;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .grid-container {
+        background: #1a1a1a;
+        color: white;
+    }
+    
+    .grid-item {
+        background: #2d2d2d;
+        border-color: #444;
+    }
+}
+
+/* Performance optimization */
+.grid-container {
+    /* Use transform instead of changing grid properties for animations */
+    will-change: transform;
+}
+
+.grid-item {
+    /* Optimize for animations */
+    backface-visibility: hidden;
+    transform: translateZ(0);
+}
+
+/* Lazy loading grid */
+.lazy-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.lazy-grid .item {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.lazy-grid .item.loaded {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Focus management for keyboard navigation */
+.grid-item:focus {
+    outline: 2px solid #007bff;
+    outline-offset: 2px;
+}
+
+/* Skip to content for screen readers */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #000;
+    color: white;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+}
+
+.skip-link:focus {
+    top: 6px;
+}</code></pre>
+                        </div>
+
+                        <div class="quiz-section">
+                            <h3>Kuis: CSS Grid</h3>
+                            <div class="quiz-question">
+                                <p><strong>1. Property mana yang digunakan untuk membuat grid container?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q1" value="a"> grid: 1fr</label>
+                                    <label><input type="radio" name="q1" value="b"> display: grid</label>
+                                    <label><input type="radio" name="q1" value="c"> grid-template: auto</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>2. Apa perbedaan antara auto-fit dan auto-fill?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q2" value="a"> auto-fit collapse empty columns, auto-fill tidak</label>
+                                    <label><input type="radio" name="q2" value="b"> auto-fill collapse empty columns, auto-fit tidak</label>
+                                    <label><input type="radio" name="q2" value="c"> Tidak ada perbedaan</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>3. Apa fungsi dari grid-template-areas?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q3" value="a"> Mengatur ukuran grid</label>
+                                    <label><input type="radio" name="q3" value="b"> Mendefinisikan layout dengan nama area</label>
+                                    <label><input type="radio" name="q3" value="c"> Mengatur gap antar item</label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="submitQuiz()">Submit Kuis</button>
+                            <div id="quiz-result" class="quiz-result"></div>
+                        </div>
+
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeBuddy. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/course.js"></script>
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+        });
+    </script>
+</body>
+</html>

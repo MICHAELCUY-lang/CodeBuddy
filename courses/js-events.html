@@ -1,0 +1,1064 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Events - CodeBuddy</title>
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <a href="../courses.html" class="back-button">
+                ← Kembali ke Kursus
+            </a>
+            <div class="course-info">
+                <h2>JavaScript Events</h2>
+                <p>Pelajari cara menangani interaksi pengguna dengan JavaScript Events. Kursus ini akan mengajarkan Anda cara merespons klik, input, dan berbagai event lainnya untuk membuat website yang interaktif.</p>
+                <div class="course-meta">
+                    <span>⚡ JavaScript</span>
+                    <span>⏰ 5 Pelajaran</span>
+                    <span>👤 Menengah</span>
+                    <span>⭐ 4.9/5</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            <div class="course-layout">
+                <aside class="lesson-sidebar">
+                    <h3>Daftar Pelajaran</h3>
+                    <ul>
+                        <li><a href="#lesson1" class="lesson-link active">1. Pengenalan Events</a></li>
+                        <li><a href="#lesson2" class="lesson-link">2. Event Listeners</a></li>
+                        <li><a href="#lesson3" class="lesson-link">3. Mouse Events</a></li>
+                        <li><a href="#lesson4" class="lesson-link">4. Keyboard Events</a></li>
+                        <li><a href="#lesson5" class="lesson-link">5. Form Events</a></li>
+                    </ul>
+                    <div class="progress-sidebar">
+                        <h4>Progress Kursus</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">0% (0/5 pelajaran)</span>
+                    </div>
+                </aside>
+
+                <main class="lesson-main">
+                    <!-- Lesson 1: Pengenalan Events -->
+                    <div id="lesson1" class="lesson-content active">
+                        <h2>Pelajaran 1: Pengenalan Events</h2>
+                        <p>Events adalah tindakan atau kejadian yang terjadi di browser, seperti klik mouse, penekanan keyboard, atau loading halaman.</p>
+                        
+                        <h3>Apa itu Events?</h3>
+                        <p>Events memungkinkan JavaScript untuk:</p>
+                        <ul>
+                            <li>Merespons interaksi pengguna</li>
+                            <li>Menjalankan kode saat kejadian tertentu</li>
+                            <li>Membuat website yang interaktif</li>
+                            <li>Validasi form secara real-time</li>
+                            <li>Animasi dan efek visual</li>
+                        </ul>
+
+                        <h3>Jenis-jenis Events</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Mouse Events
+// click, dblclick, mousedown, mouseup, mouseover, mouseout
+
+// Keyboard Events  
+// keydown, keyup, keypress
+
+// Form Events
+// submit, change, input, focus, blur
+
+// Window Events
+// load, resize, scroll, unload
+
+// Touch Events (mobile)
+// touchstart, touchend, touchmove</code></pre>
+                        </div>
+
+                        <h3>Event Handler Inline</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- HTML dengan inline event handler --&gt;
+&lt;button onclick="alert('Button diklik!')"&gt;Klik Saya&lt;/button&gt;
+
+&lt;button onclick="changeText()"&gt;Ubah Teks&lt;/button&gt;
+
+&lt;script&gt;
+function changeText() {
+    document.getElementById('demo').innerHTML = 'Teks berubah!';
+}
+&lt;/script&gt;</code></pre>
+                        </div>
+
+                        <h3>Event Handler Property</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Menggunakan property event handler
+let button = document.getElementById('myButton');
+
+// Assign function ke event property
+button.onclick = function() {
+    alert('Button diklik!');
+};
+
+// Atau dengan arrow function
+button.onclick = () => {
+    console.log('Button diklik dengan arrow function');
+};
+
+// Assign function yang sudah ada
+function handleClick() {
+    alert('Function terpisah');
+}
+
+button.onclick = handleClick;</code></pre>
+                        </div>
+
+                        <h3>Event Object</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Event object berisi informasi tentang event
+button.onclick = function(event) {
+    console.log('Event type:', event.type); // 'click'
+    console.log('Target element:', event.target); // element yang diklik
+    console.log('Mouse X:', event.clientX); // posisi X mouse
+    console.log('Mouse Y:', event.clientY); // posisi Y mouse
+    console.log('Timestamp:', event.timeStamp); // waktu event
+};
+
+// Shorthand dengan arrow function
+button.onclick = (e) => {
+    console.log('Clicked element:', e.target.tagName);
+};</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" disabled>Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 2: Event Listeners -->
+                    <div id="lesson2" class="lesson-content">
+                        <h2>Pelajaran 2: Event Listeners</h2>
+                        <p>addEventListener() adalah cara modern dan fleksibel untuk menangani events di JavaScript.</p>
+                        
+                        <h3>addEventListener Syntax</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Syntax: element.addEventListener(event, function, options)
+let button = document.getElementById('myButton');
+
+// Basic usage
+button.addEventListener('click', function() {
+    alert('Button diklik!');
+});
+
+// Dengan arrow function
+button.addEventListener('click', () => {
+    console.log('Arrow function event listener');
+});
+
+// Dengan function reference
+function handleButtonClick() {
+    alert('Function terpisah');
+}
+
+button.addEventListener('click', handleButtonClick);</code></pre>
+                        </div>
+
+                        <h3>Multiple Event Listeners</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let button = document.getElementById('myButton');
+
+// Bisa menambahkan multiple listeners untuk event yang sama
+button.addEventListener('click', function() {
+    console.log('Listener 1');
+});
+
+button.addEventListener('click', function() {
+    console.log('Listener 2');
+});
+
+button.addEventListener('click', function() {
+    console.log('Listener 3');
+});
+
+// Semua akan dijalankan saat button diklik
+
+// Multiple events untuk element yang sama
+button.addEventListener('mouseenter', function() {
+    this.style.backgroundColor = 'lightblue';
+});
+
+button.addEventListener('mouseleave', function() {
+    this.style.backgroundColor = '';
+});</code></pre>
+                        </div>
+
+                        <h3>removeEventListener</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Untuk remove listener, harus menggunakan function reference
+function myClickHandler() {
+    console.log('Button diklik');
+}
+
+// Add listener
+button.addEventListener('click', myClickHandler);
+
+// Remove listener
+button.removeEventListener('click', myClickHandler);
+
+// Anonymous function tidak bisa di-remove
+button.addEventListener('click', function() {
+    console.log('Tidak bisa di-remove');
+});
+
+// Solusi: simpan reference
+let clickHandler = function() {
+    console.log('Bisa di-remove');
+};
+
+button.addEventListener('click', clickHandler);
+button.removeEventListener('click', clickHandler);</code></pre>
+                        </div>
+
+                        <h3>Event Options</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let button = document.getElementById('myButton');
+
+// Options object
+button.addEventListener('click', function() {
+    console.log('Hanya sekali');
+}, {
+    once: true,      // Hanya dijalankan sekali
+    passive: false,  // Bisa preventDefault
+    capture: false   // Event bubbling phase
+});
+
+// Shorthand untuk once
+button.addEventListener('click', function() {
+    console.log('Sekali lagi');
+}, { once: true });
+
+// Passive listener (untuk performance)
+document.addEventListener('scroll', function() {
+    console.log('Scrolling...');
+}, { passive: true });</code></pre>
+                        </div>
+
+                        <h3>Event Delegation</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Event delegation - attach listener ke parent
+let container = document.getElementById('buttonContainer');
+
+container.addEventListener('click', function(e) {
+    // Cek apakah yang diklik adalah button
+    if (e.target.tagName === 'BUTTON') {
+        console.log('Button diklik:', e.target.textContent);
+    }
+});
+
+// Berguna untuk dynamic content
+function addNewButton() {
+    let newButton = document.createElement('button');
+    newButton.textContent = 'Button Baru';
+    container.appendChild(newButton);
+    // Tidak perlu add listener, sudah ter-handle oleh delegation
+}
+
+// Advanced delegation dengan class check
+container.addEventListener('click', function(e) {
+    if (e.target.classList.contains('delete-btn')) {
+        e.target.parentElement.remove();
+    }
+    
+    if (e.target.classList.contains('edit-btn')) {
+        // Handle edit
+    }
+});</code></pre>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 3: Mouse Events -->
+                    <div id="lesson3" class="lesson-content">
+                        <h2>Pelajaran 3: Mouse Events</h2>
+                        <p>Mouse events memungkinkan kita merespons berbagai interaksi mouse seperti klik, hover, dan drag.</p>
+                        
+                        <h3>Click Events</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let element = document.getElementById('clickable');
+
+// Single click
+element.addEventListener('click', function(e) {
+    console.log('Single click');
+    console.log('Button yang diklik:', e.button); // 0=left, 1=middle, 2=right
+});
+
+// Double click
+element.addEventListener('dblclick', function() {
+    console.log('Double click');
+});
+
+// Mouse down dan up
+element.addEventListener('mousedown', function() {
+    console.log('Mouse button ditekan');
+});
+
+element.addEventListener('mouseup', function() {
+    console.log('Mouse button dilepas');
+});
+
+// Context menu (right click)
+element.addEventListener('contextmenu', function(e) {
+    e.preventDefault(); // Mencegah context menu default
+    console.log('Right click detected');
+});</code></pre>
+                        </div>
+
+                        <h3>Mouse Movement Events</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let element = document.getElementById('hover-area');
+
+// Mouse enter dan leave
+element.addEventListener('mouseenter', function() {
+    this.style.backgroundColor = 'lightblue';
+    console.log('Mouse masuk area');
+});
+
+element.addEventListener('mouseleave', function() {
+    this.style.backgroundColor = '';
+    console.log('Mouse keluar area');
+});
+
+// Mouse over dan out (berbeda dengan enter/leave)
+element.addEventListener('mouseover', function(e) {
+    console.log('Mouse over:', e.target.tagName);
+});
+
+element.addEventListener('mouseout', function(e) {
+    console.log('Mouse out:', e.target.tagName);
+});
+
+// Mouse move - tracking posisi mouse
+element.addEventListener('mousemove', function(e) {
+    let rect = this.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+    
+    console.log(`Mouse position: (${x}, ${y})`);
+    
+    // Update display
+    document.getElementById('coordinates').textContent = `X: ${x}, Y: ${y}`;
+});</code></pre>
+                        </div>
+
+                        <h3>Drag and Drop</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Simple drag implementation
+let draggable = document.getElementById('draggable');
+let isDragging = false;
+let startX, startY, initialLeft, initialTop;
+
+draggable.addEventListener('mousedown', function(e) {
+    isDragging = true;
+    startX = e.clientX;
+    startY = e.clientY;
+    
+    let rect = this.getBoundingClientRect();
+    initialLeft = rect.left;
+    initialTop = rect.top;
+    
+    this.style.cursor = 'grabbing';
+});
+
+document.addEventListener('mousemove', function(e) {
+    if (!isDragging) return;
+    
+    let deltaX = e.clientX - startX;
+    let deltaY = e.clientY - startY;
+    
+    draggable.style.left = (initialLeft + deltaX) + 'px';
+    draggable.style.top = (initialTop + deltaY) + 'px';
+});
+
+document.addEventListener('mouseup', function() {
+    if (isDragging) {
+        isDragging = false;
+        draggable.style.cursor = 'grab';
+    }
+});
+
+// HTML5 Drag and Drop API
+let dragSource = document.getElementById('dragSource');
+let dropZone = document.getElementById('dropZone');
+
+dragSource.addEventListener('dragstart', function(e) {
+    e.dataTransfer.setData('text/plain', this.id);
+});
+
+dropZone.addEventListener('dragover', function(e) {
+    e.preventDefault(); // Allow drop
+});
+
+dropZone.addEventListener('drop', function(e) {
+    e.preventDefault();
+    let draggedId = e.dataTransfer.getData('text/plain');
+    let draggedElement = document.getElementById(draggedId);
+    this.appendChild(draggedElement);
+});</code></pre>
+                        </div>
+
+                        <h3>Mouse Event Properties</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>element.addEventListener('click', function(e) {
+    // Posisi mouse relatif terhadap viewport
+    console.log('Client X:', e.clientX);
+    console.log('Client Y:', e.clientY);
+    
+    // Posisi mouse relatif terhadap halaman (termasuk scroll)
+    console.log('Page X:', e.pageX);
+    console.log('Page Y:', e.pageY);
+    
+    // Posisi mouse relatif terhadap element
+    console.log('Offset X:', e.offsetX);
+    console.log('Offset Y:', e.offsetY);
+    
+    // Posisi mouse relatif terhadap screen
+    console.log('Screen X:', e.screenX);
+    console.log('Screen Y:', e.screenY);
+    
+    // Modifier keys
+    console.log('Ctrl pressed:', e.ctrlKey);
+    console.log('Shift pressed:', e.shiftKey);
+    console.log('Alt pressed:', e.altKey);
+    console.log('Meta pressed:', e.metaKey); // Cmd on Mac, Windows key on PC
+    
+    // Mouse button
+    console.log('Button:', e.button); // 0=left, 1=middle, 2=right
+    console.log('Buttons:', e.buttons); // Bitmask of pressed buttons
+});</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 4: Keyboard Events -->
+                    <div id="lesson4" class="lesson-content">
+                        <h2>Pelajaran 4: Keyboard Events</h2>
+                        <p>Keyboard events memungkinkan kita merespons input keyboard untuk membuat shortcut, validasi, dan interaksi yang lebih baik.</p>
+                        
+                        <h3>Jenis Keyboard Events</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let input = document.getElementById('textInput');
+
+// keydown - saat key ditekan (sebelum karakter muncul)
+input.addEventListener('keydown', function(e) {
+    console.log('Key down:', e.key);
+    console.log('Key code:', e.keyCode); // Deprecated
+    console.log('Which:', e.which); // Deprecated
+    console.log('Code:', e.code); // Physical key
+});
+
+// keyup - saat key dilepas
+input.addEventListener('keyup', function(e) {
+    console.log('Key up:', e.key);
+    console.log('Input value:', this.value);
+});
+
+// keypress - saat karakter dihasilkan (deprecated)
+input.addEventListener('keypress', function(e) {
+    console.log('Key press:', e.key);
+    // Hanya untuk printable characters
+});</code></pre>
+                        </div>
+
+                        <h3>Key Properties</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>document.addEventListener('keydown', function(e) {
+    // e.key - nilai karakter yang dihasilkan
+    console.log('Key:', e.key); // 'a', 'A', 'Enter', 'Escape', etc.
+    
+    // e.code - kode fisik key
+    console.log('Code:', e.code); // 'KeyA', 'Enter', 'Escape', etc.
+    
+    // Modifier keys
+    console.log('Ctrl:', e.ctrlKey);
+    console.log('Shift:', e.shiftKey);
+    console.log('Alt:', e.altKey);
+    console.log('Meta:', e.metaKey);
+    
+    // Kombinasi keys
+    if (e.ctrlKey && e.key === 's') {
+        e.preventDefault();
+        console.log('Ctrl+S pressed - Save action');
+    }
+    
+    if (e.ctrlKey && e.key === 'z') {
+        e.preventDefault();
+        console.log('Ctrl+Z pressed - Undo action');
+    }
+});</code></pre>
+                        </div>
+
+                        <h3>Keyboard Shortcuts</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Global keyboard shortcuts
+document.addEventListener('keydown', function(e) {
+    // Escape key
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+    
+    // Arrow keys navigation
+    switch(e.key) {
+        case 'ArrowUp':
+            navigateUp();
+            break;
+        case 'ArrowDown':
+            navigateDown();
+            break;
+        case 'ArrowLeft':
+            navigateLeft();
+            break;
+        case 'ArrowRight':
+            navigateRight();
+            break;
+    }
+    
+    // Function keys
+    if (e.key === 'F1') {
+        e.preventDefault();
+        showHelp();
+    }
+    
+    // Number keys
+    if (e.key >= '1' && e.key <= '9') {
+        let tabIndex = parseInt(e.key) - 1;
+        switchToTab(tabIndex);
+    }
+});
+
+// Keyboard shortcuts untuk specific element
+let editor = document.getElementById('editor');
+
+editor.addEventListener('keydown', function(e) {
+    // Ctrl+B untuk bold
+    if (e.ctrlKey && e.key === 'b') {
+        e.preventDefault();
+        toggleBold();
+    }
+    
+    // Ctrl+I untuk italic
+    if (e.ctrlKey && e.key === 'i') {
+        e.preventDefault();
+        toggleItalic();
+    }
+    
+    // Tab untuk indentation
+    if (e.key === 'Tab') {
+        e.preventDefault();
+        insertTab();
+    }
+});</code></pre>
+                        </div>
+
+                        <h3>Input Validation</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Hanya allow angka
+let numberInput = document.getElementById('numberOnly');
+
+numberInput.addEventListener('keydown', function(e) {
+    // Allow: backspace, delete, tab, escape, enter
+    if ([8, 9, 27, 13, 46].indexOf(e.keyCode) !== -1 ||
+        // Allow: Ctrl+A, Ctrl+C, Ctrl+V, Ctrl+X
+        (e.keyCode === 65 && e.ctrlKey === true) ||
+        (e.keyCode === 67 && e.ctrlKey === true) ||
+        (e.keyCode === 86 && e.ctrlKey === true) ||
+        (e.keyCode === 88 && e.ctrlKey === true) ||
+        // Allow: home, end, left, right
+        (e.keyCode >= 35 && e.keyCode <= 39)) {
+        return;
+    }
+    
+    // Ensure that it is a number and stop the keypress
+    if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && 
+        (e.keyCode < 96 || e.keyCode > 105)) {
+        e.preventDefault();
+    }
+});
+
+// Modern approach dengan input event
+numberInput.addEventListener('input', function(e) {
+    // Remove non-numeric characters
+    this.value = this.value.replace(/[^0-9]/g, '');
+});
+
+// Real-time validation
+let emailInput = document.getElementById('email');
+
+emailInput.addEventListener('input', function(e) {
+    let email = this.value;
+    let isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    
+    if (isValid) {
+        this.style.borderColor = 'green';
+    } else {
+        this.style.borderColor = 'red';
+    }
+});</code></pre>
+                        </div>
+
+                        <h3>Character Counter</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let textarea = document.getElementById('message');
+let counter = document.getElementById('charCounter');
+let maxLength = 280;
+
+textarea.addEventListener('input', function() {
+    let currentLength = this.value.length;
+    let remaining = maxLength - currentLength;
+    
+    counter.textContent = `${currentLength}/${maxLength}`;
+    
+    if (remaining < 0) {
+        counter.style.color = 'red';
+        this.style.borderColor = 'red';
+    } else if (remaining < 20) {
+        counter.style.color = 'orange';
+        this.style.borderColor = 'orange';
+    } else {
+        counter.style.color = 'green';
+        this.style.borderColor = 'green';
+    }
+});
+
+// Prevent typing when limit reached
+textarea.addEventListener('keydown', function(e) {
+    if (this.value.length >= maxLength) {
+        // Allow backspace, delete, arrow keys
+        if (![8, 46, 37, 38, 39, 40].includes(e.keyCode)) {
+            e.preventDefault();
+        }
+    }
+});</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 5: Form Events -->
+                    <div id="lesson5" class="lesson-content">
+                        <h2>Pelajaran 5: Form Events</h2>
+                        <p>Form events memungkinkan kita menangani interaksi dengan form elements seperti input, select, dan form submission.</p>
+                        
+                        <h3>Form Submission</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let form = document.getElementById('myForm');
+
+// Handle form submission
+form.addEventListener('submit', function(e) {
+    e.preventDefault(); // Mencegah default form submission
+    
+    // Validasi form
+    let isValid = validateForm();
+    
+    if (isValid) {
+        // Submit form via AJAX atau process data
+        submitFormData();
+    } else {
+        showErrorMessage('Please fill all required fields');
+    }
+});
+
+function validateForm() {
+    let name = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let message = document.getElementById('message').value;
+    
+    if (!name || !email || !message) {
+        return false;
+    }
+    
+    // Email validation
+    let emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email)) {
+        return false;
+    }
+    
+    return true;
+}
+
+function submitFormData() {
+    let formData = new FormData(form);
+    
+    // Example AJAX submission
+    fetch('/submit', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.json())
+    .then(data => {
+        showSuccessMessage('Form submitted successfully!');
+        form.reset();
+    })
+    .catch(error => {
+        showErrorMessage('Error submitting form');
+    });
+}</code></pre>
+                        </div>
+
+                        <h3>Input Events</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let input = document.getElementById('searchInput');
+
+// input event - fires on every change
+input.addEventListener('input', function(e) {
+    console.log('Input value:', this.value);
+    // Real-time search
+    performSearch(this.value);
+});
+
+// change event - fires when input loses focus and value changed
+input.addEventListener('change', function(e) {
+    console.log('Input changed:', this.value);
+});
+
+// focus event - when input gets focus
+input.addEventListener('focus', function(e) {
+    this.style.borderColor = 'blue';
+    this.placeholder = 'Type to search...';
+});
+
+// blur event - when input loses focus
+input.addEventListener('blur', function(e) {
+    this.style.borderColor = '';
+    if (!this.value) {
+        this.placeholder = 'Search...';
+    }
+});
+
+// select event - when text is selected
+input.addEventListener('select', function(e) {
+    console.log('Text selected:', this.value.substring(this.selectionStart, this.selectionEnd));
+});</code></pre>
+                        </div>
+
+                        <h3>Select dan Checkbox Events</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Select dropdown
+let select = document.getElementById('category');
+
+select.addEventListener('change', function(e) {
+    console.log('Selected value:', this.value);
+    console.log('Selected text:', this.options[this.selectedIndex].text);
+    
+    // Update other form elements based on selection
+    updateSubcategories(this.value);
+});
+
+// Checkbox
+let checkbox = document.getElementById('newsletter');
+
+checkbox.addEventListener('change', function(e) {
+    if (this.checked) {
+        console.log('Newsletter subscribed');
+        showEmailField();
+    } else {
+        console.log('Newsletter unsubscribed');
+        hideEmailField();
+    }
+});
+
+// Radio buttons
+let radioButtons = document.querySelectorAll('input[name="payment"]');
+
+radioButtons.forEach(radio => {
+    radio.addEventListener('change', function(e) {
+        if (this.checked) {
+            console.log('Payment method:', this.value);
+            updatePaymentForm(this.value);
+        }
+    });
+});
+
+// Multiple checkboxes
+let hobbies = document.querySelectorAll('input[name="hobbies"]');
+
+hobbies.forEach(hobby => {
+    hobby.addEventListener('change', function(e) {
+        let selectedHobbies = Array.from(hobbies)
+            .filter(h => h.checked)
+            .map(h => h.value);
+        
+        console.log('Selected hobbies:', selectedHobbies);
+    });
+});</code></pre>
+                        </div>
+
+                        <h3>Form Reset dan Custom Validation</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let form = document.getElementById('registrationForm');
+let resetBtn = document.getElementById('resetBtn');
+
+// Reset event
+form.addEventListener('reset', function(e) {
+    // Confirm before reset
+    if (!confirm('Are you sure you want to reset the form?')) {
+        e.preventDefault();
+        return;
+    }
+    
+    // Clear custom validation messages
+    clearValidationMessages();
+});
+
+// Custom validation
+function setupCustomValidation() {
+    let passwordInput = document.getElementById('password');
+    let confirmPasswordInput = document.getElementById('confirmPassword');
+    
+    confirmPasswordInput.addEventListener('input', function() {
+        if (this.value !== passwordInput.value) {
+            this.setCustomValidity('Passwords do not match');
+        } else {
+            this.setCustomValidity('');
+        }
+    });
+    
+    passwordInput.addEventListener('input', function() {
+        let password = this.value;
+        let strength = calculatePasswordStrength(password);
+        
+        updatePasswordStrengthIndicator(strength);
+        
+        if (strength < 3) {
+            this.setCustomValidity('Password is too weak');
+        } else {
+            this.setCustomValidity('');
+        }
+    });
+}
+
+function calculatePasswordStrength(password) {
+    let strength = 0;
+    
+    if (password.length >= 8) strength++;
+    if (/[a-z]/.test(password)) strength++;
+    if (/[A-Z]/.test(password)) strength++;
+    if (/[0-9]/.test(password)) strength++;
+    if (/[^A-Za-z0-9]/.test(password)) strength++;
+    
+    return strength;
+}
+
+// Real-time form validation
+function setupRealTimeValidation() {
+    let inputs = form.querySelectorAll('input, select, textarea');
+    
+    inputs.forEach(input => {
+        input.addEventListener('blur', function() {
+            validateField(this);
+        });
+        
+        input.addEventListener('input', function() {
+            if (this.classList.contains('error')) {
+                validateField(this);
+            }
+        });
+    });
+}
+
+function validateField(field) {
+    let isValid = field.checkValidity();
+    let errorElement = field.nextElementSibling;
+    
+    if (isValid) {
+        field.classList.remove('error');
+        if (errorElement && errorElement.classList.contains('error-message')) {
+            errorElement.remove();
+        }
+    } else {
+        field.classList.add('error');
+        if (!errorElement || !errorElement.classList.contains('error-message')) {
+            let errorMsg = document.createElement('span');
+            errorMsg.className = 'error-message';
+            errorMsg.textContent = field.validationMessage;
+            field.parentNode.insertBefore(errorMsg, field.nextSibling);
+        }
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="quiz-section">
+                            <h3>Kuis: JavaScript Events</h3>
+                            <div class="quiz-question">
+                                <p><strong>1. Method mana yang digunakan untuk menambahkan event listener?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q1" value="a"> addEvent()</label>
+                                    <label><input type="radio" name="q1" value="b"> addEventListener()</label>
+                                    <label><input type="radio" name="q1" value="c"> attachEvent()</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>2. Event mana yang terjadi saat mouse masuk ke area element?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q2" value="a"> mouseover</label>
+                                    <label><input type="radio" name="q2" value="b"> mouseenter</label>
+                                    <label><input type="radio" name="q2" value="c"> mousein</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>3. Method mana yang digunakan untuk mencegah default behavior?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q3" value="a"> stopPropagation()</label>
+                                    <label><input type="radio" name="q3" value="b"> preventDefault()</label>
+                                    <label><input type="radio" name="q3" value="c"> cancelEvent()</label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="submitQuiz()">Submit Kuis</button>
+                            <div id="quiz-result" class="quiz-result"></div>
+                        </div>
+
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeBuddy. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/course.js"></script>
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+        });
+    </script>
+</body>
+</html>

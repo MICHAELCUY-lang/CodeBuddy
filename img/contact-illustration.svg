@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <!-- Background -->
+  <rect x="0" y="0" width="300" height="200" fill="#F8F9FA" opacity="0" />
+  
+  <!-- Envelope -->
+  <rect x="75" y="60" width="150" height="100" rx="5" ry="5" fill="#F8F9FA" stroke="#4A6CF7" stroke-width="2" />
+  
+  <!-- Envelope Flap -->
+  <path d="M75 60 L150 110 L225 60" fill="none" stroke="#4A6CF7" stroke-width="2" />
+  
+  <!-- Message -->
+  <rect x="100" y="90" width="100" height="50" rx="5" ry="5" fill="white" stroke="#4A6CF7" stroke-width="1" />
+  
+  <!-- Message Lines -->
+  <rect x="110" y="100" width="80" height="2" rx="1" ry="1" fill="#4A6CF7" opacity="0.5" />
+  <rect x="110" y="110" width="60" height="2" rx="1" ry="1" fill="#4A6CF7" opacity="0.5" />
+  <rect x="110" y="120" width="70" height="2" rx="1" ry="1" fill="#4A6CF7" opacity="0.5" />
+  <rect x="110" y="130" width="50" height="2" rx="1" ry="1" fill="#4A6CF7" opacity="0.5" />
+  
+  <!-- Send Button -->
+  <rect x="130" y="150" width="40" height="20" rx="10" ry="10" fill="#4A6CF7" />
+  <text x="150" y="163" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">Send</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" y="50" r="10" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="250" y="150" r="15" fill="#4A6CF7" opacity="0.3" />
+  
+  <!-- Paper Airplane -->
+  <path d="M240 40 L260 60 L240 80 Z" fill="#4A6CF7" opacity="0.7" />
+  <path d="M240 40 L245 65 L240 80" fill="none" stroke="white" stroke-width="1" />
+</svg>

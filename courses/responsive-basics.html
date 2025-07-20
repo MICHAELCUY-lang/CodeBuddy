@@ -1,0 +1,1452 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Web Design - CodeBuddy</title>
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <a href="../courses.html" class="back-button">
+                ← Kembali ke Kursus
+            </a>
+            <div class="course-info">
+                <h2>Responsive Web Design</h2>
+                <p>Pelajari cara membuat website yang responsif dan dapat beradaptasi dengan berbagai ukuran layar. Kursus ini akan mengajarkan Anda teknik-teknik modern untuk membuat website yang mobile-friendly.</p>
+                <div class="course-meta">
+                    <span>📱 CSS</span>
+                    <span>⏰ 6 Pelajaran</span>
+                    <span>👤 Menengah</span>
+                    <span>⭐ 4.7/5</span>
+                </div>
+            </div>
+            <div class="course-progress">
+                <h3>Progress Kursus</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="courseProgress" style="width: 0%"></div>
+                </div>
+                <span class="progress-text" id="progressText">0% (0/6 pelajaran)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            <div class="course-layout">
+                <aside class="lesson-sidebar">
+                    <h3>Daftar Pelajaran</h3>
+                    <ul>
+                        <li><a href="#lesson1" class="lesson-link active">1. Pengenalan Responsive</a></li>
+                        <li><a href="#lesson2" class="lesson-link">2. Viewport dan Meta Tag</a></li>
+                        <li><a href="#lesson3" class="lesson-link">3. Media Queries</a></li>
+                        <li><a href="#lesson4" class="lesson-link">4. Flexible Layouts</a></li>
+                        <li><a href="#lesson5" class="lesson-link">5. Responsive Images</a></li>
+                        <li><a href="#lesson6" class="lesson-link">6. Mobile-First Design</a></li>
+                    </ul>
+                    <div class="progress-sidebar">
+                        <h4>Progress Kursus</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% (0/6 pelajaran)</span>
+                    </div>
+                </aside>
+
+                <main class="lesson-main">
+                    <!-- Lesson 1: Pengenalan Responsive -->
+                    <div id="lesson1" class="lesson-content active">
+                        <h2>Pelajaran 1: Pengenalan Responsive Web Design</h2>
+                        <p>Responsive Web Design adalah pendekatan desain web yang membuat halaman web dapat beradaptasi dengan berbagai ukuran layar dan perangkat.</p>
+                        
+                        <h3>Mengapa Responsive Design Penting?</h3>
+                        <ul>
+                            <li>Penggunaan mobile device yang meningkat</li>
+                            <li>Beragam ukuran layar (smartphone, tablet, desktop)</li>
+                            <li>SEO benefit - Google prioritas mobile-friendly sites</li>
+                            <li>User experience yang lebih baik</li>
+                            <li>Maintenance yang lebih mudah (satu website untuk semua device)</li>
+                        </ul>
+
+                        <h3>Prinsip Responsive Design</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* 1. Fluid Grid System */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -15px;
+}
+
+.col {
+    flex: 1;
+    padding: 0 15px;
+}
+
+/* 2. Flexible Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* 3. Media Queries */
+@media (max-width: 768px) {
+    .col {
+        flex: 100%;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Breakpoints Umum</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Extra Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {...}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {...}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {...}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {...}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {...}</code></pre>
+                        </div>
+
+                        <h3>Fixed vs Responsive Layout</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Fixed Layout (tidak responsive) */
+.fixed-container {
+    width: 960px;
+    margin: 0 auto;
+}
+
+.fixed-sidebar {
+    width: 300px;
+    float: left;
+}
+
+.fixed-content {
+    width: 660px;
+    float: right;
+}
+
+/* Responsive Layout */
+.responsive-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.responsive-layout {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .responsive-layout {
+        grid-template-columns: 1fr;
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" disabled>Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 2: Viewport dan Meta Tag -->
+                    <div id="lesson2" class="lesson-content">
+                        <h2>Pelajaran 2: Viewport dan Meta Tag</h2>
+                        <p>Viewport meta tag adalah elemen penting untuk membuat website responsive di perangkat mobile.</p>
+                        
+                        <h3>Viewport Meta Tag</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- Basic viewport meta tag --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+
+&lt;!-- Dengan kontrol zoom --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"&gt;
+
+&lt;!-- Untuk PWA --&gt;
+&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"&gt;</code></pre>
+                        </div>
+
+                        <h3>Viewport Properties</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* width: mengatur lebar viewport */
+width=device-width  /* Menggunakan lebar device */
+width=320          /* Fixed width dalam pixels */
+
+/* height: mengatur tinggi viewport */
+height=device-height
+height=480
+
+/* initial-scale: zoom level awal */
+initial-scale=1.0  /* No zoom */
+initial-scale=0.5  /* 50% zoom out */
+initial-scale=2.0  /* 200% zoom in */
+
+/* minimum-scale & maximum-scale: batas zoom */
+minimum-scale=0.5
+maximum-scale=3.0
+
+/* user-scalable: apakah user bisa zoom */
+user-scalable=yes  /* Default, user bisa zoom */
+user-scalable=no   /* User tidak bisa zoom */</code></pre>
+                        </div>
+
+                        <h3>CSS Viewport Units</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Viewport Width (vw) - 1vw = 1% dari lebar viewport */
+.full-width {
+    width: 100vw; /* Full width of viewport */
+}
+
+.half-width {
+    width: 50vw; /* Half width of viewport */
+}
+
+/* Viewport Height (vh) - 1vh = 1% dari tinggi viewport */
+.full-height {
+    height: 100vh; /* Full height of viewport */
+}
+
+.hero-section {
+    height: 80vh; /* 80% of viewport height */
+}
+
+/* Viewport Minimum (vmin) - 1vmin = 1% dari dimensi terkecil */
+.square {
+    width: 50vmin;
+    height: 50vmin;
+}
+
+/* Viewport Maximum (vmax) - 1vmax = 1% dari dimensi terbesar */
+.responsive-text {
+    font-size: 5vmax;
+}
+
+/* Practical examples */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar {
+    width: 25vw;
+    min-width: 250px;
+    max-width: 400px;
+}</code></pre>
+                        </div>
+
+                        <h3>Device Pixel Ratio</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* High DPI displays */
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+       only screen and (min--moz-device-pixel-ratio: 2),
+       only screen and (-o-min-device-pixel-ratio: 2/1),
+       only screen and (min-device-pixel-ratio: 2),
+       only screen and (min-resolution: 192dpi),
+       only screen and (min-resolution: 2dppx) {
+    
+    /* High resolution styles */
+    .logo {
+        background-image: url('logo@2x.png');
+        background-size: 100px 50px;
+    }
+}
+
+/* Retina display specific */
+@media (-webkit-min-device-pixel-ratio: 2) {
+    .retina-image {
+        background-image: url('image@2x.jpg');
+        background-size: contain;
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 3: Media Queries -->
+                    <div id="lesson3" class="lesson-content">
+                        <h2>Pelajaran 3: Media Queries</h2>
+                        <p>Media queries adalah fitur CSS yang memungkinkan kita menerapkan style berbeda berdasarkan karakteristik device atau viewport.</p>
+                        
+                        <h3>Syntax Media Queries</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Basic syntax */
+@media media-type and (media-feature) {
+    /* CSS rules */
+}
+
+/* Examples */
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}
+
+@media print {
+    .no-print {
+        display: none;
+    }
+}
+
+@media screen and (orientation: landscape) {
+    .landscape-only {
+        display: block;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Media Types</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* all - untuk semua media types (default) */
+@media all and (max-width: 768px) { ... }
+
+/* screen - untuk layar komputer, tablet, smartphone */
+@media screen and (max-width: 768px) { ... }
+
+/* print - untuk printer dan print preview */
+@media print {
+    body {
+        font-size: 12pt;
+        color: black;
+        background: white;
+    }
+    
+    .no-print {
+        display: none;
+    }
+    
+    a:after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* speech - untuk screen readers */
+@media speech {
+    .visually-hidden {
+        position: static;
+        clip: auto;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Media Features</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Width dan Height */
+@media (max-width: 768px) { ... }        /* Maksimal 768px */
+@media (min-width: 769px) { ... }        /* Minimal 769px */
+@media (width: 768px) { ... }            /* Tepat 768px */
+
+@media (max-height: 600px) { ... }       /* Maksimal tinggi 600px */
+@media (min-height: 601px) { ... }       /* Minimal tinggi 601px */
+
+/* Orientation */
+@media (orientation: portrait) { ... }    /* Tinggi > Lebar */
+@media (orientation: landscape) { ... }   /* Lebar > Tinggi */
+
+/* Aspect Ratio */
+@media (aspect-ratio: 16/9) { ... }      /* Rasio 16:9 */
+@media (min-aspect-ratio: 4/3) { ... }   /* Minimal rasio 4:3 */
+
+/* Resolution */
+@media (min-resolution: 2dppx) { ... }   /* High DPI displays */
+@media (min-resolution: 192dpi) { ... }  /* 192 dots per inch */
+
+/* Color */
+@media (color) { ... }                   /* Device mendukung warna */
+@media (min-color: 8) { ... }            /* Minimal 8-bit color */
+
+/* Hover capability */
+@media (hover: hover) { ... }            /* Device bisa hover */
+@media (hover: none) { ... }             /* Touch devices */
+
+/* Pointer accuracy */
+@media (pointer: fine) { ... }           /* Mouse, trackpad */
+@media (pointer: coarse) { ... }         /* Touch screens */</code></pre>
+                        </div>
+
+                        <h3>Logical Operators</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* AND operator */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Tablet landscape */
+}
+
+/* OR operator (comma) */
+@media (max-width: 768px), (orientation: portrait) {
+    /* Mobile OR portrait orientation */
+}
+
+/* NOT operator */
+@media not screen and (max-width: 768px) {
+    /* NOT mobile screens */
+}
+
+/* ONLY operator */
+@media only screen and (max-width: 768px) {
+    /* Hanya untuk screen, bukan print */
+}
+
+/* Complex queries */
+@media screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+    /* Tablet landscape specific */
+    .tablet-landscape {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Breakpoint Strategy</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mobile First Approach */
+/* Base styles untuk mobile */
+.container {
+    padding: 15px;
+}
+
+.grid {
+    display: block;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+}
+
+/* Small tablets */
+@media (min-width: 576px) {
+    .container {
+        padding: 20px;
+    }
+}
+
+/* Large tablets */
+@media (min-width: 768px) {
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .grid-item {
+        margin-bottom: 0;
+    }
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+    .container {
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 4: Flexible Layouts -->
+                    <div id="lesson4" class="lesson-content">
+                        <h2>Pelajaran 4: Flexible Layouts</h2>
+                        <p>Flexible layouts menggunakan unit relatif dan teknik modern CSS untuk membuat layout yang dapat beradaptasi dengan berbagai ukuran layar.</p>
+                        
+                        <h3>Flexbox untuk Responsive Layout</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Basic Flexbox Layout */
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.flex-item {
+    flex: 1;
+    min-width: 250px; /* Minimum width sebelum wrap */
+}
+
+/* Responsive Navigation */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+@media (max-width: 768px) {
+    .nav {
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        width: 100%;
+        justify-content: center;
+        margin-top: 20px;
+    }
+}
+
+/* Card Layout */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    flex: 1 1 300px; /* grow shrink basis */
+    max-width: 400px;
+    min-width: 250px;
+}</code></pre>
+                        </div>
+
+                        <h3>CSS Grid untuk Responsive Layout</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Auto-fit Grid */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Auto-fill Grid */
+.grid-auto-fill {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+/* Responsive Grid Areas */
+.layout {
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "sidebar main main"
+        "footer footer footer";
+    grid-template-columns: 250px 1fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    gap: 20px;
+}
+
+.header { grid-area: header; }
+.sidebar { grid-area: sidebar; }
+.main { grid-area: main; }
+.footer { grid-area: footer; }
+
+@media (max-width: 768px) {
+    .layout {
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Responsive Grid with Different Breakpoints */
+.responsive-grid {
+    display: grid;
+    gap: 20px;
+}
+
+/* Mobile: 1 column */
+@media (max-width: 576px) {
+    .responsive-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet: 2 columns */
+@media (min-width: 577px) and (max-width: 768px) {
+    .responsive-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop: 3 columns */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .responsive-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large Desktop: 4 columns */
+@media (min-width: 1025px) {
+    .responsive-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Fluid Typography</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Responsive Font Sizes */
+html {
+    font-size: 16px;
+}
+
+@media (max-width: 768px) {
+    html {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1200px) {
+    html {
+        font-size: 18px;
+    }
+}
+
+/* Fluid Typography dengan clamp() */
+.fluid-text {
+    font-size: clamp(1rem, 2.5vw, 2rem);
+    /* min: 1rem, preferred: 2.5vw, max: 2rem */
+}
+
+.heading {
+    font-size: clamp(1.5rem, 4vw, 3rem);
+    line-height: 1.2;
+}
+
+/* Responsive Line Height */
+.paragraph {
+    font-size: clamp(0.875rem, 1.5vw, 1.125rem);
+    line-height: clamp(1.4, 1.5vw + 1rem, 1.6);
+}
+
+/* Viewport-based Typography */
+.hero-title {
+    font-size: 8vw;
+    font-size: clamp(2rem, 8vw, 6rem);
+}
+
+.subtitle {
+    font-size: 4vw;
+    font-size: clamp(1rem, 4vw, 2rem);
+}</code></pre>
+                        </div>
+
+                        <h3>Container Queries (Modern)</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Container Queries - CSS yang lebih modern */
+.card-container {
+    container-type: inline-size;
+    container-name: card;
+}
+
+.card {
+    padding: 1rem;
+    background: white;
+    border-radius: 8px;
+}
+
+/* Query berdasarkan ukuran container, bukan viewport */
+@container card (min-width: 300px) {
+    .card {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        gap: 1rem;
+    }
+}
+
+@container card (min-width: 500px) {
+    .card {
+        grid-template-columns: auto 1fr auto;
+        padding: 2rem;
+    }
+}
+
+/* Fallback untuk browser yang belum support */
+@supports not (container-type: inline-size) {
+    @media (min-width: 300px) {
+        .card {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 1rem;
+        }
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 5: Responsive Images -->
+                    <div id="lesson5" class="lesson-content">
+                        <h2>Pelajaran 5: Responsive Images</h2>
+                        <p>Responsive images memastikan gambar dapat beradaptasi dengan berbagai ukuran layar dan resolusi untuk performa dan tampilan yang optimal.</p>
+                        
+                        <h3>Basic Responsive Images</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Basic responsive image */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Responsive image dengan object-fit */
+.responsive-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover; /* cover, contain, fill, scale-down, none */
+    object-position: center;
+}
+
+/* Different object-fit values */
+.cover-img {
+    object-fit: cover; /* Crop untuk fill container */
+}
+
+.contain-img {
+    object-fit: contain; /* Fit seluruh gambar dalam container */
+}
+
+.fill-img {
+    object-fit: fill; /* Stretch untuk fill container */
+}
+
+/* Responsive background images */
+.hero-bg {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 50vh;
+    min-height: 300px;
+}
+
+@media (max-width: 768px) {
+    .hero-bg {
+        height: 40vh;
+        min-height: 250px;
+        background-position: center top;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Picture Element</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- Picture element untuk art direction --&gt;
+&lt;picture&gt;
+    &lt;!-- Desktop: landscape image --&gt;
+    &lt;source media="(min-width: 768px)" srcset="hero-desktop.jpg"&gt;
+    
+    &lt;!-- Tablet: medium image --&gt;
+    &lt;source media="(min-width: 480px)" srcset="hero-tablet.jpg"&gt;
+    
+    &lt;!-- Mobile: portrait image --&gt;
+    &lt;img src="hero-mobile.jpg" alt="Hero image"&gt;
+&lt;/picture&gt;
+
+&lt;!-- Multiple resolutions --&gt;
+&lt;picture&gt;
+    &lt;source 
+        media="(min-width: 768px)" 
+        srcset="large-1x.jpg 1x, large-2x.jpg 2x"&gt;
+    
+    &lt;source 
+        media="(min-width: 480px)" 
+        srcset="medium-1x.jpg 1x, medium-2x.jpg 2x"&gt;
+    
+    &lt;img 
+        src="small-1x.jpg" 
+        srcset="small-1x.jpg 1x, small-2x.jpg 2x"
+        alt="Responsive image"&gt;
+&lt;/picture&gt;
+
+&lt;!-- WebP dengan fallback --&gt;
+&lt;picture&gt;
+    &lt;source type="image/webp" srcset="image.webp"&gt;
+    &lt;source type="image/jpeg" srcset="image.jpg"&gt;
+    &lt;img src="image.jpg" alt="Image with WebP support"&gt;
+&lt;/picture&gt;</code></pre>
+                        </div>
+
+                        <h3>Srcset dan Sizes</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- Srcset dengan width descriptors --&gt;
+&lt;img 
+    src="image-400.jpg" 
+    srcset="image-400.jpg 400w,
+            image-800.jpg 800w,
+            image-1200.jpg 1200w,
+            image-1600.jpg 1600w"
+    sizes="(max-width: 480px) 100vw,
+           (max-width: 768px) 50vw,
+           (max-width: 1024px) 33vw,
+           25vw"
+    alt="Responsive image"&gt;
+
+&lt;!-- Srcset dengan density descriptors --&gt;
+&lt;img 
+    src="image.jpg" 
+    srcset="image.jpg 1x,
+            image@2x.jpg 2x,
+            image@3x.jpg 3x"
+    alt="High DPI image"&gt;
+
+&lt;!-- Complex sizes calculation --&gt;
+&lt;img 
+    src="product.jpg"
+    srcset="product-300.jpg 300w,
+            product-600.jpg 600w,
+            product-900.jpg 900w,
+            product-1200.jpg 1200w"
+    sizes="(max-width: 480px) calc(100vw - 40px),
+           (max-width: 768px) calc(50vw - 60px),
+           (max-width: 1024px) calc(33.333vw - 80px),
+           calc(25vw - 100px)"
+    alt="Product image"&gt;</code></pre>
+                        </div>
+
+                        <h3>CSS Responsive Images</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Responsive background images dengan media queries */
+.hero {
+    background-image: url('hero-mobile.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        background-image: url('hero-tablet.jpg');
+        height: 60vh;
+    }
+}
+
+@media (min-width: 1024px) {
+    .hero {
+        background-image: url('hero-desktop.jpg');
+        height: 70vh;
+    }
+}
+
+@media (min-width: 1024px) and (-webkit-min-device-pixel-ratio: 2) {
+    .hero {
+        background-image: url('hero-desktop@2x.jpg');
+    }
+}
+
+/* Image replacement technique */
+.logo {
+    width: 200px;
+    height: 50px;
+    background-image: url('logo.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    text-indent: -9999px; /* Hide text */
+}
+
+@media (max-width: 480px) {
+    .logo {
+        width: 150px;
+        height: 37px;
+        background-image: url('logo-small.svg');
+    }
+}
+
+/* Aspect ratio boxes */
+.image-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    overflow: hidden;
+}
+
+.image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Modern aspect-ratio property */
+.modern-aspect {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    object-fit: cover;
+}</code></pre>
+                        </div>
+
+                        <h3>Lazy Loading</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- Native lazy loading --&gt;
+&lt;img 
+    src="image.jpg" 
+    loading="lazy" 
+    alt="Lazy loaded image"&gt;
+
+&lt;!-- Lazy loading dengan placeholder --&gt;
+&lt;img 
+    src="placeholder.jpg" 
+    data-src="actual-image.jpg"
+    class="lazy-load"
+    alt="Image with placeholder"&gt;
+
+&lt;!-- CSS untuk lazy loading --&gt;
+&lt;style&gt;
+.lazy-load {
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.lazy-load.loaded {
+    opacity: 1;
+}
+
+.lazy-load {
+    background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+    background-size: 200% 100%;
+    animation: loading 1.5s infinite;
+}
+
+@keyframes loading {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+&lt;/style&gt;
+
+&lt;!-- JavaScript untuk lazy loading --&gt;
+&lt;script&gt;
+const lazyImages = document.querySelectorAll('.lazy-load');
+
+const imageObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const img = entry.target;
+            img.src = img.dataset.src;
+            img.classList.add('loaded');
+            observer.unobserve(img);
+        }
+    });
+});
+
+lazyImages.forEach(img => imageObserver.observe(img));
+&lt;/script&gt;</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 6: Mobile-First Design -->
+                    <div id="lesson6" class="lesson-content">
+                        <h2>Pelajaran 6: Mobile-First Design</h2>
+                        <p>Mobile-first design adalah pendekatan yang memulai desain dari layar terkecil (mobile) kemudian berkembang ke layar yang lebih besar.</p>
+                        
+                        <h3>Mengapa Mobile-First?</h3>
+                        <ul>
+                            <li>Mayoritas traffic web berasal dari mobile</li>
+                            <li>Lebih mudah menambah fitur daripada mengurangi</li>
+                            <li>Performance yang lebih baik di mobile</li>
+                            <li>Progressive enhancement approach</li>
+                            <li>Google menggunakan mobile-first indexing</li>
+                        </ul>
+
+                        <h3>Mobile-First CSS Structure</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Base styles - Mobile first (320px+) */
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    background: #333;
+}
+
+.nav-item {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+}
+
+.content {
+    padding: 20px 0;
+}
+
+.grid {
+    display: block;
+}
+
+.grid-item {
+    margin-bottom: 20px;
+    padding: 15px;
+    background: #f5f5f5;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+    }
+    
+    .grid-item {
+        margin-bottom: 0;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    .navigation {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .nav-item {
+        border-bottom: none;
+        border-right: 1px solid #555;
+    }
+    
+    .nav-item:last-child {
+        border-right: none;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    .content {
+        padding: 40px 0;
+    }
+    
+    .grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 25px;
+    }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Mobile Navigation Patterns</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Hamburger Menu */
+.mobile-menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #333;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-menu li {
+    border-bottom: 1px solid #555;
+}
+
+.nav-menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+}
+
+/* Desktop Navigation */
+@media (min-width: 768px) {
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    .nav-menu {
+        display: flex !important;
+        position: static;
+        width: auto;
+        background: transparent;
+        box-shadow: none;
+    }
+    
+    .nav-menu ul {
+        display: flex;
+    }
+    
+    .nav-menu li {
+        border-bottom: none;
+    }
+    
+    .nav-menu a {
+        padding: 10px 15px;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Touch-Friendly Design</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Touch targets - minimum 44px */
+.btn {
+    min-height: 44px;
+    min-width: 44px;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px; /* Prevents zoom on iOS */
+    cursor: pointer;
+    touch-action: manipulation; /* Prevents double-tap zoom */
+}
+
+/* Form inputs */
+input, select, textarea {
+    min-height: 44px;
+    padding: 12px;
+    font-size: 16px; /* Prevents zoom on iOS */
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+/* Links in content */
+a {
+    min-height: 44px;
+    display: inline-block;
+    padding: 8px 4px;
+}
+
+/* Hover states for touch devices */
+@media (hover: hover) {
+    .btn:hover {
+        background-color: #0056b3;
+    }
+    
+    a:hover {
+        text-decoration: underline;
+    }
+}
+
+/* Touch-specific styles */
+@media (hover: none) {
+    .btn:active {
+        background-color: #0056b3;
+        transform: scale(0.98);
+    }
+}
+
+/* Swipe gestures */
+.swipeable {
+    touch-action: pan-x;
+    user-select: none;
+}
+
+/* Prevent text selection on touch */
+.no-select {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}</code></pre>
+                        </div>
+
+                        <h3>Performance Optimization</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Critical CSS - inline dalam <head> */
+/* Hanya styles yang diperlukan untuk above-the-fold content */
+
+/* Reduce repaints dan reflows */
+.animated-element {
+    will-change: transform;
+    transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Efficient animations */
+@keyframes slideIn {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.slide-animation {
+    animation: slideIn 0.3s ease-out;
+}
+
+/* Conditional loading untuk desktop features */
+@media (min-width: 768px) {
+    .desktop-only {
+        display: block;
+    }
+    
+    /* Load additional styles untuk desktop */
+    .complex-layout {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+    }
+}
+
+/* Preload critical resources */
+/* Di HTML: */
+/* <link rel="preload" href="critical.css" as="style"> */
+/* <link rel="preload" href="hero-image.jpg" as="image"> */
+
+/* Reduce motion untuk accessibility */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="quiz-section">
+                            <h3>Kuis: Responsive Web Design</h3>
+                            <div class="quiz-question">
+                                <p><strong>1. Apa yang dimaksud dengan mobile-first design?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q1" value="a"> Desain khusus untuk mobile saja</label>
+                                    <label><input type="radio" name="q1" value="b"> Mulai desain dari mobile kemudian ke desktop</label>
+                                    <label><input type="radio" name="q1" value="c"> Desain yang hanya berfungsi di mobile</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>2. Unit CSS mana yang paling cocok untuk responsive design?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q2" value="a"> px (pixels)</label>
+                                    <label><input type="radio" name="q2" value="b"> em, rem, %, vw, vh</label>
+                                    <label><input type="radio" name="q2" value="c"> pt (points)</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>3. Apa fungsi viewport meta tag?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q3" value="a"> Mengatur warna background</label>
+                                    <label><input type="radio" name="q3" value="b"> Mengontrol tampilan di mobile browser</label>
+                                    <label><input type="radio" name="q3" value="c"> Menambahkan animasi</label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="submitQuiz()">Submit Kuis</button>
+                            <div id="quiz-result" class="quiz-result"></div>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="completeCourse()">Selesaikan Kursus</button>
+                        </div>
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeBuddy. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/course.js"></script>
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+        });
+    </script>
+</body>
+</html>

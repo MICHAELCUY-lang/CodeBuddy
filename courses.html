@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kursus - CodeBuddy</title>
+    <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="courses.html" class="active">Kursus</a></li>
+                        <li><a href="progress.html">Progres Saya</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <!-- Tombol toggle tema dihapus untuk hanya menggunakan dark mode -->
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h2>Semua Kursus Programming</h2>
+            <p>Pilih kursus yang sesuai dengan minat dan level Anda. Dari pemula hingga expert, kami punya semuanya!</p>
+        </div>
+    </section>
+
+    <section class="course-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="filter-btn active" data-filter="all"><i class="fas fa-star"></i> Semua</button>
+                <button class="filter-btn" data-filter="html-css"><i class="fas fa-palette"></i> HTML & CSS</button>
+                <button class="filter-btn" data-filter="javascript"><i class="fas fa-laptop-code"></i> JavaScript</button>
+                <button class="filter-btn" data-filter="responsive"><i class="fas fa-mobile-alt"></i> Responsive Web</button>
+                <button class="filter-btn" data-filter="backend"><i class="fas fa-cogs"></i> Backend</button>
+                <button class="filter-btn" data-filter="data"><i class="fas fa-chart-bar"></i> Data Science</button>
+            </div>
+
+            <div class="course-grid">
+                <!-- HTML & CSS Courses -->
+                <div class="course-card animate-on-scroll" data-category="html-css">
+                    <div class="course-image">
+                        <img src="img/html-course.svg" alt="HTML Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Dasar-dasar HTML</h3>
+                        <p>Pelajari struktur dasar HTML dan cara membuat halaman web sederhana.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-code"></i> HTML</span>
+                            <span><i class="fas fa-clock"></i> 5 Pelajaran</span>
+                            <span><i class="fas fa-user"></i> Pemula</span>
+                        </div>
+                        <a href="courses/html-basics.html" class="btn btn-secondary">Mulai Belajar</a>
+                    </div>
+                </div>
+
+                <div class="course-card animate-on-scroll" data-category="html-css">
+                    <div class="course-image">
+                        <img src="img/css-course.svg" alt="CSS Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Dasar-dasar CSS</h3>
+                        <p>Pelajari cara mendesain dan mempercantik halaman web dengan CSS.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-code"></i> CSS</span>
+                            <span><i class="fas fa-clock"></i> 5 Pelajaran</span>
+                            <span><i class="fas fa-user"></i> Pemula</span>
+                        </div>
+                        <a href="courses/css-basics.html" class="btn btn-secondary">Mulai Belajar</a>
+                    </div>
+                </div>
+
+                <div class="course-card animate-on-scroll" data-category="html-css">
+                    <div class="course-image">
+                        <img src="img/html-course.svg" alt="HTML Forms Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Formulir HTML</h3>
+                        <p>Pelajari cara membuat dan mengelola formulir interaktif dengan HTML.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-code"></i> HTML</span>
+                            <span><i class="fas fa-clock"></i> 4 Pelajaran</span>
+                            <span><i class="fas fa-user-friends"></i> Menengah</span>
+                        </div>
+                        <a href="courses/html-forms.html" class="btn btn-secondary">Mulai Belajar</a>
+                    </div>
+                </div>
+
+                <!-- JavaScript Courses -->
+                <div class="course-card animate-on-scroll" data-category="javascript">
+                    <div class="course-image">
+                        <img src="img/js-course.svg" alt="JavaScript Basics Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Dasar-dasar JavaScript</h3>
+                        <p>Pelajari konsep dasar JavaScript dan cara menggunakannya dalam halaman web.</p>
+                        <div class="course-meta">
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                            <span><i class="fas fa-clock"></i> 6 Pelajaran</span>
+                            <span><i class="fas fa-user"></i> Pemula</span>
+                        </div>
+                        <a href="courses/js-basics.html" class="btn btn-secondary">Mulai Belajar</a>
+                    </div>
+                </div>
+
+                <div class="course-card animate-on-scroll" data-category="javascript">
+                    <div class="course-image">
+                        <img src="img/js-dom-course.svg" alt="JavaScript DOM Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>JavaScript DOM</h3>
+                        <p>Pelajari cara memanipulasi elemen HTML dengan JavaScript melalui DOM.</p>
+                        <div class="course-meta">
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                            <span><i class="fas fa-clock"></i> 5 Pelajaran</span>
+                            <span><i class="fas fa-user-friends"></i> Menengah</span>
+                        </div>
+                        <a href="courses/js-dom.html" class="btn btn-secondary">Mulai Belajar</a>
+                    </div>
+                </div>
+
+                <div class="course-card animate-on-scroll" data-category="javascript">
+                    <div class="course-image">
+                        <img src="img/js-course.svg" alt="JavaScript Events Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>JavaScript Events</h3>
+                        <p>Pelajari cara menangani event dan membuat interaksi pengguna dengan JavaScript.</p>
+                        <div class="course-meta">
+                            <span><i class="fab fa-js"></i> JavaScript</span>
+                            <span><i class="fas fa-clock"></i> 4 Pelajaran</span>
+                            <span><i class="fas fa-user-friends"></i> Menengah</span>
+                        </div>
+                        <a href="courses/js-events.html" class="btn btn-secondary">Mulai Belajar</a>
+                    </div>
+                </div>
+
+                <!-- Responsive Web Courses -->
+                <div class="course-card animate-on-scroll" data-category="responsive">
+                    <div class="course-image">
+                        <img src="img/responsive-course.svg" alt="Responsive Web Basics Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Dasar-dasar Responsive Web</h3>
+                        <p>Pelajari konsep dasar desain web responsif dan media queries.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-code"></i> HTML/CSS</span>
+                            <span><i class="fas fa-clock"></i> 4 Pelajaran</span>
+                            <span><i class="fas fa-user-friends"></i> Menengah</span>
+                        </div>
+                        <a href="courses/responsive-basics.html" class="btn btn-secondary">Mulai Belajar</a>
+                    </div>
+                </div>
+
+                <div class="course-card animate-on-scroll" data-category="responsive">
+                    <div class="course-image">
+                        <img src="img/css-course.svg" alt="CSS Flexbox Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>CSS Flexbox</h3>
+                        <p>Pelajari cara menggunakan Flexbox untuk layout yang responsif dan fleksibel.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-code"></i> CSS</span>
+                            <span><i class="fas fa-clock"></i> 4 Pelajaran</span>
+                            <span><i class="fas fa-user-friends"></i> Menengah</span>
+                        </div>
+                        <a href="courses/flexbox.html" class="btn btn-secondary">Mulai Belajar</a>
+                    </div>
+                </div>
+
+                <div class="course-card animate-on-scroll" data-category="responsive">
+                    <div class="course-image">
+                        <img src="img/css-course.svg" alt="CSS Grid Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>CSS Grid</h3>
+                        <p>Pelajari cara menggunakan CSS Grid untuk layout yang kompleks dan responsif.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-code"></i> CSS</span>
+                            <span><i class="fas fa-clock"></i> 4 Pelajaran</span>
+                            <span><i class="fas fa-user-tie"></i> Lanjutan</span>
+                        </div>
+                        <a href="courses/grid.html" class="btn btn-secondary">Mulai Belajar</a>
+                    </div>
+                </div>
+                
+                <!-- Backend Courses -->
+                <div class="course-card animate-on-scroll" data-category="backend">
+                    <div class="course-image">
+                        <img src="img/nodejs-course.svg" alt="Node.js Backend Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Node.js Backend</h3>
+                        <p>Pelajari pengembangan backend dengan Node.js untuk membangun API dan server aplikasi.</p>
+                        <div class="course-meta">
+                            <span><i class="fab fa-node-js"></i> Node.js</span>
+                            <span><i class="fas fa-clock"></i> 8 Pelajaran</span>
+                            <span><i class="fas fa-user-friends"></i> Menengah</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Coming Soon</a>
+                    </div>
+                </div>
+                
+                <!-- Data Science Courses -->
+                <div class="course-card animate-on-scroll" data-category="data">
+                    <div class="course-image">
+                        <img src="img/python-course.svg" alt="Python for Data Science Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Python untuk Data Science</h3>
+                        <p>Pelajari analisis data, machine learning, dan visualisasi data menggunakan Python.</p>
+                        <div class="course-meta">
+                            <span><i class="fab fa-python"></i> Python</span>
+                            <span><i class="fas fa-clock"></i> 12 Pelajaran</span>
+                            <span><i class="fas fa-user-tie"></i> Lanjutan</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buatkan design untuk learning path -->
+    <!-- <section class="learning-path">
+        <div class="container">
+            <h2 class="section-title">Jalur Pembelajaran yang Direkomendasikan</h2>
+            <div class="path-container">
+                <div class="path-step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Dasar-dasar HTML</h3>
+                        <p>Mulai dengan mempelajari struktur dasar HTML.</p>
+                        <a href="courses/html-basics.html" class="btn btn-outline">Mulai</a>
+                    </div>
+                </div>
+                <div class="path-connector"></div>
+                <div class="path-step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Dasar-dasar CSS</h3>
+                        <p>Pelajari cara mendesain halaman web dengan CSS.</p>
+                        <a href="courses/css-basics.html" class="btn btn-outline">Mulai</a>
+                    </div>
+                </div>
+                <div class="path-connector"></div>
+                <div class="path-step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Dasar-dasar JavaScript</h3>
+                        <p>Tambahkan interaktivitas dengan JavaScript.</p>
+                        <a href="courses/js-basics.html" class="btn btn-outline">Mulai</a>
+                    </div>
+                </div>
+                <div class="path-connector"></div>
+                <div class="path-step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Responsive Web Design</h3>
+                        <p>Buat website yang responsif untuk semua perangkat.</p>
+                        <a href="courses/responsive-basics.html" class="btn btn-outline">Mulai</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="courses.html">Kursus</a></li>
+                        <li><a href="progress.html">Progres Saya</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kursus</h4>
+                    <ul>
+                        <li><a href="courses/html-basics.html">HTML Dasar</a></li>
+                        <li><a href="courses/css-basics.html">CSS Dasar</a></li>
+                        <li><a href="courses/js-basics.html">JavaScript Dasar</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CodeBuddy. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hanya menggunakan dark mode
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selalu mengatur tema ke dark mode
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+            
+            // Initialize scroll animations
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -50px 0px'
+            };
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, observerOptions);
+            
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            animateElements.forEach(el => observer.observe(el));
+            
+            // Course filtering
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            const courseCards = document.querySelectorAll('.course-card');
+            
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    // Remove active class from all buttons
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    // Add active class to clicked button
+                    btn.classList.add('active');
+                    
+                    const filter = btn.getAttribute('data-filter');
+                    
+                    courseCards.forEach((card, index) => {
+                        if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                            setTimeout(() => {
+                                card.style.display = 'block';
+                                card.style.animation = 'scaleIn 0.6s ease forwards';
+                            }, index * 100);
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,1408 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Flexbox - CodeBuddy</title>
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <a href="../courses.html" class="back-button">
+                ← Kembali ke Kursus
+            </a>
+            <div class="course-info">
+                <h2>CSS Flexbox</h2>
+                <p>Pelajari CSS Flexbox untuk membuat layout yang fleksibel dan responsif. Kursus ini akan mengajarkan Anda cara menggunakan Flexbox untuk mengatur elemen dengan mudah dan efisien.</p>
+                <div class="course-meta">
+                    <span>📐 CSS Flexbox</span>
+                    <span>⏰ 4 Pelajaran</span>
+                    <span>👤 Menengah</span>
+                    <span>⭐ 4.8/5</span>
+                </div>
+            </div>
+            <div class="course-progress">
+                <h3>Progress Kursus</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="courseProgress" style="width: 0%"></div>
+                </div>
+                <span class="progress-text" id="progressText">0% (0/5 pelajaran)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            <div class="course-layout">
+                <aside class="lesson-sidebar">
+                    <h3>Daftar Pelajaran</h3>
+                    <ul>
+                        <li><a href="#lesson1" class="lesson-link active">1. Pengenalan Flexbox</a></li>
+                        <li><a href="#lesson2" class="lesson-link">2. Flex Container</a></li>
+                        <li><a href="#lesson3" class="lesson-link">3. Flex Items</a></li>
+                        <li><a href="#lesson4" class="lesson-link">4. Alignment & Spacing</a></li>
+                        <li><a href="#lesson5" class="lesson-link">5. Practical Examples</a></li>
+                    </ul>
+                    <div class="progress-sidebar">
+                        <h4>Progress Kursus</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% (0/5 pelajaran)</span>
+                    </div>
+                </aside>
+
+                <main class="lesson-main">
+                    <!-- Lesson 1: Pengenalan Flexbox -->
+                    <div id="lesson1" class="lesson-content active">
+                        <h2>Pelajaran 1: Pengenalan Flexbox</h2>
+                        <p>CSS Flexbox (Flexible Box Layout) adalah metode layout yang memungkinkan kita mengatur elemen dalam container dengan cara yang fleksibel dan efisien.</p>
+                        
+                        <h3>Mengapa Menggunakan Flexbox?</h3>
+                        <ul>
+                            <li>Layout yang responsif dan fleksibel</li>
+                            <li>Mudah mengatur alignment dan spacing</li>
+                            <li>Mengatasi masalah layout tradisional (float, positioning)</li>
+                            <li>Distribusi ruang yang dinamis</li>
+                            <li>Dukungan browser yang baik</li>
+                        </ul>
+
+                        <h3>Konsep Dasar Flexbox</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Membuat flex container */
+.container {
+    display: flex;
+}
+
+/* Atau inline-flex */
+.inline-container {
+    display: inline-flex;
+}
+
+/* Basic flex layout */
+.flex-container {
+    display: flex;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.flex-item {
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+}</code></pre>
+                        </div>
+
+                        <h3>Flex Axes (Sumbu Flex)</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Main Axis (sumbu utama) - default: horizontal */
+/* Cross Axis (sumbu silang) - default: vertical */
+
+/* Horizontal layout (default) */
+.horizontal-flex {
+    display: flex;
+    flex-direction: row; /* default */
+}
+
+/* Vertical layout */
+.vertical-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Reverse layouts */
+.reverse-horizontal {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.reverse-vertical {
+    display: flex;
+    flex-direction: column-reverse;
+}</code></pre>
+                        </div>
+
+                        <h3>Flexbox vs Traditional Layout</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Traditional layout dengan float */
+.traditional-container {
+    overflow: hidden; /* clearfix */
+}
+
+.traditional-item {
+    float: left;
+    width: 33.333%;
+    box-sizing: border-box;
+    padding: 10px;
+}
+
+/* Flexbox equivalent */
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    flex: 1; /* Equal width */
+    padding: 10px;
+}
+
+/* Centering dengan traditional method */
+.traditional-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Centering dengan flexbox */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}</code></pre>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 2: Flex Container -->
+                    <div id="lesson2" class="lesson-content">
+                        <h2>Pelajaran 2: Flex Container Properties</h2>
+                        <p>Flex container adalah parent element yang menggunakan display: flex. Container memiliki beberapa properties untuk mengontrol layout flex items.</p>
+                        
+                        <h3>flex-direction</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mengatur arah main axis */
+.container {
+    display: flex;
+}
+
+/* row (default) - horizontal, left to right */
+.row {
+    flex-direction: row;
+}
+
+/* row-reverse - horizontal, right to left */
+.row-reverse {
+    flex-direction: row-reverse;
+}
+
+/* column - vertical, top to bottom */
+.column {
+    flex-direction: column;
+}
+
+/* column-reverse - vertical, bottom to top */
+.column-reverse {
+    flex-direction: column-reverse;
+}</code></pre>
+                        </div>
+
+                        <h3>flex-wrap</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mengatur apakah items bisa wrap ke baris baru */
+
+/* nowrap (default) - semua items dalam satu baris */
+.no-wrap {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+/* wrap - items bisa wrap ke baris baru */
+.wrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* wrap-reverse - wrap tapi urutan baris terbalik */
+.wrap-reverse {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+/* Shorthand: flex-flow */
+.flex-flow {
+    display: flex;
+    flex-flow: row wrap; /* flex-direction flex-wrap */
+}
+
+.flex-flow-column {
+    display: flex;
+    flex-flow: column nowrap;
+}</code></pre>
+                        </div>
+
+                        <h3>justify-content</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mengatur alignment di main axis */
+
+/* flex-start (default) - items di awal */
+.justify-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+/* flex-end - items di akhir */
+.justify-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* center - items di tengah */
+.justify-center {
+    display: flex;
+    justify-content: center;
+}
+
+/* space-between - space di antara items */
+.justify-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* space-around - space di sekitar items */
+.justify-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* space-evenly - space yang sama di semua gap */
+.justify-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}</code></pre>
+                        </div>
+
+                        <h3>align-items</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mengatur alignment di cross axis */
+
+/* stretch (default) - items stretch untuk fill container */
+.align-stretch {
+    display: flex;
+    align-items: stretch;
+    height: 200px;
+}
+
+/* flex-start - items di awal cross axis */
+.align-start {
+    display: flex;
+    align-items: flex-start;
+    height: 200px;
+}
+
+/* flex-end - items di akhir cross axis */
+.align-end {
+    display: flex;
+    align-items: flex-end;
+    height: 200px;
+}
+
+/* center - items di tengah cross axis */
+.align-center {
+    display: flex;
+    align-items: center;
+    height: 200px;
+}
+
+/* baseline - items align berdasarkan text baseline */
+.align-baseline {
+    display: flex;
+    align-items: baseline;
+    height: 200px;
+}</code></pre>
+                        </div>
+
+                        <h3>align-content</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mengatur alignment untuk multiple lines (ketika wrap) */
+
+/* stretch (default) - lines stretch untuk fill container */
+.content-stretch {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: stretch;
+    height: 300px;
+}
+
+/* flex-start - lines di awal */
+.content-start {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    height: 300px;
+}
+
+/* flex-end - lines di akhir */
+.content-end {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-end;
+    height: 300px;
+}
+
+/* center - lines di tengah */
+.content-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    height: 300px;
+}
+
+/* space-between - space di antara lines */
+.content-between {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    height: 300px;
+}
+
+/* space-around - space di sekitar lines */
+.content-around {
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-around;
+    height: 300px;
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 3: Flex Items -->
+                    <div id="lesson3" class="lesson-content">
+                        <h2>Pelajaran 3: Flex Items Properties</h2>
+                        <p>Flex items adalah child elements dari flex container. Setiap flex item memiliki properties untuk mengontrol ukuran dan posisinya.</p>
+                        
+                        <h3>flex-grow</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mengatur kemampuan item untuk grow */
+
+.container {
+    display: flex;
+    width: 600px;
+}
+
+/* flex-grow: 0 (default) - tidak grow */
+.item-no-grow {
+    flex-grow: 0;
+    width: 100px;
+}
+
+/* flex-grow: 1 - grow untuk mengisi space */
+.item-grow {
+    flex-grow: 1;
+}
+
+/* flex-grow dengan ratio berbeda */
+.item-grow-1 {
+    flex-grow: 1; /* Mendapat 1 bagian */
+}
+
+.item-grow-2 {
+    flex-grow: 2; /* Mendapat 2 bagian */
+}
+
+.item-grow-3 {
+    flex-grow: 3; /* Mendapat 3 bagian */
+}
+
+/* Contoh praktis */
+.sidebar {
+    flex-grow: 0;
+    width: 250px;
+}
+
+.main-content {
+    flex-grow: 1; /* Mengisi sisa space */
+}</code></pre>
+                        </div>
+
+                        <h3>flex-shrink</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mengatur kemampuan item untuk shrink */
+
+.container {
+    display: flex;
+    width: 300px; /* Container lebih kecil dari total item width */
+}
+
+/* flex-shrink: 1 (default) - bisa shrink */
+.item-shrink {
+    flex-shrink: 1;
+    width: 200px;
+}
+
+/* flex-shrink: 0 - tidak bisa shrink */
+.item-no-shrink {
+    flex-shrink: 0;
+    width: 200px;
+}
+
+/* flex-shrink dengan ratio berbeda */
+.item-shrink-1 {
+    flex-shrink: 1; /* Shrink normal */
+    width: 200px;
+}
+
+.item-shrink-2 {
+    flex-shrink: 2; /* Shrink 2x lebih cepat */
+    width: 200px;
+}
+
+/* Contoh praktis - prevent shrinking */
+.logo {
+    flex-shrink: 0;
+    width: 150px;
+}
+
+.navigation {
+    flex-shrink: 1;
+}</code></pre>
+                        </div>
+
+                        <h3>flex-basis</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Mengatur initial size sebelum grow/shrink */
+
+/* auto (default) - menggunakan width/height */
+.item-auto {
+    flex-basis: auto;
+    width: 200px;
+}
+
+/* Specific size */
+.item-basis-200 {
+    flex-basis: 200px;
+}
+
+.item-basis-percent {
+    flex-basis: 30%;
+}
+
+/* 0 - mengabaikan content size */
+.item-basis-zero {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+/* content - berdasarkan content size */
+.item-basis-content {
+    flex-basis: content;
+}
+
+/* Contoh praktis */
+.equal-columns {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.fixed-sidebar {
+    flex-basis: 250px;
+    flex-grow: 0;
+    flex-shrink: 0;
+}</code></pre>
+                        </div>
+
+                        <h3>flex Shorthand</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* flex: grow shrink basis */
+
+/* Common patterns */
+.flex-1 {
+    flex: 1; /* 1 1 0% - equal distribution */
+}
+
+.flex-auto {
+    flex: auto; /* 1 1 auto - grow/shrink based on content */
+}
+
+.flex-none {
+    flex: none; /* 0 0 auto - fixed size */
+}
+
+.flex-initial {
+    flex: initial; /* 0 1 auto - default behavior */
+}
+
+/* Custom values */
+.flex-custom {
+    flex: 2 1 200px; /* grow: 2, shrink: 1, basis: 200px */
+}
+
+/* Single values */
+.flex-grow-only {
+    flex: 2; /* grow: 2, shrink: 1, basis: 0% */
+}
+
+.flex-basis-only {
+    flex: 200px; /* grow: 1, shrink: 1, basis: 200px */
+}
+
+/* Practical examples */
+.header {
+    flex: none; /* Fixed height */
+}
+
+.content {
+    flex: 1; /* Fill remaining space */
+}
+
+.footer {
+    flex: none; /* Fixed height */
+}</code></pre>
+                        </div>
+
+                        <h3>align-self</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Override align-items untuk individual item */
+
+.container {
+    display: flex;
+    align-items: center; /* Default untuk semua items */
+    height: 200px;
+}
+
+/* auto (default) - inherit dari parent align-items */
+.item-auto {
+    align-self: auto;
+}
+
+/* flex-start - align ke awal cross axis */
+.item-start {
+    align-self: flex-start;
+}
+
+/* flex-end - align ke akhir cross axis */
+.item-end {
+    align-self: flex-end;
+}
+
+/* center - align ke tengah cross axis */
+.item-center {
+    align-self: center;
+}
+
+/* stretch - stretch untuk fill container */
+.item-stretch {
+    align-self: stretch;
+}
+
+/* baseline - align berdasarkan text baseline */
+.item-baseline {
+    align-self: baseline;
+}
+
+/* Contoh praktis */
+.special-item {
+    align-self: flex-end; /* Berbeda dari items lain */
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 4: Alignment & Spacing -->
+                    <div id="lesson4" class="lesson-content">
+                        <h2>Pelajaran 4: Alignment & Spacing</h2>
+                        <p>Flexbox menyediakan kontrol yang powerful untuk alignment dan spacing. Mari pelajari teknik-teknik untuk mengatur posisi dan jarak antar elemen.</p>
+                        
+                        <h3>Perfect Centering</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Center horizontal dan vertical */
+.perfect-center {
+    display: flex;
+    justify-content: center; /* Horizontal center */
+    align-items: center;     /* Vertical center */
+    height: 100vh;
+}
+
+/* Center dengan multiple items */
+.center-multiple {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+}
+
+/* Center content dalam card */
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* Center dengan text alignment */
+.text-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}</code></pre>
+                        </div>
+
+                        <h3>Spacing dengan Gap</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Modern spacing dengan gap property */
+.flex-gap {
+    display: flex;
+    gap: 20px; /* Space antara items */
+}
+
+/* Different gap untuk row dan column */
+.flex-gap-different {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px 10px; /* row-gap column-gap */
+}
+
+/* Specific gap properties */
+.flex-row-gap {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 10px;
+}
+
+/* Gap dengan flex-direction: column */
+.flex-column-gap {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Responsive gap */
+.responsive-gap {
+    display: flex;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .responsive-gap {
+        gap: 20px;
+    }
+}
+
+/* Fallback untuk browser lama (tanpa gap support) */
+.flex-margin-fallback {
+    display: flex;
+    margin: -10px; /* Negative margin */
+}
+
+.flex-margin-fallback > * {
+    margin: 10px; /* Positive margin pada items */
+}</code></pre>
+                        </div>
+
+                        <h3>Space Distribution</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Space between items */
+.space-between {
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Space around items */
+.space-around {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Equal space everywhere */
+.space-evenly {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* Push items to edges */
+.push-edges {
+    display: flex;
+}
+
+.push-edges .first {
+    margin-right: auto; /* Push ke kiri */
+}
+
+.push-edges .last {
+    margin-left: auto; /* Push ke kanan */
+}
+
+/* Center group dengan space around */
+.center-group {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Navigation dengan space distribution */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}</code></pre>
+                        </div>
+
+                        <h3>Alignment Patterns</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Top alignment */
+.align-top {
+    display: flex;
+    align-items: flex-start;
+}
+
+/* Bottom alignment */
+.align-bottom {
+    display: flex;
+    align-items: flex-end;
+}
+
+/* Baseline alignment untuk text */
+.align-baseline {
+    display: flex;
+    align-items: baseline;
+}
+
+/* Mixed alignment */
+.mixed-alignment {
+    display: flex;
+    align-items: center;
+}
+
+.mixed-alignment .special {
+    align-self: flex-start;
+}
+
+/* Stretch untuk equal height */
+.equal-height {
+    display: flex;
+    align-items: stretch;
+}
+
+.equal-height .item {
+    /* Items akan memiliki tinggi yang sama */
+}
+
+/* Vertical centering dengan different heights */
+.vertical-center {
+    display: flex;
+    align-items: center;
+    min-height: 200px;
+}
+
+/* Complex alignment */
+.complex-layout {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+.complex-layout .header {
+    align-self: stretch;
+}
+
+.complex-layout .footer {
+    align-self: stretch;
+}</code></pre>
+                        </div>
+
+                        <h3>Responsive Alignment</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Responsive flex direction */
+.responsive-flex {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .responsive-flex {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Responsive alignment */
+.responsive-align {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .responsive-align {
+        flex-direction: row;
+        align-items: flex-start;
+        text-align: left;
+    }
+}
+
+/* Mobile-first navigation */
+.mobile-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+@media (min-width: 768px) {
+    .mobile-nav {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/* Responsive card layout */
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .card-container {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 5: Practical Examples -->
+                    <div id="lesson5" class="lesson-content">
+                        <h2>Pelajaran 5: Practical Examples</h2>
+                        <p>Mari implementasikan Flexbox dalam contoh-contoh praktis yang sering digunakan dalam pengembangan web.</p>
+                        
+                        <h3>Navigation Bar</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* HTML */
+&lt;nav class="navbar"&gt;
+    &lt;div class="nav-brand"&gt;
+        &lt;img src="logo.png" alt="Logo"&gt;
+        &lt;span&gt;Brand&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;ul class="nav-links"&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;About&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;div class="nav-actions"&gt;
+        &lt;button class="btn-login"&gt;Login&lt;/button&gt;
+        &lt;button class="btn-signup"&gt;Sign Up&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/nav&gt;
+
+/* CSS */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav-brand img {
+    height: 32px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.nav-actions {
+    display: flex;
+    gap: 1rem;
+}
+
+/* Responsive navigation */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Card Layout</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* HTML */
+&lt;div class="card-container"&gt;
+    &lt;div class="card"&gt;
+        &lt;img src="image1.jpg" alt="Image"&gt;
+        &lt;div class="card-content"&gt;
+            &lt;h3&gt;Card Title&lt;/h3&gt;
+            &lt;p&gt;Card description text here...&lt;/p&gt;
+            &lt;div class="card-actions"&gt;
+                &lt;button class="btn-primary"&gt;Read More&lt;/button&gt;
+                &lt;button class="btn-secondary"&gt;Share&lt;/button&gt;
+            &lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+/* CSS */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.card-content h3 {
+    margin: 0 0 1rem 0;
+}
+
+.card-content p {
+    flex-grow: 1;
+    margin: 0 0 1.5rem 0;
+    color: #666;
+}
+
+.card-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+}
+
+.card-actions button {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+/* Responsive cards */
+@media (max-width: 768px) {
+    .card {
+        width: 100%;
+        max-width: 400px;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Holy Grail Layout</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* HTML */
+&lt;div class="holy-grail"&gt;
+    &lt;header class="header"&gt;Header&lt;/header&gt;
+    &lt;div class="content-wrapper"&gt;
+        &lt;aside class="sidebar-left"&gt;Left Sidebar&lt;/aside&gt;
+        &lt;main class="main-content"&gt;Main Content&lt;/main&gt;
+        &lt;aside class="sidebar-right"&gt;Right Sidebar&lt;/aside&gt;
+    &lt;/div&gt;
+    &lt;footer class="footer"&gt;Footer&lt;/footer&gt;
+&lt;/div&gt;
+
+/* CSS */
+.holy-grail {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.header {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex: 1;
+}
+
+.sidebar-left {
+    background: #f0f0f0;
+    width: 200px;
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.main-content {
+    background: white;
+    padding: 1rem;
+    flex: 1;
+}
+
+.sidebar-right {
+    background: #f0f0f0;
+    width: 200px;
+    padding: 1rem;
+    flex-shrink: 0;
+}
+
+.footer {
+    background: #333;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+/* Responsive holy grail */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+    }
+    
+    .sidebar-left,
+    .sidebar-right {
+        width: auto;
+        order: 2;
+    }
+    
+    .main-content {
+        order: 1;
+    }
+}</code></pre>
+                        </div>
+
+                        <h3>Form Layout</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* HTML */
+&lt;form class="flex-form"&gt;
+    &lt;div class="form-row"&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label&gt;First Name&lt;/label&gt;
+            &lt;input type="text" required&gt;
+        &lt;/div&gt;
+        &lt;div class="form-group"&gt;
+            &lt;label&gt;Last Name&lt;/label&gt;
+            &lt;input type="text" required&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="form-group"&gt;
+        &lt;label&gt;Email&lt;/label&gt;
+        &lt;input type="email" required&gt;
+    &lt;/div&gt;
+    &lt;div class="form-actions"&gt;
+        &lt;button type="button" class="btn-cancel"&gt;Cancel&lt;/button&gt;
+        &lt;button type="submit" class="btn-submit"&gt;Submit&lt;/button&gt;
+    &lt;/div&gt;
+&lt;/form&gt;
+
+/* CSS */
+.flex-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 2rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.form-row {
+    display: flex;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.form-group label {
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input {
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 1rem;
+}
+
+.form-actions button {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-cancel {
+    background: #f5f5f5;
+    color: #333;
+}
+
+.btn-submit {
+    background: #007bff;
+    color: white;
+}
+
+/* Responsive form */
+@media (max-width: 480px) {
+    .form-row {
+        flex-direction: column;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="quiz-section">
+                            <h3>Kuis: CSS Flexbox</h3>
+                            <div class="quiz-question">
+                                <p><strong>1. Property mana yang digunakan untuk membuat flex container?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q1" value="a"> flex: 1</label>
+                                    <label><input type="radio" name="q1" value="b"> display: flex</label>
+                                    <label><input type="radio" name="q1" value="c"> flex-direction: row</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>2. Property mana yang mengatur alignment di main axis?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q2" value="a"> align-items</label>
+                                    <label><input type="radio" name="q2" value="b"> justify-content</label>
+                                    <label><input type="radio" name="q2" value="c"> align-content</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>3. Apa fungsi dari flex: 1?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q3" value="a"> Membuat item fixed width</label>
+                                    <label><input type="radio" name="q3" value="b"> Membuat item grow untuk mengisi space</label>
+                                    <label><input type="radio" name="q3" value="c"> Membuat item shrink</label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="submitQuiz()">Submit Kuis</button>
+                            <div id="quiz-result" class="quiz-result"></div>
+                        </div>
+
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeBuddy. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/course.js"></script>
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+        });
+    </script>
+</body>
+</html>

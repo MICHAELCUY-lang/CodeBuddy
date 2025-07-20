@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <!-- Background -->
+  <rect x="0" y="0" width="300" height="200" fill="#F8F9FA" opacity="0" />
+  
+  <!-- Progress Chart -->
+  <rect x="50" y="50" width="200" height="100" rx="5" ry="5" fill="#F8F9FA" stroke="#4A6CF7" stroke-width="2" />
+  
+  <!-- Chart Grid Lines -->
+  <line x1="50" y1="75" x2="250" y2="75" stroke="#E9ECEF" stroke-width="1" />
+  <line x1="50" y1="100" x2="250" y2="100" stroke="#E9ECEF" stroke-width="1" />
+  <line x1="50" y1="125" x2="250" y2="125" stroke="#E9ECEF" stroke-width="1" />
+  
+  <line x1="90" y1="50" x2="90" y2="150" stroke="#E9ECEF" stroke-width="1" />
+  <line x1="130" y1="50" x2="130" y2="150" stroke="#E9ECEF" stroke-width="1" />
+  <line x1="170" y1="50" x2="170" y2="150" stroke="#E9ECEF" stroke-width="1" />
+  <line x1="210" y1="50" x2="210" y2="150" stroke="#E9ECEF" stroke-width="1" />
+  
+  <!-- Progress Line -->
+  <path d="M70 130 L110 110 L150 90 L190 70 L230 60" fill="none" stroke="#4A6CF7" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- Data Points -->
+  <circle cx="70" cy="130" r="5" fill="#4A6CF7" />
+  <circle cx="110" cy="110" r="5" fill="#4A6CF7" />
+  <circle cx="150" cy="90" r="5" fill="#4A6CF7" />
+  <circle cx="190" cy="70" r="5" fill="#4A6CF7" />
+  <circle cx="230" cy="60" r="5" fill="#4A6CF7" />
+  
+  <!-- Axis Labels -->
+  <text x="70" y="165" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Week 1</text>
+  <text x="110" y="165" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Week 2</text>
+  <text x="150" y="165" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Week 3</text>
+  <text x="190" y="165" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Week 4</text>
+  <text x="230" y="165" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="middle">Week 5</text>
+  
+  <text x="40" y="130" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="end">25%</text>
+  <text x="40" y="105" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="end">50%</text>
+  <text x="40" y="80" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="end">75%</text>
+  <text x="40" y="55" font-family="Arial, sans-serif" font-size="10" fill="#333" text-anchor="end">100%</text>
+  
+  <!-- Chart Title -->
+  <text x="150" y="35" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#4A6CF7" text-anchor="middle">Learning Progress</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="30" y="30" r="10" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="270" y="170" r="15" fill="#4A6CF7" opacity="0.3" />
+</svg>

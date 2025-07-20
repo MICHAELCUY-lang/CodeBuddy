@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#2d3748" rx="15" ry="15"/>
+  
+  <!-- Python Logo -->
+  <g transform="translate(120, 50) scale(0.7)">
+    <!-- Python Shape - Blue Part -->
+    <path d="M116.5,0.5 C56.5,0.5 60.4,28.1 60.4,28.1 L60.5,57 L117.5,57 L117.5,66 L38.1,66 C38.1,66 0.5,63.9 0.5,124 C0.5,184.1 33.2,182.1 33.2,182.1 L53,182.1 L53,151.5 C53,151.5 52,119 85.8,119 L142.1,119 C142.1,119 173.5,119.4 173.5,88.5 L173.5,29.9 C173.5,29.9 178.4,0.5 116.5,0.5 Z" fill="#3776AB" stroke="#ffffff" stroke-width="1"/>
+    
+    <!-- Python Eye - Blue Part -->
+    <circle cx="86" cy="28" r="12" fill="#ffffff"/>
+    
+    <!-- Python Shape - Yellow Part -->
+    <path d="M117.8,199.5 C177.8,199.5 173.9,171.9 173.9,171.9 L173.8,143 L116.8,143 L116.8,134 L196.2,134 C196.2,134 233.8,136.1 233.8,76 C233.8,15.9 201.1,17.9 201.1,17.9 L181.3,17.9 L181.3,48.5 C181.3,48.5 182.3,81 148.5,81 L92.2,81 C92.2,81 60.8,80.6 60.8,111.5 L60.8,170.1 C60.8,170.1 55.9,199.5 117.8,199.5 Z" fill="#FFD43B" stroke="#ffffff" stroke-width="1"/>
+    
+    <!-- Python Eye - Yellow Part -->
+    <circle cx="148" cy="172" r="12" fill="#ffffff"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="200" y="240" font-family="'Inter', sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Python untuk Data Science</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="50" r="15" fill="#667eea" opacity="0.6"/>
+  <circle cx="350" cy="250" r="20" fill="#667eea" opacity="0.4"/>
+  <circle cx="30" cy="200" r="10" fill="#FFD43B" opacity="0.5"/>
+  <circle cx="370" cy="100" r="12" fill="#3776AB" opacity="0.3"/>
+</svg>

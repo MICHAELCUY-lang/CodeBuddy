@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <rect x="0" y="0" width="200" height="200" fill="#F8F9FA" opacity="0" />
+  
+  <!-- Folder Structure -->
+  <rect x="40" y="30" width="120" height="140" rx="5" ry="5" fill="#F8F9FA" stroke="#4A6CF7" stroke-width="2" />
+  
+  <!-- Folder Tabs -->
+  <rect x="50" y="50" width="100" height="20" rx="3" ry="3" fill="#4A6CF7" />
+  <rect x="50" y="80" width="100" height="20" rx="3" ry="3" fill="#4A6CF7" opacity="0.8" />
+  <rect x="50" y="110" width="100" height="20" rx="3" ry="3" fill="#4A6CF7" opacity="0.6" />
+  <rect x="50" y="140" width="100" height="20" rx="3" ry="3" fill="#4A6CF7" opacity="0.4" />
+  
+  <!-- Numbers -->
+  <text x="65" y="65" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">1</text>
+  <text x="65" y="95" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">2</text>
+  <text x="65" y="125" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">3</text>
+  <text x="65" y="155" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">4</text>
+  
+  <!-- Text Lines -->
+  <rect x="80" y="60" width="60" height="2" rx="1" ry="1" fill="white" />
+  <rect x="80" y="90" width="60" height="2" rx="1" ry="1" fill="white" />
+  <rect x="80" y="120" width="60" height="2" rx="1" ry="1" fill="white" />
+  <rect x="80" y="150" width="60" height="2" rx="1" ry="1" fill="white" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="30" y="30" r="10" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="170" y="170" r="15" fill="#4A6CF7" opacity="0.3" />
+</svg>

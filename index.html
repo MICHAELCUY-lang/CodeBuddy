@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeBuddy - Platform Belajar Programming Terbaik</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/popup.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="index.html" class="active">Beranda</a></li>
+                        <li><a href="courses.html">Kursus</a></li>
+                        <li><a href="progress.html">Progres Saya</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <!-- Tombol toggle tema dihapus untuk hanya menggunakan dark mode -->
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2>Belajar Programming dengan Mudah dan Menyenangkan</h2>
+                <p>Platform pembelajaran programming terlengkap dengan materi terstruktur, latihan interaktif, dan mentor berpengalaman. Mulai perjalanan coding Anda hari ini!</p>
+                <div style="display: flex; gap: 20px; margin-top: 40px;">
+                    <a href="courses.html" class="btn btn-primary"><i class="fas fa-rocket"></i> Mulai Belajar Sekarang</a>
+                    <a href="about.html" class="btn btn-outline"><i class="fas fa-book"></i> Pelajari Lebih Lanjut</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="img/hero-illustration.svg" alt="Hero Illustration">
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <h2 class="section-title">Mengapa Memilih CodeBuddy?</h2>
+            <div class="feature-cards">
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-book"></i></div>
+                    <h3>Materi Terstruktur</h3>
+                    <p>Kurikulum yang disusun secara sistematis dari dasar hingga mahir, cocok untuk pemula maupun yang ingin meningkatkan skill.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                    <h3>Latihan Interaktif</h3>
+                    <p>Praktik langsung dengan editor code online, quiz interaktif, dan project nyata untuk mengasah kemampuan programming.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-chart-line"></i></div>
+                    <h3>Progress Tracking</h3>
+                    <p>Pantau perkembangan belajar Anda dengan sistem tracking yang detail dan dapatkan sertifikat setelah menyelesaikan course.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Mentor Berpengalaman</h3>
+                    <p>Belajar dari praktisi industri dengan pengalaman bertahun-tahun di bidang teknologi dan programming.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-star"></i></div>
+                    <h3>Komunitas Aktif</h3>
+                    <p>Bergabung dengan ribuan developer lainnya, sharing knowledge, dan saling membantu dalam forum diskusi.</p>
+                </div>
+                <div class="feature-card animate-on-scroll">
+                    <div class="feature-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Update Terkini</h3>
+                    <p>Materi selalu diperbarui mengikuti perkembangan teknologi terbaru dan kebutuhan industri saat ini.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Popular Courses Section -->
+    <section class="popular-courses">
+        <div class="container">
+            <h2 class="section-title">Kursus Populer</h2>
+            <div class="course-cards">
+                <div class="course-card animate-on-scroll">
+                    <div class="course-image">
+                        <img src="img/html-course.svg" alt="HTML Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>HTML Dasar</h3>
+                        <p>Pelajari dasar-dasar HTML untuk membangun struktur website yang solid dan semantik.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-laptop-code"></i> 12 Materi</span>
+                            <span><i class="fas fa-clock"></i> 8 Jam</span>
+                            <span><i class="fas fa-users"></i> 1,234 Siswa</span>
+                        </div>
+                        <a href="courses/html-basics.html" class="btn btn-primary">Mulai Belajar</a>
+                    </div>
+                </div>
+                <div class="course-card animate-on-scroll">
+                    <div class="course-image">
+                        <img src="img/css-course.svg" alt="CSS Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>CSS Styling</h3>
+                        <p>Kuasai CSS untuk membuat tampilan website yang menarik dan responsive.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-laptop-code"></i> 15 Materi</span>
+                            <span><i class="fas fa-clock"></i> 12 Jam</span>
+                            <span><i class="fas fa-users"></i> 987 Siswa</span>
+                        </div>
+                        <a href="courses/css-basics.html" class="btn btn-primary">Mulai Belajar</a>
+                    </div>
+                </div>
+                <div class="course-card animate-on-scroll">
+                    <div class="course-image">
+                        <img src="img/js-course.svg" alt="JavaScript Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>JavaScript Fundamental</h3>
+                        <p>Pelajari JavaScript dari dasar hingga konsep advanced untuk pengembangan web modern.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-laptop-code"></i> 20 Materi</span>
+                            <span><i class="fas fa-clock"></i> 16 Jam</span>
+                            <span><i class="fas fa-users"></i> 2,156 Siswa</span>
+                        </div>
+                        <a href="#" class="btn btn-secondary">Coming Soon</a>
+                    </div>
+                </div>
+                <div class="course-card animate-on-scroll">
+                    <div class="course-image">
+                        <img src="img/python-course.svg" alt="Python Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Python Programming</h3>
+                        <p>Mulai journey programming dengan Python, bahasa yang mudah dipelajari dan powerful.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-laptop-code"></i> 25 Materi</span>
+                            <span><i class="fas fa-clock"></i> 20 Jam</span>
+                            <span><i class="fas fa-users"></i> 3,421 Siswa</span>
+                        </div>
+                        <a href="#" class="btn btn-accent">Coming Soon</a>
+                    </div>
+                </div>
+                <div class="course-card animate-on-scroll">
+                    <div class="course-image">
+                        <img src="img/responsive-course.svg" alt="React Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>React Development</h3>
+                        <p>Bangun aplikasi web modern dengan React, library JavaScript paling populer saat ini.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-laptop-code"></i> 30 Materi</span>
+                            <span><i class="fas fa-clock"></i> 24 Jam</span>
+                            <span><i class="fas fa-users"></i> 1,876 Siswa</span>
+                        </div>
+                        <a href="#" class="btn btn-accent">Coming Soon</a>
+                    </div>
+                </div>
+                <div class="course-card animate-on-scroll">
+                    <div class="course-image">
+                        <img src="img/nodejs-course.svg" alt="Node.js Course">
+                    </div>
+                    <div class="course-content">
+                        <h3>Node.js Backend</h3>
+                        <p>Pelajari pengembangan backend dengan Node.js untuk membangun API dan server aplikasi.</p>
+                        <div class="course-meta">
+                            <span><i class="fas fa-laptop-code"></i> 22 Materi</span>
+                            <span><i class="fas fa-clock"></i> 18 Jam</span>
+                            <span><i class="fas fa-users"></i> 1,543 Siswa</span>
+                        </div>
+                        <a href="#" class="btn btn-accent">Coming Soon</a>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 60px;">
+                <a href="courses.html" class="btn btn-outline"><i class="fas fa-bullseye"></i> Lihat Semua Kursus</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <h2>Siap Memulai Perjalanan Coding Anda?</h2>
+            <p>Bergabunglah dengan developer yang telah memulai belajar mereka bersama CodeBuddy. Semua materi di CodeBuddy gratis!</p>
+            <div style="display: flex; gap: 20px; justify-content: center; flex-wrap: wrap; margin-top: 40px;">
+                <a href="courses.html" class="btn"><i class="fas fa-rocket"></i> Belajar Sekarang - Gratis!</a>
+                <a href="about.html" class="btn"><i class="fas fa-comment"></i> Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="index.html">Beranda</a></li>
+                        <li><a href="courses.html">Kursus</a></li>
+                        <li><a href="progress.html">Progres Saya</a></li>
+                        <li><a href="about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Kursus</h4>
+                    <ul>
+                        <li><a href="courses/html-css.html">HTML & CSS</a></li>
+                        <li><a href="courses/javascript.html">JavaScript</a></li>
+                        <li><a href="courses/responsive.html">Responsive Web</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 CodeBuddy. Hak Cipta Dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Hanya menggunakan dark mode
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selalu mengatur tema ke dark mode
+            document.documentElement.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        });
+        
+        // Scroll animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animated');
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all elements with animate-on-scroll class
+        document.addEventListener('DOMContentLoaded', () => {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            animateElements.forEach(el => observer.observe(el));
+        });
+    </script>
+    <script src="js/script.js"></script>
+    <script src="js/popup.js"></script>
+    <!-- Popup yang ditambahkan langsung ke HTML -->
+    <div class="popup-overlay" id="staticPopup">
+        <div class="popup-container">
+            <button class="popup-close" onclick="document.getElementById('staticPopup').classList.remove('active')">&times;</button>
+            <div class="popup-header">
+                <h3>Selamat Datang di CodeBuddy!</h3>
+            </div>
+            <div class="popup-content">
+                <p>Jika Anda menemukan bug atau error saat menggunakan platform ini, Anda dapat melaporkannya melalui <a href="https://www.instagram.com/michael.mandey.79" target="_blank">Instagram kami</a>. Kami akan segera memperbaikinya!</p>
+            </div>
+            <div class="popup-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('staticPopup').classList.remove('active')">Mengerti</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Tampilkan popup statis setelah halaman dimuat
+        window.addEventListener('load', function() {
+            setTimeout(function() {
+                document.getElementById('staticPopup').classList.add('active');
+            }, 500);
+        });
+    </script>
+</body>
+</html>

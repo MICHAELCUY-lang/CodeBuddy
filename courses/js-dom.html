@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript DOM - CodeBuddy</title>
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="mobile-menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <a href="../courses.html" class="back-button">
+                ← Kembali ke Kursus
+            </a>
+            <div class="course-info">
+                <h2>JavaScript DOM</h2>
+                <p>Pelajari cara memanipulasi elemen HTML dengan JavaScript melalui DOM. Kursus ini akan mengajarkan Anda cara mengubah konten, style, dan struktur halaman web secara dinamis.</p>
+                <div class="course-meta">
+                    <span>🌐 JavaScript</span>
+                    <span>⏰ 5 Pelajaran</span>
+                    <span>👤 Menengah</span>
+                    <span>⭐ 4.8/5</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            <div class="course-layout">
+                <aside class="lesson-sidebar">
+                    <h3>Daftar Pelajaran</h3>
+                    <ul>
+                        <li><a href="#lesson1" class="lesson-link active">1. Pengenalan DOM</a></li>
+                        <li><a href="#lesson2" class="lesson-link">2. Selecting Elements</a></li>
+                        <li><a href="#lesson3" class="lesson-link">3. Manipulasi Content</a></li>
+                        <li><a href="#lesson4" class="lesson-link">4. Manipulasi Style</a></li>
+                        <li><a href="#lesson5" class="lesson-link">5. Creating Elements</a></li>
+                    </ul>
+                    <div class="progress-sidebar">
+                        <h4>Progress Kursus</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text" id="progress-text">0% (0/5 pelajaran)</span>
+                    </div>
+                </aside>
+
+                <main class="lesson-main">
+                    <!-- Lesson 1: Pengenalan DOM -->
+                    <div id="lesson1" class="lesson-content active">
+                        <h2>Pelajaran 1: Pengenalan DOM</h2>
+                        <p>DOM (Document Object Model) adalah representasi struktur HTML sebagai objek yang dapat dimanipulasi dengan JavaScript.</p>
+                        
+                        <h3>Apa itu DOM?</h3>
+                        <p>DOM memungkinkan JavaScript untuk:</p>
+                        <ul>
+                            <li>Mengubah konten HTML</li>
+                            <li>Mengubah atribut HTML</li>
+                            <li>Mengubah style CSS</li>
+                            <li>Menambah atau menghapus elemen</li>
+                            <li>Merespons event HTML</li>
+                        </ul>
+
+                        <h3>Struktur DOM Tree</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- HTML --&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;My Page&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1 id="title"&gt;Hello World&lt;/h1&gt;
+    &lt;p class="text"&gt;This is a paragraph.&lt;/p&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                        </div>
+
+                        <h3>Document Object</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Mengakses document
+console.log(document); // Seluruh dokumen HTML
+console.log(document.title); // Judul halaman
+console.log(document.URL); // URL halaman
+console.log(document.body); // Element body
+
+// Mengubah title
+document.title = 'Judul Baru';</code></pre>
+                        </div>
+
+                        <h3>Window Object</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Window adalah objek global
+console.log(window.innerWidth); // Lebar window
+console.log(window.innerHeight); // Tinggi window
+
+// Alert, confirm, prompt
+window.alert('Hello!');
+let konfirmasi = window.confirm('Apakah Anda yakin?');
+let input = window.prompt('Masukkan nama Anda:');</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" disabled>Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 2: Selecting Elements -->
+                    <div id="lesson2" class="lesson-content">
+                        <h2>Pelajaran 2: Selecting Elements</h2>
+                        <p>Sebelum memanipulasi elemen, kita perlu memilih elemen tersebut terlebih dahulu.</p>
+                        
+                        <h3>getElementById</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// HTML: &lt;h1 id="title"&gt;Hello&lt;/h1&gt;
+let title = document.getElementById('title');
+console.log(title); // &lt;h1 id="title"&gt;Hello&lt;/h1&gt;
+console.log(title.textContent); // "Hello"</code></pre>
+                        </div>
+
+                        <h3>getElementsByClassName</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// HTML: &lt;p class="text"&gt;Paragraph 1&lt;/p&gt;
+//       &lt;p class="text"&gt;Paragraph 2&lt;/p&gt;
+let paragraphs = document.getElementsByClassName('text');
+console.log(paragraphs); // HTMLCollection [p.text, p.text]
+console.log(paragraphs[0]); // Elemen pertama
+console.log(paragraphs.length); // 2
+
+// Loop through collection
+for (let p of paragraphs) {
+    console.log(p.textContent);
+}</code></pre>
+                        </div>
+
+                        <h3>getElementsByTagName</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Pilih semua elemen dengan tag tertentu
+let allParagraphs = document.getElementsByTagName('p');
+let allDivs = document.getElementsByTagName('div');
+
+// Pilih semua elemen
+let allElements = document.getElementsByTagName('*');</code></pre>
+                        </div>
+
+                        <h3>querySelector dan querySelectorAll</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// querySelector - pilih elemen pertama yang cocok
+let title = document.querySelector('#title'); // by ID
+let firstText = document.querySelector('.text'); // by class
+let firstP = document.querySelector('p'); // by tag
+let specific = document.querySelector('div.container p.highlight');
+
+// querySelectorAll - pilih semua elemen yang cocok
+let allTexts = document.querySelectorAll('.text');
+let allPs = document.querySelectorAll('p');
+
+// Advanced selectors
+let evenPs = document.querySelectorAll('p:nth-child(even)');
+let firstChild = document.querySelector('div > p:first-child');</code></pre>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 3: Manipulasi Content -->
+                    <div id="lesson3" class="lesson-content">
+                        <h2>Pelajaran 3: Manipulasi Content</h2>
+                        <p>Setelah memilih elemen, kita dapat mengubah konten, atribut, dan properti elemen tersebut.</p>
+                        
+                        <h3>Mengubah Text Content</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let title = document.getElementById('title');
+
+// textContent - hanya teks, tanpa HTML
+title.textContent = 'Judul Baru';
+console.log(title.textContent); // "Judul Baru"
+
+// innerHTML - termasuk HTML tags
+title.innerHTML = '&lt;strong&gt;Judul Tebal&lt;/strong&gt;';
+
+// innerText - teks yang terlihat (respects styling)
+title.innerText = 'Teks Terlihat';</code></pre>
+                        </div>
+
+                        <h3>Manipulasi Atribut</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let image = document.querySelector('img');
+
+// getAttribute - mendapatkan nilai atribut
+let src = image.getAttribute('src');
+let alt = image.getAttribute('alt');
+
+// setAttribute - mengatur nilai atribut
+image.setAttribute('src', 'new-image.jpg');
+image.setAttribute('alt', 'Gambar baru');
+
+// removeAttribute - menghapus atribut
+image.removeAttribute('title');
+
+// hasAttribute - cek apakah atribut ada
+if (image.hasAttribute('data-id')) {
+    console.log('Element memiliki data-id');
+}</code></pre>
+                        </div>
+
+                        <h3>Properti Elemen</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let input = document.querySelector('input');
+let link = document.querySelector('a');
+
+// Input properties
+input.value = 'Nilai baru';
+input.placeholder = 'Masukkan teks...';
+input.disabled = true;
+input.checked = true; // untuk checkbox/radio
+
+// Link properties
+link.href = 'https://example.com';
+link.target = '_blank';
+
+// Common properties
+element.id = 'new-id';
+element.className = 'new-class';
+element.title = 'Tooltip text';</code></pre>
+                        </div>
+
+                        <h3>Class Manipulation</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let element = document.querySelector('.my-element');
+
+// classList methods
+element.classList.add('new-class'); // tambah class
+element.classList.remove('old-class'); // hapus class
+element.classList.toggle('active'); // toggle class
+element.classList.replace('old', 'new'); // ganti class
+
+// Check if class exists
+if (element.classList.contains('active')) {
+    console.log('Element memiliki class active');
+}
+
+// Get all classes
+console.log(element.classList); // DOMTokenList</code></pre>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 4: Manipulasi Style -->
+                    <div id="lesson4" class="lesson-content">
+                        <h2>Pelajaran 4: Manipulasi Style</h2>
+                        <p>JavaScript dapat mengubah style CSS elemen secara langsung atau melalui class.</p>
+                        
+                        <h3>Inline Styles</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let element = document.getElementById('myElement');
+
+// Mengubah style individual
+element.style.color = 'red';
+element.style.backgroundColor = 'yellow';
+element.style.fontSize = '20px';
+element.style.margin = '10px';
+element.style.display = 'none'; // sembunyikan
+element.style.display = 'block'; // tampilkan
+
+// Camel case untuk property dengan dash
+element.style.borderRadius = '5px'; // border-radius
+element.style.textAlign = 'center'; // text-align</code></pre>
+                        </div>
+
+                        <h3>CSS Text dan cssText</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let element = document.querySelector('.box');
+
+// cssText - set multiple styles at once
+element.style.cssText = 'color: blue; background: yellow; padding: 10px;';
+
+// Atau dengan template literal
+element.style.cssText = `
+    color: ${textColor};
+    background-color: ${bgColor};
+    padding: ${padding}px;
+`;
+
+// Mendapatkan computed style
+let computedStyle = window.getComputedStyle(element);
+console.log(computedStyle.color); // rgb(0, 0, 255)
+console.log(computedStyle.fontSize); // 16px</code></pre>
+                        </div>
+
+                        <h3>Show/Hide Elements</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let element = document.querySelector('.toggle-element');
+
+// Cara 1: display
+function hideElement() {
+    element.style.display = 'none';
+}
+
+function showElement() {
+    element.style.display = 'block'; // atau 'inline', 'flex', dll
+}
+
+// Cara 2: visibility
+function hideElementKeepSpace() {
+    element.style.visibility = 'hidden';
+}
+
+function showElementKeepSpace() {
+    element.style.visibility = 'visible';
+}
+
+// Cara 3: opacity
+function fadeOut() {
+    element.style.opacity = '0';
+}
+
+function fadeIn() {
+    element.style.opacity = '1';
+}</code></pre>
+                        </div>
+
+                        <h3>Dynamic Styling</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Animasi sederhana dengan JavaScript
+function animateWidth(element, targetWidth) {
+    let currentWidth = 0;
+    let interval = setInterval(() => {
+        if (currentWidth >= targetWidth) {
+            clearInterval(interval);
+        } else {
+            currentWidth += 5;
+            element.style.width = currentWidth + 'px';
+        }
+    }, 10);
+}
+
+// Responsive styling
+function updateStyleBasedOnScreenSize() {
+    let element = document.querySelector('.responsive-element');
+    
+    if (window.innerWidth < 768) {
+        element.style.fontSize = '14px';
+        element.style.padding = '5px';
+    } else {
+        element.style.fontSize = '16px';
+        element.style.padding = '10px';
+    }
+}
+
+// Jalankan saat window resize
+window.addEventListener('resize', updateStyleBasedOnScreenSize);</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 5: Creating Elements -->
+                    <div id="lesson5" class="lesson-content">
+                        <h2>Pelajaran 5: Creating Elements</h2>
+                        <p>JavaScript dapat membuat elemen HTML baru dan menambahkannya ke DOM secara dinamis.</p>
+                        
+                        <h3>createElement dan appendChild</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Membuat elemen baru
+let newDiv = document.createElement('div');
+let newP = document.createElement('p');
+let newImg = document.createElement('img');
+
+// Set content dan atribut
+newP.textContent = 'Ini paragraf baru';
+newP.className = 'new-paragraph';
+newImg.src = 'image.jpg';
+newImg.alt = 'Gambar baru';
+
+// Menambahkan ke DOM
+let container = document.querySelector('.container');
+container.appendChild(newDiv);
+container.appendChild(newP);
+newDiv.appendChild(newImg);</code></pre>
+                        </div>
+
+                        <h3>insertBefore dan insertAdjacentElement</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let container = document.querySelector('.container');
+let existingElement = document.querySelector('.existing');
+let newElement = document.createElement('div');
+newElement.textContent = 'Element baru';
+
+// insertBefore
+container.insertBefore(newElement, existingElement);
+
+// insertAdjacentElement
+let anotherNew = document.createElement('span');
+existingElement.insertAdjacentElement('beforebegin', anotherNew); // sebelum element
+existingElement.insertAdjacentElement('afterbegin', anotherNew);  // di awal dalam element
+existingElement.insertAdjacentElement('beforeend', anotherNew);   // di akhir dalam element
+existingElement.insertAdjacentElement('afterend', anotherNew);    // setelah element</code></pre>
+                        </div>
+
+                        <h3>innerHTML vs createElement</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let container = document.querySelector('.container');
+
+// Cara 1: innerHTML (lebih mudah, tapi kurang aman)
+container.innerHTML += `
+    &lt;div class="card"&gt;
+        &lt;h3&gt;Judul Card&lt;/h3&gt;
+        &lt;p&gt;Deskripsi card&lt;/p&gt;
+        &lt;button&gt;Klik Saya&lt;/button&gt;
+    &lt;/div&gt;
+`;
+
+// Cara 2: createElement (lebih aman, lebih kontrol)
+function createCard(title, description) {
+    let card = document.createElement('div');
+    card.className = 'card';
+    
+    let h3 = document.createElement('h3');
+    h3.textContent = title;
+    
+    let p = document.createElement('p');
+    p.textContent = description;
+    
+    let button = document.createElement('button');
+    button.textContent = 'Klik Saya';
+    button.addEventListener('click', () => {
+        alert('Button diklik!');
+    });
+    
+    card.appendChild(h3);
+    card.appendChild(p);
+    card.appendChild(button);
+    
+    return card;
+}
+
+let newCard = createCard('Judul Baru', 'Deskripsi baru');
+container.appendChild(newCard);</code></pre>
+                        </div>
+
+                        <h3>Menghapus Elemen</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let elementToRemove = document.querySelector('.remove-me');
+
+// Cara 1: remove() (modern)
+elementToRemove.remove();
+
+// Cara 2: removeChild() (lama)
+let parent = elementToRemove.parentNode;
+parent.removeChild(elementToRemove);
+
+// Menghapus semua child elements
+let container = document.querySelector('.container');
+while (container.firstChild) {
+    container.removeChild(container.firstChild);
+}
+
+// Atau dengan innerHTML
+container.innerHTML = '';</code></pre>
+                        </div>
+
+                        <h3>Cloning Elements</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let originalElement = document.querySelector('.template');
+
+// Clone tanpa child elements
+let shallowClone = originalElement.cloneNode(false);
+
+// Clone dengan semua child elements
+let deepClone = originalElement.cloneNode(true);
+
+// Modifikasi clone
+deepClone.id = 'cloned-element';
+deepClone.querySelector('.title').textContent = 'Judul Clone';
+
+// Tambahkan ke DOM
+document.body.appendChild(deepClone);</code></pre>
+                        </div>
+
+                        <div class="quiz-section">
+                            <h3>Kuis: JavaScript DOM</h3>
+                            <div class="quiz-question">
+                                <p><strong>1. Method mana yang digunakan untuk memilih elemen berdasarkan ID?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q1" value="a"> querySelector()</label>
+                                    <label><input type="radio" name="q1" value="b"> getElementById()</label>
+                                    <label><input type="radio" name="q1" value="c"> getElementsByClassName()</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>2. Properti mana yang digunakan untuk mengubah teks tanpa HTML?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q2" value="a"> innerHTML</label>
+                                    <label><input type="radio" name="q2" value="b"> textContent</label>
+                                    <label><input type="radio" name="q2" value="c"> innerText</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>3. Method mana yang digunakan untuk menambahkan elemen baru ke akhir parent?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q3" value="a"> insertBefore()</label>
+                                    <label><input type="radio" name="q3" value="b"> appendChild()</label>
+                                    <label><input type="radio" name="q3" value="c"> replaceChild()</label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="submitQuiz()">Submit Kuis</button>
+                            <div id="quiz-result" class="quiz-result"></div>
+                        </div>
+
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeBuddy. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/course.js"></script>
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+        });
+    </script>
+</body>
+</html>

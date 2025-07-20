@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200" width="300" height="200">
+  <!-- Background -->
+  <rect x="0" y="0" width="300" height="200" fill="#F8F9FA" opacity="0" />
+  
+  <!-- Person 1 -->
+  <circle cx="75" cy="70" r="30" fill="#4A6CF7" opacity="0.8" />
+  <circle cx="75" cy="60" r="15" fill="#F8F9FA" />
+  <path d="M55 100 Q75 85 95 100" fill="#4A6CF7" opacity="0.8" />
+  
+  <!-- Person 2 -->
+  <circle cx="150" cy="70" r="30" fill="#6FCF97" opacity="0.8" />
+  <circle cx="150" cy="60" r="15" fill="#F8F9FA" />
+  <path d="M130 100 Q150 85 170 100" fill="#6FCF97" opacity="0.8" />
+  
+  <!-- Person 3 -->
+  <circle cx="225" cy="70" r="30" fill="#F2994A" opacity="0.8" />
+  <circle cx="225" cy="60" r="15" fill="#F8F9FA" />
+  <path d="M205 100 Q225 85 245 100" fill="#F2994A" opacity="0.8" />
+  
+  <!-- Connecting Lines -->
+  <path d="M95 85 L130 85" stroke="#4A6CF7" stroke-width="2" stroke-dasharray="5,5" />
+  <path d="M170 85 L205 85" stroke="#4A6CF7" stroke-width="2" stroke-dasharray="5,5" />
+  
+  <!-- Role Labels -->
+  <rect x="45" y="120" width="60" height="20" rx="10" ry="10" fill="#4A6CF7" opacity="0.8" />
+  <text x="75" y="133" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">Designer</text>
+  
+  <rect x="120" y="120" width="60" height="20" rx="10" ry="10" fill="#6FCF97" opacity="0.8" />
+  <text x="150" y="133" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">Developer</text>
+  
+  <rect x="195" y="120" width="60" height="20" rx="10" ry="10" fill="#F2994A" opacity="0.8" />
+  <text x="225" y="133" font-family="Arial, sans-serif" font-size="10" font-weight="bold" fill="white" text-anchor="middle" dominant-baseline="middle">Educator</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" y="160" r="10" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="250" y="160" r="15" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="150" y="180" r="12" fill="#4A6CF7" opacity="0.3" />
+</svg>

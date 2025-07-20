@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <!-- Badge Background -->
+  <circle cx="50" cy="50" r="45" fill="#FFD700" />
+  <circle cx="50" cy="50" r="40" fill="#4A6CF7" />
+  
+  <!-- Star Shape -->
+  <path d="M50 20 L57.5 35 L75 37.5 L62.5 50 L65 67.5 L50 60 L35 67.5 L37.5 50 L25 37.5 L42.5 35 Z" fill="#FFD700" />
+  
+  <!-- Center Circle -->
+  <circle cx="50" cy="50" r="10" fill="#FFD700" />
+  <circle cx="50" cy="50" r="7" fill="#4A6CF7" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="30" cy="30" r="3" fill="white" opacity="0.5" />
+  <circle cx="70" cy="30" r="2" fill="white" opacity="0.5" />
+  <circle cx="30" cy="70" r="2" fill="white" opacity="0.5" />
+  <circle cx="70" cy="70" r="3" fill="white" opacity="0.5" />
+</svg>

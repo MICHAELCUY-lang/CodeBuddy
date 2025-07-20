@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Background -->
+  <rect x="0" y="0" width="200" height="200" fill="#F8F9FA" opacity="0" />
+  
+  <!-- Video Player -->
+  <rect x="40" y="40" width="120" height="90" rx="5" ry="5" fill="#F8F9FA" stroke="#4A6CF7" stroke-width="2" />
+  
+  <!-- Video Screen -->
+  <rect x="45" y="45" width="110" height="80" rx="3" ry="3" fill="#1E1E1E" />
+  
+  <!-- Play Button -->
+  <circle cx="100" y="85" r="20" fill="#4A6CF7" opacity="0.9" />
+  <path d="M95 75 L95 95 L110 85 Z" fill="white" />
+  
+  <!-- Video Controls -->
+  <rect x="50" y="140" width="100" height="10" rx="5" ry="5" fill="#E9ECEF" />
+  <rect x="50" y="140" width="60" height="10" rx="5" ry="5" fill="#4A6CF7" />
+  
+  <!-- YouTube Icon -->
+  <rect x="50" y="160" width="30" height="20" rx="5" ry="5" fill="#FF0000" />
+  <path d="M65 165 L60 170 L65 175 Z" fill="white" />
+  <rect x="67" y="167" width="8" height="6" rx="1" ry="1" fill="white" />
+  
+  <!-- Text Lines -->
+  <rect x="90" y="165" width="60" height="3" rx="1.5" ry="1.5" fill="#333" />
+  <rect x="90" y="172" width="40" height="3" rx="1.5" ry="1.5" fill="#333" />
+  
+  <!-- Decorative Elements -->
+  <circle cx="30" y="30" r="10" fill="#4A6CF7" opacity="0.3" />
+  <circle cx="170" y="170" r="15" fill="#4A6CF7" opacity="0.3" />
+</svg>

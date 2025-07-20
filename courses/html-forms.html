@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulir HTML - CodeBuddy</title>
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <a href="../courses.html" class="back-button">
+                ← Kembali ke Kursus
+            </a>
+            <div class="course-info">
+                <h2>Formulir HTML</h2>
+                <p>Pelajari cara membuat dan mengelola formulir interaktif dengan HTML. Kursus ini akan mengajarkan Anda berbagai jenis input, validasi, dan best practices.</p>
+                <div class="course-meta">
+                    <span>📝 HTML</span>
+                    <span>⏰ 4 Pelajaran</span>
+                    <span>👤 Menengah</span>
+                    <span>⭐ 4.7/5</span>
+                </div>
+            </div>
+            <div class="course-progress">
+                <h3>Progress Kursus</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="courseProgress" style="width: 0%"></div>
+                </div>
+                <span class="progress-text" id="progressText">0% (0/4 pelajaran)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            <div class="course-layout">
+                <aside class="lesson-sidebar">
+                    <h3>Daftar Pelajaran</h3>
+                    <ul>
+                        <li><a href="#lesson1" class="lesson-link active">1. Dasar-dasar Form</a></li>
+                        <li><a href="#lesson2" class="lesson-link">2. Input Types</a></li>
+                        <li><a href="#lesson3" class="lesson-link">3. Form Validation</a></li>
+                        <li><a href="#lesson4" class="lesson-link">4. Form Styling</a></li>
+                    </ul>
+                    <div class="progress-sidebar">
+                        <h4>Progress Kursus</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% (0/4 pelajaran)</span>
+                    </div>
+                </aside>
+
+                <main class="lesson-main">
+                    <!-- Lesson 1: Dasar-dasar Form -->
+                    <div id="lesson1" class="lesson-content active">
+                        <h2>Pelajaran 1: Dasar-dasar Form</h2>
+                        <p>Form HTML adalah cara untuk mengumpulkan input dari pengguna dan mengirimkannya ke server.</p>
+                        
+                        <h3>Struktur Dasar Form</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;form action="/submit" method="POST"&gt;
+    &lt;label for="name"&gt;Nama:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;button type="submit"&gt;Kirim&lt;/button&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+
+                        <h3>Atribut Form Penting</h3>
+                        <ul>
+                            <li><strong>action:</strong> URL tujuan pengiriman data</li>
+                            <li><strong>method:</strong> Metode HTTP (GET atau POST)</li>
+                            <li><strong>enctype:</strong> Encoding type untuk file upload</li>
+                        </ul>
+
+                        <h3>Label dan Input</h3>
+                        <p>Selalu gunakan label untuk accessibility:</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;label for="username"&gt;Username:&lt;/label&gt;
+&lt;input type="text" id="username" name="username"&gt;
+
+&lt;!-- Atau --&gt;
+&lt;label&gt;
+    Password:
+    &lt;input type="password" name="password"&gt;
+&lt;/label&gt;</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" disabled>Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 2: Input Types -->
+                    <div id="lesson2" class="lesson-content">
+                        <h2>Pelajaran 2: Input Types</h2>
+                        <p>HTML5 menyediakan berbagai jenis input untuk kebutuhan yang berbeda.</p>
+                        
+                        <h3>Text Inputs</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- Text biasa --&gt;
+&lt;input type="text" name="name" placeholder="Masukkan nama"&gt;
+
+&lt;!-- Email --&gt;
+&lt;input type="email" name="email" placeholder="email@example.com"&gt;
+
+&lt;!-- Password --&gt;
+&lt;input type="password" name="password"&gt;
+
+&lt;!-- Textarea untuk teks panjang --&gt;
+&lt;textarea name="message" rows="4" cols="50"&gt;&lt;/textarea&gt;</code></pre>
+                        </div>
+
+                        <h3>Number dan Date Inputs</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- Number --&gt;
+&lt;input type="number" name="age" min="1" max="100"&gt;
+
+&lt;!-- Date --&gt;
+&lt;input type="date" name="birthday"&gt;
+
+&lt;!-- Time --&gt;
+&lt;input type="time" name="appointment"&gt;
+
+&lt;!-- Range --&gt;
+&lt;input type="range" name="volume" min="0" max="100"&gt;</code></pre>
+                        </div>
+
+                        <h3>Selection Inputs</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- Radio buttons --&gt;
+&lt;input type="radio" id="male" name="gender" value="male"&gt;
+&lt;label for="male"&gt;Laki-laki&lt;/label&gt;
+
+&lt;input type="radio" id="female" name="gender" value="female"&gt;
+&lt;label for="female"&gt;Perempuan&lt;/label&gt;
+
+&lt;!-- Checkboxes --&gt;
+&lt;input type="checkbox" id="newsletter" name="newsletter"&gt;
+&lt;label for="newsletter"&gt;Subscribe newsletter&lt;/label&gt;
+
+&lt;!-- Select dropdown --&gt;
+&lt;select name="country"&gt;
+    &lt;option value="id"&gt;Indonesia&lt;/option&gt;
+    &lt;option value="my"&gt;Malaysia&lt;/option&gt;
+    &lt;option value="sg"&gt;Singapore&lt;/option&gt;
+&lt;/select&gt;</code></pre>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 3: Form Validation -->
+                    <div id="lesson3" class="lesson-content">
+                        <h2>Pelajaran 3: Form Validation</h2>
+                        <p>Validasi form memastikan data yang dimasukkan pengguna sesuai dengan format yang diharapkan.</p>
+                        
+                        <h3>HTML5 Validation Attributes</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;!-- Required field --&gt;
+&lt;input type="text" name="name" required&gt;
+
+&lt;!-- Minimum dan maximum length --&gt;
+&lt;input type="text" name="username" minlength="3" maxlength="20"&gt;
+
+&lt;!-- Pattern validation --&gt;
+&lt;input type="text" name="phone" pattern="[0-9]{10,12}" 
+       title="Masukkan 10-12 digit angka"&gt;
+
+&lt;!-- Min dan max untuk numbers --&gt;
+&lt;input type="number" name="age" min="18" max="65"&gt;</code></pre>
+                        </div>
+
+                        <h3>Custom Validation Messages</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;input type="email" name="email" required 
+       oninvalid="this.setCustomValidity('Masukkan email yang valid')" 
+       oninput="this.setCustomValidity('')"&gt;
+
+&lt;input type="password" name="password" required 
+       pattern=".{8,}" 
+       title="Password minimal 8 karakter"&gt;</code></pre>
+                        </div>
+
+                        <h3>JavaScript Validation</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;script&gt;
+function validateForm() {
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    
+    if (!email.includes('@')) {
+        alert('Email tidak valid');
+        return false;
+    }
+    
+    if (password.length &lt; 8) {
+        alert('Password minimal 8 karakter');
+        return false;
+    }
+    
+    return true;
+}
+&lt;/script&gt;
+
+&lt;form onsubmit="return validateForm()"&gt;
+    &lt;!-- form fields --&gt;
+&lt;/form&gt;</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 4: Form Styling -->
+                    <div id="lesson4" class="lesson-content">
+                        <h2>Pelajaran 4: Form Styling</h2>
+                        <p>Membuat form yang menarik dan user-friendly dengan CSS.</p>
+                        
+                        <h3>Basic Form Styling</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}</code></pre>
+                        </div>
+
+                        <h3>Focus dan Hover Effects</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+input:hover, textarea:hover, select:hover {
+    border-color: #999;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}</code></pre>
+                        </div>
+
+                        <h3>Error Styling</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>input:invalid {
+    border-color: #dc3545;
+}
+
+input:valid {
+    border-color: #28a745;
+}
+
+.error-message {
+    color: #dc3545;
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
+.success-message {
+    color: #28a745;
+    font-size: 14px;
+}</code></pre>
+                        </div>
+
+                        <h3>Responsive Form</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>@media (max-width: 768px) {
+    form {
+        margin: 10px;
+        padding: 15px;
+    }
+    
+    input, textarea, select {
+        font-size: 16px; /* Prevents zoom on iOS */
+    }
+    
+    button {
+        width: 100%;
+        padding: 15px;
+    }
+}</code></pre>
+                        </div>
+
+                        <div class="quiz-section">
+                            <h3>Kuis: Formulir HTML</h3>
+                            <div class="quiz-question">
+                                <p><strong>1. Atribut mana yang digunakan untuk membuat input wajib diisi?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q1" value="a"> mandatory</label>
+                                    <label><input type="radio" name="q1" value="b"> required</label>
+                                    <label><input type="radio" name="q1" value="c"> needed</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>2. Input type mana yang digunakan untuk memilih tanggal?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q2" value="a"> datetime</label>
+                                    <label><input type="radio" name="q2" value="b"> date</label>
+                                    <label><input type="radio" name="q2" value="c"> calendar</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>3. Metode HTTP mana yang biasanya digunakan untuk mengirim data form?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q3" value="a"> GET</label>
+                                    <label><input type="radio" name="q3" value="b"> POST</label>
+                                    <label><input type="radio" name="q3" value="c"> PUT</label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="submitQuiz()">Submit Kuis</button>
+                            <div id="quiz-result" class="quiz-result"></div>
+                        </div>
+
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeBuddy. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/course.js"></script>
+    <script>
+        // Theme toggle functionality
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+        
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+        });
+    </script>
+</body>
+</html>

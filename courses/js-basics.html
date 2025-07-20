@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar-dasar JavaScript - CodeBuddy</title>
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode">
+                    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <a href="../courses.html" class="back-button">
+                ← Kembali ke Kursus
+            </a>
+            <div class="course-info">
+                <h2>Dasar-dasar JavaScript</h2>
+                <p>Pelajari konsep dasar JavaScript dan cara menggunakannya dalam halaman web. Kursus ini akan mengajarkan Anda variabel, fungsi, dan logika pemrograman.</p>
+                <div class="course-meta">
+                    <span>⚡ JavaScript</span>
+                    <span>⏰ 6 Pelajaran</span>
+                    <span>👤 Pemula</span>
+                    <span>⭐ 4.9/5</span>
+                </div>
+            </div>
+            <div class="course-progress">
+                <h3>Progress Kursus</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="courseProgress" style="width: 0%"></div>
+                </div>
+                <span class="progress-text" id="progressText">0% (0/6 pelajaran)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            <div class="course-layout">
+                <aside class="lesson-sidebar">
+                    <h3>Daftar Pelajaran</h3>
+                    <ul>
+                        <li><a href="#lesson1" class="lesson-link active">1. Pengenalan JavaScript</a></li>
+                        <li><a href="#lesson2" class="lesson-link">2. Variabel dan Tipe Data</a></li>
+                        <li><a href="#lesson3" class="lesson-link">3. Operator dan Ekspresi</a></li>
+                        <li><a href="#lesson4" class="lesson-link">4. Kondisi dan Perulangan</a></li>
+                        <li><a href="#lesson5" class="lesson-link">5. Fungsi</a></li>
+                        <li><a href="#lesson6" class="lesson-link">6. Array dan Object</a></li>
+                    </ul>
+                    <div class="progress-sidebar">
+                        <h4>Progress Kursus</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% (0/6 pelajaran)</span>
+                    </div>
+                </aside>
+
+                <main class="lesson-main">
+                    <!-- Lesson 1: Pengenalan JavaScript -->
+                    <div id="lesson1" class="lesson-content active">
+                        <h2>Pelajaran 1: Pengenalan JavaScript</h2>
+                        <p>JavaScript adalah bahasa pemrograman yang digunakan untuk membuat halaman web menjadi interaktif dan dinamis.</p>
+                        
+                        <h3>Apa itu JavaScript?</h3>
+                        <p>JavaScript memungkinkan Anda untuk:</p>
+                        <ul>
+                            <li>Memanipulasi konten HTML dan CSS</li>
+                            <li>Merespons interaksi pengguna (klik, hover, dll)</li>
+                            <li>Memvalidasi form</li>
+                            <li>Membuat animasi dan efek visual</li>
+                            <li>Berkomunikasi dengan server</li>
+                        </ul>
+
+                        <h3>Cara Menambahkan JavaScript</h3>
+                        
+                        <h4>1. Inline JavaScript</h4>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;button onclick="alert('Hello World!')"&gt;Klik Saya&lt;/button&gt;</code></pre>
+                        </div>
+
+                        <h4>2. Internal JavaScript</h4>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;script&gt;
+    console.log('Hello World!');
+    alert('Selamat datang di JavaScript!');
+&lt;/script&gt;</code></pre>
+                        </div>
+
+                        <h4>3. External JavaScript</h4>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code></pre>
+                        </div>
+
+                        <h3>Console dan Debugging</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>console.log('Pesan debug');
+console.error('Pesan error');
+console.warn('Pesan warning');</code></pre>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Pengenalan JavaScript melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/W6NZfCO5SIk" title="Tutorial Pengenalan JavaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" disabled>Sebelumnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 2: Variabel dan Tipe Data -->
+                    <div id="lesson2" class="lesson-content">
+                        <h2>Pelajaran 2: Variabel dan Tipe Data</h2>
+                        <p>Variabel adalah wadah untuk menyimpan data, dan JavaScript memiliki berbagai tipe data.</p>
+                        
+                        <h3>Deklarasi Variabel</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// var (lama, hindari penggunaan)
+var nama = 'John';
+
+// let (untuk variabel yang bisa berubah)
+let umur = 25;
+umur = 26; // bisa diubah
+
+// const (untuk konstanta)
+const PI = 3.14159;
+// PI = 3.14; // Error! tidak bisa diubah</code></pre>
+                        </div>
+
+                        <h3>Tipe Data Primitif</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// String (teks)
+let nama = 'Alice';
+let pesan = "Hello World";
+let template = `Halo, ${nama}!`; // Template literal
+
+// Number (angka)
+let umur = 25;
+let tinggi = 175.5;
+let negatif = -10;
+
+// Boolean (true/false)
+let aktif = true;
+let selesai = false;
+
+// Undefined
+let belumDiisi;
+console.log(belumDiisi); // undefined
+
+// Null
+let kosong = null;</code></pre>
+                        </div>
+
+                        <h3>Mengecek Tipe Data</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>console.log(typeof 'Hello'); // "string"
+console.log(typeof 42); // "number"
+console.log(typeof true); // "boolean"
+console.log(typeof undefined); // "undefined"
+console.log(typeof null); // "object" (ini bug di JavaScript!)</code></pre>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Variabel dan Tipe Data JavaScript melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/edlFjlzxkSI" title="Tutorial Variabel dan Tipe Data JavaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Operator dan Ekspresi JavaScript melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/FZzyij43A54" title="Tutorial Operator dan Ekspresi JavaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Fungsi dan Objek JavaScript melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/xUI5Tsl2JpY" title="Tutorial Fungsi dan Objek JavaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 3: Operator dan Ekspresi -->
+                    <div id="lesson3" class="lesson-content">
+                        <h2>Pelajaran 3: Operator dan Ekspresi</h2>
+                        <p>Operator digunakan untuk melakukan operasi pada variabel dan nilai.</p>
+                        
+                        <h3>Operator Aritmatika</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let a = 10;
+let b = 3;
+
+console.log(a + b); // 13 (penjumlahan)
+console.log(a - b); // 7 (pengurangan)
+console.log(a * b); // 30 (perkalian)
+console.log(a / b); // 3.333... (pembagian)
+console.log(a % b); // 1 (modulus/sisa bagi)
+console.log(a ** b); // 1000 (pangkat)</code></pre>
+                        </div>
+
+                        <h3>Operator Perbandingan</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let x = 5;
+let y = '5';
+
+console.log(x == y);  // true (sama nilai)
+console.log(x === y); // false (sama nilai dan tipe)
+console.log(x != y);  // false (tidak sama nilai)
+console.log(x !== y); // true (tidak sama nilai atau tipe)
+console.log(x > 3);   // true
+console.log(x <= 5);  // true</code></pre>
+                        </div>
+
+                        <h3>Operator Logika</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let benar = true;
+let salah = false;
+
+console.log(benar && salah); // false (AND)
+console.log(benar || salah); // true (OR)
+console.log(!benar);         // false (NOT)
+
+// Short-circuit evaluation
+let nama = '' || 'Default'; // 'Default'
+let user = {name: 'John'} && user.name; // 'John'</code></pre>
+                        </div>
+
+                        <h3>Operator Assignment</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let angka = 10;
+
+angka += 5;  // angka = angka + 5 (15)
+angka -= 3;  // angka = angka - 3 (12)
+angka *= 2;  // angka = angka * 2 (24)
+angka /= 4;  // angka = angka / 4 (6)
+angka++;     // angka = angka + 1 (7)
+angka--;     // angka = angka - 1 (6)</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 4: Kondisi dan Perulangan -->
+                    <div id="lesson4" class="lesson-content">
+                        <h2>Pelajaran 4: Kondisi dan Perulangan</h2>
+                        <p>Struktur kontrol memungkinkan program membuat keputusan dan mengulang tindakan.</p>
+                        
+                        <h3>If Statement</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let umur = 18;
+
+if (umur >= 18) {
+    console.log('Anda sudah dewasa');
+} else if (umur >= 13) {
+    console.log('Anda remaja');
+} else {
+    console.log('Anda masih anak-anak');
+}
+
+// Ternary operator
+let status = umur >= 18 ? 'Dewasa' : 'Belum dewasa';</code></pre>
+                        </div>
+
+                        <h3>Switch Statement</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let hari = 'Senin';
+
+switch (hari) {
+    case 'Senin':
+        console.log('Awal minggu');
+        break;
+    case 'Jumat':
+        console.log('Akhir minggu kerja');
+        break;
+    case 'Sabtu':
+    case 'Minggu':
+        console.log('Weekend!');
+        break;
+    default:
+        console.log('Hari biasa');
+}</code></pre>
+                        </div>
+
+                        <h3>For Loop</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// For loop biasa
+for (let i = 0; i < 5; i++) {
+    console.log('Iterasi ke-' + i);
+}
+
+// For...of (untuk array)
+let buah = ['apel', 'jeruk', 'pisang'];
+for (let item of buah) {
+    console.log(item);
+}
+
+// For...in (untuk object)
+let person = {nama: 'John', umur: 30};</code></pre>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Kondisi dan Perulangan JavaScript melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/N8ap4k_1QEQ" title="Tutorial Kondisi dan Perulangan JavaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// For...in (untuk object)
+let person = {nama: 'John', umur: 30};
+for (let key in person) {
+    console.log(key + ': ' + person[key]);
+}</code></pre>
+                        </div>
+
+                        <h3>While Loop</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let i = 0;
+while (i < 3) {
+    console.log('While: ' + i);
+    i++;
+}
+
+// Do...while
+let j = 0;
+do {
+    console.log('Do-while: ' + j);
+    j++;
+} while (j < 3);</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 5: Fungsi -->
+                    <div id="lesson5" class="lesson-content">
+                        <h2>Pelajaran 5: Fungsi</h2>
+                        <p>Fungsi adalah blok kode yang dapat digunakan kembali untuk melakukan tugas tertentu.</p>
+                        
+                        <h3>Deklarasi Fungsi</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Function declaration
+function sapa(nama) {
+    return 'Halo, ' + nama + '!';
+}
+
+// Function expression
+const tambah = function(a, b) {
+    return a + b;
+};
+
+// Arrow function
+const kali = (a, b) => a * b;
+const kuadrat = x => x * x;
+const salam = () => 'Hello World!';</code></pre>
+                        </div>
+
+                        <h3>Parameter dan Argument</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Default parameter
+function perkenalan(nama = 'Anonim', umur = 0) {
+    return `Nama: ${nama}, Umur: ${umur}`;
+}
+
+console.log(perkenalan()); // "Nama: Anonim, Umur: 0"
+console.log(perkenalan('Alice', 25)); // "Nama: Alice, Umur: 25"
+
+// Rest parameter
+function jumlahSemua(...angka) {
+    return angka.reduce((total, num) => total + num, 0);
+}
+
+console.log(jumlahSemua(1, 2, 3, 4)); // 10</code></pre>
+                        </div>
+
+                        <h3>Scope dan Closure</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Global scope
+let globalVar = 'Saya global';
+
+function luarFungsi() {
+    // Function scope
+    let lokalVar = 'Saya lokal';
+    
+    function dalamFungsi() {
+        // Closure - bisa akses variabel parent
+        console.log(globalVar); // OK
+        console.log(lokalVar);  // OK
+    }
+    
+    return dalamFungsi;
+}
+
+const fungsiClosure = luarFungsi();
+fungsiClosure(); // Masih bisa akses lokalVar!</code></pre>
+                        </div>
+
+                        <div class="lesson-navigation">
+                            <button class="btn btn-secondary" onclick="prevLesson()">Sebelumnya</button>
+                            <button class="btn btn-primary" onclick="nextLesson()">Selanjutnya</button>
+                        </div>
+                    </div>
+
+                    <!-- Lesson 6: Array dan Object -->
+                    <div id="lesson6" class="lesson-content">
+                        <h2>Pelajaran 6: Array dan Object</h2>
+                        <p>Array dan Object adalah struktur data penting untuk menyimpan koleksi data.</p>
+                        
+                        <h3>Array</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Membuat array
+let buah = ['apel', 'jeruk', 'pisang'];
+let angka = [1, 2, 3, 4, 5];
+let campuran = ['teks', 42, true, null];
+
+// Mengakses elemen
+console.log(buah[0]); // 'apel'
+console.log(buah.length); // 3
+
+// Menambah elemen
+buah.push('mangga'); // tambah di akhir
+buah.unshift('anggur'); // tambah di awal
+
+// Menghapus elemen
+buah.pop(); // hapus dari akhir
+buah.shift(); // hapus dari awal</code></pre>
+                        </div>
+
+                        <h3>Array Methods</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let angka = [1, 2, 3, 4, 5];
+
+// Map - transform setiap elemen</code></pre>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Array dan Object JavaScript melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/aVS4W4GZSLo" title="Tutorial Array dan Object JavaScript" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Map - transform setiap elemen
+let dikali2 = angka.map(x => x * 2); // [2, 4, 6, 8, 10]
+
+// Filter - saring elemen
+let genap = angka.filter(x => x % 2 === 0); // [2, 4]
+
+// Find - cari elemen pertama
+let ditemukan = angka.find(x => x > 3); // 4
+
+// Reduce - gabungkan menjadi satu nilai
+let total = angka.reduce((sum, x) => sum + x, 0); // 15
+
+// ForEach - iterasi
+angka.forEach(x => console.log(x));</code></pre>
+                        </div>
+
+                        <h3>Object</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>// Membuat object
+let person = {
+    nama: 'John',
+    umur: 30,
+    hobi: ['membaca', 'coding'],
+    alamat: {
+        kota: 'Jakarta',
+        kodePos: '12345'
+    }
+};
+
+// Mengakses properti
+console.log(person.nama); // 'John'
+console.log(person['umur']); // 30
+console.log(person.alamat.kota); // 'Jakarta'
+
+// Menambah/mengubah properti
+person.pekerjaan = 'Developer';
+person.umur = 31;</code></pre>
+                        </div>
+
+                        <h3>Object Methods</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>let mobil = {
+    merk: 'Toyota',
+    model: 'Camry',
+    tahun: 2020,
+    
+    // Method
+    info: function() {
+        return `${this.merk} ${this.model} (${this.tahun})`;
+    },
+    
+    // Arrow function tidak memiliki 'this'
+    infoArrow: () => {
+        return 'Arrow function';
+    }
+};
+
+console.log(mobil.info()); // "Toyota Camry (2020)"
+
+// Object methods
+console.log(Object.keys(mobil)); // ['merk', 'model', 'tahun', 'info']
+console.log(Object.values(mobil)); // ['Toyota', 'Camry', 2020, function...]</code></pre>
+                        </div>
+
+                        <div class="quiz-section">
+                            <h3>Kuis: Dasar-dasar JavaScript</h3>
+                            <div class="quiz-question">
+                                <p><strong>1. Mana yang merupakan cara yang benar untuk mendeklarasikan variabel yang tidak bisa diubah?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q1" value="a"> var nama = 'John'</label>
+                                    <label><input type="radio" name="q1" value="b"> let nama = 'John'</label>
+                                    <label><input type="radio" name="q1" value="c"> const nama = 'John'</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>2. Apa hasil dari: console.log(5 === '5')?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q2" value="a"> true</label>
+                                    <label><input type="radio" name="q2" value="b"> false</label>
+                                    <label><input type="radio" name="q2" value="c"> undefined</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>3. Method array mana yang digunakan untuk mengubah setiap elemen array?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q3" value="a"> filter()</label>
+                                    <label><input type="radio" name="q3" value="b"> map()</label>
+                                    <label><input type="radio" name="q3" value="c"> find()</label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="submitQuiz()">Submit Kuis</button>
+                            <div id="quiz-result" class="quiz-result"></div>
+                        </div>
+
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeBuddy. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/course.js"></script>
+    <script>
+        function toggleTheme() {
+            const body = document.body;
+            const currentTheme = body.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            
+            body.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+        }
+
+        // Load saved theme on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            const savedTheme = localStorage.getItem('theme') || 'dark';
+            document.body.setAttribute('data-theme', savedTheme);
+        });
+    </script>
+</body>
+</html>

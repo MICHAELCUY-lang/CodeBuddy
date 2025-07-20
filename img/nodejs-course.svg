@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" width="400" height="300">
+  <!-- Background -->
+  <rect width="400" height="300" fill="#2d3748" rx="15" ry="15"/>
+  
+  <!-- Node.js Logo -->
+  <g transform="translate(120, 60) scale(0.8)">
+    <!-- Node.js Shape -->
+    <path d="M100,0 L200,57.7 L200,173.1 L100,230.8 L0,173.1 L0,57.7 Z" fill="#83CD29"/>
+    
+    <!-- Inner Shape -->
+    <path d="M100,18.2 L180,66.5 L180,163.1 L100,211.4 L20,163.1 L20,66.5 Z" fill="#2d3748"/>
+    
+    <!-- N Shape -->
+    <path d="M100,18.2 L100,211.4 M100,18.2 L180,66.5 M100,18.2 L20,66.5" stroke="#83CD29" stroke-width="10" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+  
+  <!-- Text -->
+  <text x="200" y="240" font-family="'Inter', sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">Node.js Backend</text>
+  
+  <!-- Decorative Elements -->
+  <circle cx="50" cy="50" r="15" fill="#667eea" opacity="0.6"/>
+  <circle cx="350" cy="250" r="20" fill="#667eea" opacity="0.4"/>
+  <circle cx="30" cy="200" r="10" fill="#83CD29" opacity="0.5"/>
+  <circle cx="370" cy="100" r="12" fill="#83CD29" opacity="0.3"/>
+</svg>

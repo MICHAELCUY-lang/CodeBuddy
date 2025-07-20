@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="id" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dasar-dasar CSS - CodeBuddy</title>
+    <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="../img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
+                <nav>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </nav>
+                <!-- Tombol toggle tema dihapus untuk hanya menggunakan dark mode -->
+            </div>
+        </div>
+    </header>
+
+    <section class="course-header">
+        <div class="container">
+            <a href="../courses.html" class="back-button">
+                ← Kembali ke Kursus
+            </a>
+            <div class="course-info">
+                <h2>Dasar-dasar CSS</h2>
+                <p>Pelajari cara mendesain dan mempercantik halaman web dengan CSS. Kursus ini akan mengajarkan Anda selector, properti, dan teknik styling dasar.</p>
+                <div class="course-meta">
+                    <span>🎨 CSS</span>
+                    <span>⏰ 5 Pelajaran</span>
+                    <span>👤 Pemula</span>
+                    <span>⭐ 4.8/5</span>
+                </div>
+            </div>
+            <div class="course-progress">
+                <h3>Progress Kursus</h3>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="courseProgress" style="width: 0%"></div>
+                </div>
+                <span class="progress-text" id="progressText">0% (0/5 pelajaran)</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="course-content">
+        <div class="container">
+            <div class="course-layout">
+                <aside class="lesson-sidebar">
+                    <h3>Daftar Pelajaran</h3>
+                    <ul>
+                        <li><a href="#lesson1" class="active">🎨 1. Pengenalan CSS</a></li>
+                        <li><a href="#lesson2">🎯 2. CSS Selector</a></li>
+                        <li><a href="#lesson3">📝 3. Properti Text dan Font</a></li>
+                        <li><a href="#lesson4">📦 4. Box Model</a></li>
+                        <li><a href="#lesson5">🏗️ 5. Layout dengan CSS</a></li>
+                    </ul>
+                    <div class="progress-sidebar">
+                        <h4>Progress Kursus</h4>
+                        <div class="progress-bar">
+                            <div class="progress-fill" style="width: 0%"></div>
+                        </div>
+                        <span class="progress-text">0% (0/5 pelajaran)</span>
+                    </div>
+                </aside>
+
+                <main class="lesson-main">
+                    <!-- Lesson 1: Pengenalan CSS -->
+                    <div id="lesson1" class="lesson active">
+                        <div class="lesson-header">
+                            <h3>🎨 Pelajaran 1: Pengenalan CSS</h3>
+                            <div class="lesson-meta">
+                                <span>⏰ 25 menit</span>
+                                <span>📝 1 Quiz</span>
+                                <span>🎯 Pemula</span>
+                            </div>
+                        </div>
+                        
+                        <div class="lesson-section">
+                            <h4>Apa itu CSS?</h4>
+                            <p>CSS (Cascading Style Sheets) adalah bahasa yang digunakan untuk mendesain dan mengatur tampilan halaman web.</p>
+                        
+                            <p>CSS memungkinkan Anda untuk:</p>
+                            <ul>
+                                <li>Mengatur warna, font, dan ukuran teks</li>
+                                <li>Mengatur layout dan posisi elemen</li>
+                                <li>Menambahkan efek visual seperti bayangan dan animasi</li>
+                                <li>Membuat desain yang responsif</li>
+                            </ul>
+                        </div>
+
+                        <div class="lesson-section">
+                            <h4>Cara Menambahkan CSS</h4>
+                            <p>Ada tiga cara untuk menambahkan CSS ke HTML:</p>
+                            
+                            <h5>1. Inline CSS</h5>
+                            <div class="code-example">
+                                <pre><code>&lt;p style="color: blue; font-size: 18px;"&gt;Teks berwarna biru&lt;/p&gt;</code></pre>
+                            </div>
+
+                            <h5>2. Internal CSS</h5>
+                            <div class="code-example">
+                                <pre><code>&lt;head&gt;
+    &lt;style&gt;
+        p {
+            color: blue;
+            font-size: 18px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;</code></pre>
+                            </div>
+
+                            <h5>3. External CSS</h5>
+                            <div class="code-example">
+                                <pre><code>&lt;head&gt;
+    &lt;link rel="stylesheet" href="style.css"&gt;
+&lt;/head&gt;</code></pre>
+                            </div>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Pengenalan CSS melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/1PnVor36_40" title="Tutorial Pengenalan CSS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 2: CSS Selector -->
+                    <div id="lesson2" class="lesson-content">
+                        <h2>Pelajaran 2: CSS Selector</h2>
+                        <p>Selector adalah cara untuk memilih elemen HTML yang ingin diberi style.</p>
+                        
+                        <h3>Jenis-jenis Selector</h3>
+                        
+                        <h4>1. Element Selector</h4>
+                        <p>Memilih semua elemen dengan tag tertentu:</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>p {
+    color: red;
+}
+
+h1 {
+    font-size: 24px;
+}</code></pre>
+                        </div>
+
+                        <h4>2. Class Selector</h4>
+                        <p>Memilih elemen dengan class tertentu:</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>.highlight {
+    background-color: yellow;
+}
+
+.center {
+    text-align: center;
+}</code></pre>
+                        </div>
+
+                        <h4>3. ID Selector</h4>
+                        <p>Memilih elemen dengan ID tertentu:</p>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>#header {
+    background-color: blue;
+}
+
+#footer {
+    margin-top: 20px;
+}</code></pre>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang CSS Selector melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/l1mER1bV0N0" title="Tutorial CSS Selector" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Properti Text dan Font CSS melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/UO0ZPL8yMpU" title="Tutorial Properti Text dan Font CSS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 3: Properti Text dan Font -->
+                    <div id="lesson3" class="lesson-content">
+                        <h2>Pelajaran 3: Properti Text dan Font</h2>
+                        <p>Pelajari cara mengatur tampilan teks dengan berbagai properti CSS.</p>
+                        
+                        <h3>Properti Font</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>p {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+}</code></pre>
+                        </div>
+
+                        <h3>Properti Text</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>h1 {
+    color: #333;
+    text-align: center;
+    text-decoration: underline;
+    text-transform: uppercase;
+    line-height: 1.5;
+}</code></pre>
+                        </div>
+
+                        <h3>Contoh Penggunaan</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>.title {
+    font-family: 'Georgia', serif;
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+}</code></pre>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 4: Box Model -->
+                    <div id="lesson4" class="lesson-content">
+                        <h2>Pelajaran 4: Box Model</h2>
+                        <p>Box Model adalah konsep fundamental dalam CSS yang menjelaskan bagaimana elemen HTML ditampilkan sebagai kotak.</p>
+                        
+                        <h3>Komponen Box Model</h3>
+                        <ul>
+                            <li><strong>Content:</strong> Isi dari elemen</li>
+                            <li><strong>Padding:</strong> Ruang di dalam elemen, di sekitar content</li>
+                            <li><strong>Border:</strong> Garis tepi elemen</li>
+                            <li><strong>Margin:</strong> Ruang di luar elemen</li>
+                        </ul>
+
+                        <h3>Properti Box Model</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>.box {
+    width: 200px;
+    height: 100px;
+    padding: 20px;
+    border: 2px solid #333;
+    margin: 10px;
+    background-color: #f0f0f0;
+}</code></pre>
+                        </div>
+
+                        <h3>Shorthand Properties</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Margin dan Padding */
+margin: 10px 20px 10px 20px; /* top right bottom left */
+margin: 10px 20px; /* top/bottom left/right */
+margin: 10px; /* semua sisi */
+
+/* Border */
+border: 2px solid red; /* width style color */</code></pre>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Box Model CSS melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/rIO5326FgPE" title="Tutorial Box Model CSS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+
+                    </div>
+
+                    <!-- Lesson 5: Layout dengan CSS -->
+                    <div id="lesson5" class="lesson-content">
+                        <h2>Pelajaran 5: Layout dengan CSS</h2>
+                        <p>Pelajari cara mengatur layout elemen dengan properti display dan position.</p>
+                        
+                        <h3>Properti Display</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Block element */
+div {
+    display: block;
+    width: 100%;
+}
+
+/* Inline element */
+span {
+    display: inline;
+}
+
+/* Inline-block */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+}</code></pre>
+                        </div>
+
+                        <h3>Properti Position</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>/* Static (default) */
+.normal {
+    position: static;
+}
+
+/* Relative */
+.relative {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+/* Absolute */
+.absolute {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* Fixed */
+.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}</code></pre>
+                        </div>
+
+                        <h3>Float dan Clear</h3>
+                        <div class="code-block">
+                            <button class="copy-btn" onclick="copyCode(this)"><i class="fas fa-copy"></i></button>
+                            <pre><code>.left {
+    float: left;
+    width: 50%;
+}
+
+.right {
+    float: right;
+    width: 50%;
+}
+
+.clear {
+    clear: both;
+}</code></pre>
+                        </div>
+
+                        <div class="video-reference">
+                            <h5>Referensi Video</h5>
+                            <p>Pelajari lebih lanjut tentang Layout dengan CSS melalui video tutorial berikut:</p>
+                            <iframe width="100%" height="315" src="https://www.youtube.com/embed/K74l26pE4YA" title="Tutorial Layout dengan CSS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        </div>
+
+                        <div class="quiz-section">
+                            <h3>Kuis: Dasar-dasar CSS</h3>
+                            <div class="quiz-question">
+                                <p><strong>1. Apa kepanjangan dari CSS?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q1" value="a"> Computer Style Sheets</label>
+                                    <label><input type="radio" name="q1" value="b" data-correct="true"> Cascading Style Sheets</label>
+                                    <label><input type="radio" name="q1" value="c"> Creative Style Sheets</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>2. Selector mana yang digunakan untuk memilih elemen dengan ID "header"?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q2" value="a"> .header</label>
+                                    <label><input type="radio" name="q2" value="b" data-correct="true"> #header</label>
+                                    <label><input type="radio" name="q2" value="c"> header</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p><strong>3. Properti CSS mana yang digunakan untuk mengatur jarak di dalam elemen?</strong></p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q3" value="a"> margin</label>
+                                    <label><input type="radio" name="q3" value="b" data-correct="true"> padding</label>
+                                    <label><input type="radio" name="q3" value="c"> border</label>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-primary" onclick="submitQuiz()">Submit Kuis</button>
+                            <div id="quiz-result" class="quiz-result"></div>
+                        </div>
+
+
+                    </div>
+                </main>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>CodeBuddy</h3>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Navigasi</h4>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h4>Kontak</h4>
+                    <p><i class="far fa-envelope"></i> michael.mandey@student.president.ac.id</p>
+                    <p><i class="fas fa-phone-alt"></i> +62 812 9730 0254</p>
+                    <div class="social-media">
+                        <a href="https://www.instagram.com/michael.mandey.79/" class="instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/MICHAELCUY-lang" class="github"><i class="fab fa-github"></i></a>
+                        <a href="https://discord.com/users/691305691222245396" class="discord"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeBuddy. Semua hak dilindungi.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/script.js"></script>
+    <script src="../js/course.js"></script>
+    <script>
+        // Hanya menggunakan dark mode
+        document.addEventListener('DOMContentLoaded', function() {
+            // Selalu mengatur tema ke dark mode
+            document.body.setAttribute('data-theme', 'dark');
+            localStorage.setItem('theme', 'dark');
+        });
+        
+        // Fungsi untuk menangani pengiriman kuis
+        function submitQuiz() {
+            const quizForm = document.querySelector('.quiz-section');
+            const resultContainer = document.getElementById('quiz-result');
+            const questions = quizForm.querySelectorAll('.quiz-question');
+            let score = 0;
+            let totalQuestions = questions.length;
+            
+            // Periksa setiap pertanyaan
+            questions.forEach(question => {
+                const selectedOption = question.querySelector('input[type="radio"]:checked');
+                const correctOption = question.querySelector('input[data-correct="true"]');
+                
+                if (selectedOption) {
+                    // Tandai opsi yang dipilih
+                    const selectedLabel = question.querySelector(`label[for="${selectedOption.id}"]`) || 
+                                          selectedOption.parentElement;
+                    
+                    if (selectedOption.getAttribute('data-correct') === 'true') {
+                        // Jawaban benar
+                        score++;
+                        selectedLabel.classList.add('correct');
+                    } else {
+                        // Jawaban salah
+                        selectedLabel.classList.add('incorrect');
+                        
+                        // Tampilkan jawaban yang benar
+                        const correctLabel = question.querySelector(`label[for="${correctOption.id}"]`) || 
+                                             correctOption.parentElement;
+                        correctLabel.classList.add('correct');
+                    }
+                } else {
+                    // Tidak ada opsi yang dipilih
+                    const correctLabel = question.querySelector(`label[for="${correctOption.id}"]`) || 
+                                         correctOption.parentElement;
+                    correctLabel.classList.add('correct');
+                }
+                
+                // Nonaktifkan semua input untuk pertanyaan ini
+                question.querySelectorAll('input[type="radio"]').forEach(input => {
+                    input.disabled = true;
+                });
+            });
+            
+            // Hitung persentase skor
+            const percentage = Math.round((score / totalQuestions) * 100);
+            
+            // Tampilkan hasil
+            resultContainer.innerHTML = `
+                <div class="result-message ${percentage >= 70 ? 'success' : 'error'}">
+                    <h3>${percentage >= 70 ? 'Selamat!' : 'Coba Lagi!'}</h3>
+                    <p>Skor Anda: ${score}/${totalQuestions} (${percentage}%)</p>
+                    <p>${percentage >= 70 ? 'Anda telah menguasai materi ini.' : 'Anda perlu mengulang materi ini.'}</p>
+                </div>
+            `;
+            resultContainer.style.display = 'block';
+            
+            // Nonaktifkan tombol submit
+            document.querySelector('.quiz-section button[onclick="submitQuiz()"]').disabled = true;
+            
+            // Tambahkan tombol coba lagi jika skor kurang dari 70%
+            if (percentage < 70) {
+                const retryButton = document.createElement('button');
+                retryButton.textContent = 'Coba Lagi';
+                retryButton.className = 'btn btn-primary';
+                retryButton.addEventListener('click', function() {
+                    // Reset kuis
+                    resetQuiz();
+                });
+                resultContainer.querySelector('.result-message').appendChild(retryButton);
+            } else {
+                // Perbarui progres jika lulus
+                const courseSlug = window.location.pathname.split('/').pop().replace('.html', '');
+                const lessonNumber = 5; // Pelajaran terakhir
+                
+                // Tandai pelajaran sebagai selesai di penyimpanan lokal
+                markLessonComplete(courseSlug, lessonNumber);
+            }
+        }
+        
+        // Fungsi untuk mereset kuis
+        function resetQuiz() {
+            const quizForm = document.querySelector('.quiz-section');
+            const resultContainer = document.getElementById('quiz-result');
+            
+            // Reset semua opsi
+            quizForm.querySelectorAll('input[type="radio"]').forEach(input => {
+                input.checked = false;
+                input.disabled = false;
+            });
+            
+            // Hapus kelas correct dan incorrect
+            quizForm.querySelectorAll('label').forEach(label => {
+                label.classList.remove('correct', 'incorrect');
+            });
+            
+            // Sembunyikan hasil
+            resultContainer.style.display = 'none';
+            resultContainer.innerHTML = '';
+            
+            // Aktifkan tombol submit
+            document.querySelector('.quiz-section button[onclick="submitQuiz()"]').disabled = false;
+        }
+        
+        // Fungsi untuk menandai pelajaran sebagai selesai
+        function markLessonComplete(courseSlug, lessonNumber) {
+            // Dapatkan progres dari penyimpanan lokal
+            let progress = JSON.parse(localStorage.getItem('courseProgress')) || {};
+            
+            // Inisialisasi progres untuk kursus ini jika belum ada
+            if (!progress[courseSlug]) {
+                progress[courseSlug] = {
+                    completedLessons: [],
+                    totalLessons: 5
+                };
+            }
+            
+            // Tambahkan pelajaran ini ke daftar pelajaran yang selesai jika belum ada
+            if (!progress[courseSlug].completedLessons.includes(lessonNumber)) {
+                progress[courseSlug].completedLessons.push(lessonNumber);
+            }
+            
+            // Simpan progres ke penyimpanan lokal
+            localStorage.setItem('courseProgress', JSON.stringify(progress));
+        }
+    </script>
+</body>
+</html>
