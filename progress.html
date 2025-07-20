@@ -12,6 +12,34 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Coming Soon Overlay -->
+    <div class="coming-soon-overlay">
+        <div class="coming-soon-content">
+            <i class="fas fa-tools fa-4x pulse-animation"></i>
+            <h2>Coming Soon</h2>
+            <p>Halaman Progress Belajar sedang dalam pengembangan. Kami sedang bekerja keras untuk memberikan pengalaman terbaik bagi Anda.</p>
+            <div class="countdown">
+                <div class="countdown-item">
+                    <span class="countdown-number" id="countdown-days">14</span>
+                    <span class="countdown-label">Hari</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="countdown-hours">08</span>
+                    <span class="countdown-label">Jam</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="countdown-minutes">45</span>
+                    <span class="countdown-label">Menit</span>
+                </div>
+                <div class="countdown-item">
+                    <span class="countdown-number" id="countdown-seconds">00</span>
+                    <span class="countdown-label">Detik</span>
+                </div>
+            </div>
+            <a href="index.html" class="back-button"><i class="fas fa-arrow-left"></i> Kembali ke Beranda</a>
+        </div>
+    </div>
+    
     <header>
         <div class="container">
             <div class="logo">
@@ -441,6 +469,43 @@
                 }
             });
         }
+    </script>
+    
+    <!-- Countdown Script -->
+    <script>
+        // Set the date we're counting down to (30 days from now)
+        const countdownDate = new Date();
+        countdownDate.setDate(countdownDate.getDate() + 30);
+        
+        // Update the countdown every 1 second
+        const countdownTimer = setInterval(function() {
+            // Get current date and time
+            const now = new Date().getTime();
+            
+            // Find the distance between now and the countdown date
+            const distance = countdownDate - now;
+            
+            // Time calculations for days, hours, minutes and seconds
+            const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+            
+            // Display the result
+            document.getElementById("countdown-days").textContent = days.toString().padStart(2, '0');
+            document.getElementById("countdown-hours").textContent = hours.toString().padStart(2, '0');
+            document.getElementById("countdown-minutes").textContent = minutes.toString().padStart(2, '0');
+            document.getElementById("countdown-seconds").textContent = seconds.toString().padStart(2, '0');
+            
+            // If the countdown is finished, display a message
+            if (distance < 0) {
+                clearInterval(countdownTimer);
+                document.getElementById("countdown-days").textContent = "00";
+                document.getElementById("countdown-hours").textContent = "00";
+                document.getElementById("countdown-minutes").textContent = "00";
+                document.getElementById("countdown-seconds").textContent = "00";
+            }
+        }, 1000);
     </script>
 </body>
 </html>
