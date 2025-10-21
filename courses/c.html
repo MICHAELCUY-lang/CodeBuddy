@@ -4,6 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>C Programming Fundamentals - CodeBuddy</title>
+        <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/course.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         :root {
             --primary-color: #667eea;
@@ -49,13 +54,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-            -webkit-text-fill-color: transparent;
         }
 
         nav a {
@@ -178,8 +176,6 @@
             margin: 1.5rem 0;
             overflow-x: auto;
             border-left: 4px solid var(--primary-color);
-            white-space: pre-wrap; /* Wrap code */
-            word-wrap: break-word; /* Ensure long words wrap */
         }
 
         .code-block code {
@@ -317,15 +313,25 @@
     </style>
 </head>
 <body>
-    <header>
+   <header>
         <div class="container">
-            <div class="header-content">
-                <div class="logo">CodeBuddy</div>
+            <div class="logo">
+                <img src="../img/logo.svg" alt="CodeBuddy Logo">
+                <div class="logo-text">
+                    <h1>CodeBuddy</h1>
+                    <p>Panduan Belajar Ngoding untuk Pemula</p>
+                </div>
+            </div>
+            <div class="nav-wrapper">
                 <nav>
-                    <a href="#home">Home</a>
-                    <a href="#courses">Courses</a>
-                    <a href="#about">About</a>
+                    <ul>
+                        <li><a href="../index.html">Beranda</a></li>
+                        <li><a href="../courses.html">Kursus</a></li>
+                        <li><a href="../progress.html">Progres Saya</a></li>
+                        <li><a href="../about.html">Tentang</a></li>
+                    </ul>
                 </nav>
+                <!-- Tombol toggle tema dihapus untuk hanya menggunakan dark mode -->
             </div>
         </div>
     </header>
