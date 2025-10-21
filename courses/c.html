@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="id" data-theme="dark">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dasar-dasar C Programming - CodeBuddy</title>
+    <title>C Programming Fundamentals - CodeBuddy</title>
     <style>
         :root {
             --primary-color: #667eea;
@@ -171,24 +171,24 @@
             margin: 1.5rem 0 0.8rem;
         }
 
-.code-block {
-    background: #1e1e1e;
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin: 1.5rem 0;
-    overflow-x: auto;
-    border-left: 4px solid var(--primary-color);
-    white-space: pre-wrap; /* Membungkus kode agar tidak ke samping */
-    word-wrap: break-word; /* Memastikan kata-kata panjang bisa terbungkus */
-}
+        .code-block {
+            background: #1e1e1e;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin: 1.5rem 0;
+            overflow-x: auto;
+            border-left: 4px solid var(--primary-color);
+            white-space: pre-wrap; /* Wrap code */
+            word-wrap: break-word; /* Ensure long words wrap */
+        }
 
-.code-block code {
-    color: #d4d4d4;
-    font-family: 'Courier New', monospace;
-    font-size: 1rem;
-    line-height: 1.6;
-    white-space: pre-wrap; /* Menjaga format dan indentasi */
-}
+        .code-block code {
+            color: #d4d4d4;
+            font-family: 'Courier New', monospace;
+            font-size: 1rem;
+            line-height: 1.6;
+            white-space: pre-wrap; /* Preserve format and indentation */
+        }
 
 
         .info-box {
@@ -322,9 +322,9 @@
             <div class="header-content">
                 <div class="logo">CodeBuddy</div>
                 <nav>
-                    <a href="#beranda">Beranda</a>
-                    <a href="#kursus">Kursus</a>
-                    <a href="#tentang">Tentang</a>
+                    <a href="#home">Home</a>
+                    <a href="#courses">Courses</a>
+                    <a href="#about">About</a>
                 </nav>
             </div>
         </div>
@@ -332,12 +332,12 @@
 
     <section class="course-header">
         <div class="container">
-            <h1>🖥️ Dasar-dasar C Programming</h1>
-            <p>Pelajari bahasa pemrograman C dari dasar hingga mahir</p>
+            <h1>🖥️ C Programming Fundamentals</h1>
+            <p>Learn the C programming language from basics to advanced</p>
             <div class="course-meta">
-                <span>📚 6 Pelajaran</span>
-                <span>⏱️ ~8 Jam</span>
-                <span>👤 Pemula</span>
+                <span>📚 6 Lessons</span>
+                <span>⏱️ ~8 Hours</span>
+                <span>👤 Beginner</span>
                 <span>⭐ God's Programming Language</span>
             </div>
         </div>
@@ -346,32 +346,31 @@
     <div class="container">
         <div class="course-layout">
             <aside class="sidebar">
-                <h3>Daftar Pelajaran</h3>
+                <h3>Lesson List</h3>
                 <ul>
-                    <li><a href="#lesson1" class="lesson-link active" onclick="showLesson(1)">1. Pengenalan C</a></li>
-                    <li><a href="#lesson2" class="lesson-link" onclick="showLesson(2)">2. Variabel & Tipe Data</a></li>
-                    <li><a href="#lesson3" class="lesson-link" onclick="showLesson(3)">3. Operator & Ekspresi</a></li>
-                    <li><a href="#lesson4" class="lesson-link" onclick="showLesson(4)">4. Struktur Kontrol</a></li>
-                    <li><a href="#lesson5" class="lesson-link" onclick="showLesson(5)">5. Function & Rekursi</a></li>
-                    <li><a href="#lesson6" class="lesson-link" onclick="showLesson(6)">6. Array & Pointer</a></li>
+                    <li><a href="#lesson1" class="lesson-link active" onclick="showLesson(1)">1. Introduction to C</a></li>
+                    <li><a href="#lesson2" class="lesson-link" onclick="showLesson(2)">2. Variables & Data Types</a></li>
+                    <li><a href="#lesson3" class="lesson-link" onclick="showLesson(3)">3. Operators & Expressions</a></li>
+                    <li><a href="#lesson4" class="lesson-link" onclick="showLesson(4)">4. Control Structures</a></li>
+                    <li><a href="#lesson5" class="lesson-link" onclick="showLesson(5)">5. Functions & Recursion</a></li>
+                    <li><a href="#lesson6" class="lesson-link" onclick="showLesson(6)">6. Arrays & Pointers</a></li>
                 </ul>
             </aside>
 
             <main>
-                <!-- Lesson 1: Pengenalan C -->
                 <div id="lesson1" class="lesson-content active">
-                    <h2>Pelajaran 1: Pengenalan C Programming</h2>
+                    <h2>Lesson 1: Introduction to C Programming</h2>
                     
-                    <h3>🎯 Apa itu Bahasa C?</h3>
-                    <p>Bahasa C adalah <strong>"God's Programming Language"</strong> yang dibuat oleh Dennis Ritchie pada tahun 1969-1973. C adalah bahasa pemrograman yang:</p>
+                    <h3>🎯 What is the C Language?</h3>
+                    <p>The C language is the <strong>"God's Programming Language"</strong> created by Dennis Ritchie between 1969-1973. C is a programming language that is:</p>
                     <ul>
-                        <li>Sangat powerful dan efficient</li>
-                        <li>Menjadi basis dari bahasa modern (C++, C#, Java, PHP)</li>
-                        <li>Digunakan untuk membuat sistem operasi (Linux, Unix, Windows)</li>
-                        <li>Low-level namun tetap portable</li>
+                        <li>Very powerful and efficient</li>
+                        <li>The basis for modern languages (C++, C#, Java, PHP)</li>
+                        <li>Used to create operating systems (Linux, Unix, Windows)</li>
+                        <li>Low-level yet portable</li>
                     </ul>
 
-                    <h3>📋 Struktur Program C Dasar</h3>
+                    <h3>📋 Basic C Program Structure</h3>
                     <div class="code-block">
                     <code>
 #include &lt;stdio.h&gt;
@@ -382,101 +381,100 @@ int main() {
 }</code>
                     </div>
 
-                    <h4>Penjelasan Komponen:</h4>
+                    <h4>Component Explanation:</h4>
                     <ul>
-                        <li><code>#include &lt;stdio.h&gt;</code> - Menyertakan library standar input/output</li>
-                        <li><code>int main()</code> - Fungsi utama program</li>
-                        <li><code>printf()</code> - Fungsi untuk mencetak output</li>
-                        <li><code>return 0;</code> - Mengakhiri program dengan status sukses</li>
+                        <li><code>#include &lt;stdio.h&gt;</code> - Includes the standard input/output library</li>
+                        <li><code>int main()</code> - The main function of the program</li>
+                        <li><code>printf()</code> - Function for printing output</li>
+                        <li><code>return 0;</code> - Ends the program with a success status</li>
                     </ul>
 
-                    <h3>💻 printf() - Menampilkan Output</h3>
+                    <h3>💻 printf() - Displaying Output</h3>
                     <div class="code-block">
                         <code>
 printf("Welcome to C!\n");
 
-// \n adalah escape character untuk baris baru
-// Escape characters lainnya:
+// \n is the escape character for a new line
+// Other escape characters:
 // \t = tab
 // \\ = backslash
-// \" = tanda kutip</code>
+// \" = quotation mark</code>
                     </div>
 
                     <div class="info-box">
-                        <strong>💡 Tips:</strong> Setiap statement di C harus diakhiri dengan <strong>semicolon (;)</strong>. Ini sangat penting!
+                        <strong>💡 Tip:</strong> Every statement in C must end with a <strong>semicolon (;)</strong>. This is crucial!
                     </div>
 
-                    <h3>📝 Komentar dalam C</h3>
+                    <h3>📝 Comments in C</h3>
                     <div class="code-block">
                         <code>
-// Ini adalah komentar satu baris
+// This is a single-line comment
 
-/* Ini adalah komentar
-   multi-baris yang bisa
-   mencakup beberapa baris */</code>
+/* This is a multi-line
+   comment that can
+   span several lines */</code>
                     </div>
 
                     <div class="navigation-buttons">
-                        <button class="btn btn-secondary" disabled>Sebelumnya</button>
-                        <button class="btn btn-primary" onclick="showLesson(2)">Selanjutnya →</button>
+                        <button class="btn btn-secondary" disabled>Previous</button>
+                        <button class="btn btn-primary" onclick="showLesson(2)">Next →</button>
                     </div>
                 </div>
 
-                <!-- Lesson 2: Variabel & Tipe Data -->
                 <div id="lesson2" class="lesson-content">
-                    <h2>Pelajaran 2: Variabel & Tipe Data</h2>
+                    <h2>Lesson 2: Variables & Data Types</h2>
                     
-                    <h3>📦 Apa itu Variabel?</h3>
-                    <p>Variabel adalah <strong>lokasi di memori</strong> tempat kita menyimpan data. Setiap variabel memiliki:</p>
+                    <h3>📦 What is a Variable?</h3>
+                    <p>A variable is a <strong>location in memory</strong> where we store data. Each variable has:</p>
                     <ul>
-                        <li><strong>Nama</strong> (identifier)</li>
-                        <li><strong>Tipe data</strong></li>
-                        <li><strong>Nilai</strong></li>
+                        <li><strong>Name</strong> (identifier)</li>
+                        <li><strong>Data type</strong></li>
+                        <li><strong>Value</strong></li>
                     </ul>
 
-                    <h3>🔤 Tipe Data Dasar di C</h3>
+                    <h3>🔤 Basic Data Types in C</h3>
                     <div class="code-block">
                         <code>
-// Integer - bilangan bulat
-int umur = 25;
-int suhu = -10;
+// Integer - whole numbers
+int age = 25;
+int temperature = -10;
 
-// Float - bilangan desimal (6-7 digit presisi)
-float tinggi = 175.5;
-float berat = 65.3;
+// Float - decimal numbers (6-7 digits precision)
+float height = 175.5;
+float weight = 65.3;
 
-// Double - bilangan desimal (15-16 digit presisi)
-double phi = 3.14159265359;
+// Double - decimal numbers (15-16 digits precision)
+double pi = 3.14159265359;
 
-// Character - karakter tunggal
+// Character - single character
 char grade = 'A';
-char huruf = 'Z';
+char letter = 'Z';
 
-// String - kumpulan karakter (array of char)
-char nama[] = "John Doe";</code>
+// String - collection of characters (array of char)
+char name[] = "John Doe";</code>
                     </div>
 
-                    <h3>📊 Ukuran Tipe Data</h3>
+                    <h3>📊 Data Type Sizes</h3>
                     <div class="info-box">
                         <ul>
-                            <li><code>int</code> - 4 bytes (biasanya)</li>
+                            <li><code>int</code> - 4 bytes (usually)</li>
                             <li><code>float</code> - 4 bytes</li>
                             <li><code>double</code> - 8 bytes</li>
                             <li><code>char</code> - 1 byte</li>
                         </ul>
                     </div>
 
-                    <h3>🔧 Deklarasi dan Inisialisasi</h3>
+                    <h3>🔧 Declaration and Initialization</h3>
                     <div class="code-block">
                         <code>
-// Deklarasi (hanya membuat variabel)
-int angka;
+// Declaration (just creating the variable)
+int number;
 
-// Inisialisasi (memberi nilai awal)
-angka = 10;
+// Initialization (giving an initial value)
+number = 10;
 
-// Deklarasi + Inisialisasi sekaligus
-int nilai = 100;
+// Declaration + Initialization simultaneously
+int value = 100;
 
 // Multiple declaration
 int a, b, c;
@@ -488,28 +486,28 @@ c = 3;
 int x = 5, y = 10, z = 15;</code>
                     </div>
 
-                    <h3>📝 scanf() - Mengambil Input</h3>
+                    <h3>📝 scanf() - Getting Input</h3>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
 int main() {
-    int umur;
-    float tinggi;
-    char nama[50];
+    int age;
+    float height;
+    char name[50];
     
-    printf("Masukkan nama Anda: ");
-    scanf("%s", nama);
+    printf("Enter your name: ");
+    scanf("%s", name);
     
-    printf("Masukkan umur Anda: ");
-    scanf("%d", &umur);
+    printf("Enter your age: ");
+    scanf("%d", &age);
     
-    printf("Masukkan tinggi (cm): ");
-    scanf("%f", &tinggi);
+    printf("Enter your height (cm): ");
+    scanf("%f", &height);
     
-    printf("\nNama: %s\n", nama);
-    printf("Umur: %d tahun\n", umur);
-    printf("Tinggi: %.1f cm\n", tinggi);
+    printf("\nName: %s\n", name);
+    printf("Age: %d years\n", age);
+    printf("Height: %.1f cm\n", height);
     
     return 0;
 }</code>
@@ -521,46 +519,45 @@ int main() {
                         <li><code>%f</code> - float/double</li>
                         <li><code>%c</code> - character</li>
                         <li><code>%s</code> - string</li>
-                        <li><code>%lf</code> - double (untuk scanf)</li>
+                        <li><code>%lf</code> - double (for scanf)</li>
                     </ul>
 
                     <div class="warning-box">
-                        <strong>⚠️ Perhatian:</strong> Gunakan operator <code>&</code> (ampersand) sebelum nama variabel di scanf, kecuali untuk string!
+                        <strong>⚠️ Attention:</strong> Use the <code>&</code> (ampersand) operator before the variable name in `scanf`, except for strings!
                     </div>
 
                     <div class="navigation-buttons">
-                        <button class="btn btn-secondary" onclick="showLesson(1)">← Sebelumnya</button>
-                        <button class="btn btn-primary" onclick="showLesson(3)">Selanjutnya →</button>
+                        <button class="btn btn-secondary" onclick="showLesson(1)">← Previous</button>
+                        <button class="btn btn-primary" onclick="showLesson(3)">Next →</button>
                     </div>
                 </div>
 
-                <!-- Lesson 3: Operator & Ekspresi -->
                 <div id="lesson3" class="lesson-content">
-                    <h2>Pelajaran 3: Operator & Ekspresi</h2>
+                    <h2>Lesson 3: Operators & Expressions</h2>
                     
-                    <h3>➕ Operator Aritmatika</h3>
+                    <h3>➕ Arithmetic Operators</h3>
                     <div class="code-block">
                         <code>int a = 10, b = 3;
 
-// Penjumlahan
-int hasil = a + b;  // 13
+// Addition
+int result = a + b;  // 13
 
-// Pengurangan
-hasil = a - b;      // 7
+// Subtraction
+result = a - b;      // 7
 
-// Perkalian
-hasil = a * b;      // 30
+// Multiplication
+result = a * b;      // 30
 
-// Pembagian (integer division)
-hasil = a / b;      // 3 (bukan 3.333...)
+// Division (integer division)
+result = a / b;      // 3 (not 3.333...)
 
-// Modulus (sisa pembagian)
-hasil = a % b;      // 1</code>
+// Modulus (remainder)
+result = a % b;      // 1</code>
                     </div>
 
                     <div class="warning-box">
-                        <strong>⚠️ Penting:</strong> Pembagian integer di C akan membuang bagian desimalnya! 
-                        <br>Untuk hasil desimal, gunakan float atau double.
+                        <strong>⚠️ Important:</strong> Integer division in C will discard the decimal part! 
+                        <br>For a decimal result, use float or double.
                     </div>
 
                     <h3>📊 Assignment Operators</h3>
@@ -568,102 +565,101 @@ hasil = a % b;      // 1</code>
                         <code>int x = 10;
 
 // Compound assignment
-x += 5;   // x = x + 5  → 15
-x -= 3;   // x = x - 3  → 12
-x *= 2;   // x = x * 2  → 24
-x /= 4;   // x = x / 4  → 6
-x %= 4;   // x = x % 4  → 2
+x += 5;  // x = x + 5  → 15
+x -= 3;  // x = x - 3  → 12
+x *= 2;  // x = x * 2  → 24
+x /= 4;  // x = x / 4  → 6
+x %= 4;  // x = x % 4  → 2
 
 // Increment & Decrement
-x++;      // x = x + 1
-++x;      // x = x + 1
-x--;      // x = x - 1
---x;      // x = x - 1</code>
+x++;     // x = x + 1
+++x;     // x = x + 1
+x--;     // x = x - 1
+--x;     // x = x - 1</code>
                     </div>
 
-                    <h3>🔍 Operator Perbandingan</h3>
+                    <h3>🔍 Comparison Operators</h3>
                     <div class="code-block">
                         <code>int a = 5, b = 10;
 
-// Hasil operator perbandingan adalah 0 (false) atau 1 (true)
-a == b   // 0 (sama dengan?)
-a != b   // 1 (tidak sama dengan?)
-a > b    // 0 (lebih besar?)
-a < b    // 1 (lebih kecil?)
-a >= b   // 0 (lebih besar atau sama?)
-a <= b   // 1 (lebih kecil atau sama?)</code>
+// The result of a comparison operator is 0 (false) or 1 (true)
+a == b   // 0 (equals?)
+a != b   // 1 (not equals?)
+a > b    // 0 (greater than?)
+a < b    // 1 (less than?)
+a >= b   // 0 (greater than or equal?)
+a <= b   // 1 (less than or equal?)</code>
                     </div>
 
-                    <h3>🎯 Operator Logika</h3>
+                    <h3>🎯 Logical Operators</h3>
                     <div class="code-block">
                         <code>int x = 5, y = 10, z = 15;
 
-// AND (&&) - kedua kondisi harus true
+// AND (&&) - both conditions must be true
 (x < y && y < z)   // 1 (true)
 
-// OR (||) - salah satu kondisi true
+// OR (||) - at least one condition is true
 (x > y || y < z)   // 1 (true)
 
-// NOT (!) - membalik kondisi
+// NOT (!) - inverts the condition
 !(x == y)          // 1 (true)</code>
                     </div>
 
-                    <h3>📐 Contoh Program Lengkap</h3>
+                    <h3>📐 Full Program Example</h3>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
 int main() {
-    int angka1, angka2;
+    int num1, num2;
     
-    printf("Masukkan angka pertama: ");
-    scanf("%d", &angka1);
+    printf("Enter the first number: ");
+    scanf("%d", &num1);
     
-    printf("Masukkan angka kedua: ");
-    scanf("%d", &angka2);
+    printf("Enter the second number: ");
+    scanf("%d", &num2);
     
-    printf("\nHasil Operasi:\n");
-    printf("%d + %d = %d\n", angka1, angka2, angka1 + angka2);
-    printf("%d - %d = %d\n", angka1, angka2, angka1 - angka2);
-    printf("%d * %d = %d\n", angka1, angka2, angka1 * angka2);
-    printf("%d / %d = %d\n", angka1, angka2, angka1 / angka2);
-    printf("%d %% %d = %d\n", angka1, angka2, angka1 % angka2);
+    printf("\nOperation Results:\n");
+    printf("%d + %d = %d\n", num1, num2, num1 + num2);
+    printf("%d - %d = %d\n", num1, num2, num1 - num2);
+    printf("%d * %d = %d\n", num1, num2, num1 * num2);
+    printf("%d / %d = %d\n", num1, num2, num1 / num2);
+    printf("%d %% %d = %d\n", num1, num2, num1 % num2);
     
     return 0;
 }</code>
                     </div>
 
                     <div class="navigation-buttons">
-                        <button class="btn btn-secondary" onclick="showLesson(2)">← Sebelumnya</button>
-                        <button class="btn btn-primary" onclick="showLesson(4)">Selanjutnya →</button>
+                        <button class="btn btn-secondary" onclick="showLesson(2)">← Previous</button>
+                        <button class="btn btn-primary" onclick="showLesson(4)">Next →</button>
                     </div>
                 </div>
 
-                <!-- Lesson 4: Struktur Kontrol -->
                 <div id="lesson4" class="lesson-content">
-                    <h2>Pelajaran 4: Struktur Kontrol</h2>
+                    <h2>Lesson 4: Control Structures</h2>
                     
                     <h3>🔀 IF Statement</h3>
                     <div class="code-block">
-                        <code>int nilai = 85;
+                        <code>int score = 85;
 
-if (nilai >= 80) {
-    printf("Nilai A - Excellent!\n");
+if (score >= 80) {
+    printf("Grade A - Excellent!\n");
 }
 
 // IF-ELSE
-if (nilai >= 70) {
-    printf("Lulus\n");
+if (score >= 70) {
+    printf("Pass\n");
 } else {
-    printf("Tidak Lulus\n");
+    printf("Fail\n");
 }
 
 // IF-ELSE IF-ELSE
-if (nilai >= 90) {
+if (score >= 90) {
     printf("Grade: A\n");
-} else if (nilai >= 80) {
+} else if (score >= 80) {
     printf("Grade: B\n");
-} else if (nilai >= 70) {
+} else if (score >= 70) {
     printf("Grade: C\n");
 } else {
     printf("Grade: D\n");
@@ -672,23 +668,23 @@ if (nilai >= 90) {
 
                     <h3>🎛️ SWITCH Statement</h3>
                     <div class="code-block">
-                        <code>int hari = 3;
+                        <code>int day = 3;
 
-switch (hari) {
+switch (day) {
     case 1:
-        printf("Senin\n");
+        printf("Monday\n");
         break;
     case 2:
-        printf("Selasa\n");
+        printf("Tuesday\n");
         break;
     case 3:
-        printf("Rabu\n");
+        printf("Wednesday\n");
         break;
     case 4:
-        printf("Kamis\n");
+        printf("Thursday\n");
         break;
     case 5:
-        printf("Jumat\n");
+        printf("Friday\n");
         break;
     default:
         printf("Weekend!\n");
@@ -696,22 +692,22 @@ switch (hari) {
                     </div>
 
                     <div class="warning-box">
-                        <strong>⚠️ Jangan lupa BREAK!</strong> Tanpa break, program akan terus mengeksekusi case berikutnya.
+                        <strong>⚠️ Don't forget BREAK!</strong> Without `break`, the program will continue executing the next `case`.
                     </div>
 
                     <h3>🔁 FOR Loop</h3>
                     <div class="code-block">
                         <code>// Syntax: for(init; condition; increment)
 for (int i = 1; i <= 5; i++) {
-    printf("Iterasi ke-%d\n", i);
+    printf("Iteration no.-%d\n", i);
 }
 
 // Output:
-// Iterasi ke-1
-// Iterasi ke-2
-// Iterasi ke-3
-// Iterasi ke-4
-// Iterasi ke-5
+// Iteration no.-1
+// Iteration no.-2
+// Iteration no.-3
+// Iteration no.-4
+// Iteration no.-5
 
 // Nested for loop
 for (int i = 1; i <= 3; i++) {
@@ -731,298 +727,382 @@ for (int i = 1; i <= 3; i++) {
                         <code>int i = 1;
 
 while (i <= 5) {
-    printf("Nilai i = %d\n", i);
+    printf("Value of i = %d\n", i);
     i++;
 }
 
-// DO-WHILE (dijalankan minimal 1 kali)
-int pilihan;
+// DO-WHILE (executed at least 1 time)
+int choice;
 do {
     printf("Menu:\n");
-    printf("1. Tambah\n");
-    printf("2. Kurang\n");
-    printf("0. Keluar\n");
-    printf("Pilihan: ");
-    scanf("%d", &pilihan);
-} while (pilihan != 0);</code>
+    printf("1. Add\n");
+    printf("2. Subtract\n");
+    printf("0. Exit\n");
+    printf("Choice: ");
+    scanf("%d", &choice);
+} while (choice != 0);</code>
                     </div>
 
-                    <h3>🎮 Contoh Program: Tebak Angka</h3>
+                    <h3>🎮 Program Example: Guess the Number</h3>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
 int main() {
-    int angkaRahasia = 42;
-    int tebakan;
-    int percobaan = 0;
+    int secretNumber = 42;
+    int guess;
+    int attempts = 0;
     
-    printf("=== GAME TEBAK ANGKA ===\n");
-    printf("Tebak angka antara 1-100!\n\n");
+    printf("=== GUESS THE NUMBER GAME ===\n");
+    printf("Guess a number between 1-100!\n\n");
     
     do {
-        printf("Masukkan tebakan Anda: ");
-        scanf("%d", &tebakan);
-        percobaan++;
+        printf("Enter your guess: ");
+        scanf("%d", &guess);
+        attempts++;
         
-        if (tebakan < angkaRahasia) {
-            printf("Terlalu kecil! Coba lagi.\n\n");
-        } else if (tebakan > angkaRahasia) {
-            printf("Terlalu besar! Coba lagi.\n\n");
+        if (guess < secretNumber) {
+            printf("Too small! Try again.\n\n");
+        } else if (guess > secretNumber) {
+            printf("Too big! Try again.\n\n");
         } else {
-            printf("\n🎉 BENAR! ");
-            printf("Anda menebak dalam %d percobaan!\n", percobaan);
+            printf("\n🎉 CORRECT! ");
+            printf("You guessed in %d attempts!\n", attempts);
         }
-    } while (tebakan != angkaRahasia);
+    } while (guess != secretNumber);
     
     return 0;
 }</code>
                     </div>
 
                     <div class="navigation-buttons">
-                        <button class="btn btn-secondary" onclick="showLesson(3)">← Sebelumnya</button>
-                        <button class="btn btn-primary" onclick="showLesson(5)">Selanjutnya →</button>
+                        <button class="btn btn-secondary" onclick="showLesson(3)">← Previous</button>
+                        <button class="btn btn-primary" onclick="showLesson(5)">Next →</button>
                     </div>
                 </div>
 
-                <!-- Lesson 5: Function & Rekursi -->
                 <div id="lesson5" class="lesson-content">
-                    <h2>Pelajaran 5: Function & Rekursi</h2>
+                    <h2>Lesson 5: Functions & Recursion</h2>
                     
-                    <h3>🎯 Apa itu Function?</h3>
-                    <p>Function adalah <strong>blok kode yang dapat digunakan kembali</strong> untuk melakukan tugas tertentu.</p>
+                    <h3>🎯 What is a Function?</h3>
+                    <p>A function is a <strong>reusable block of code</strong> to perform a specific task.</p>
 
-                    <h3>📋 Struktur Function</h3>
+                    <h3>📋 Function Structure</h3>
                     <div class="code-block">
                         <code>// Syntax:
 // return_type function_name(parameters) {
 //     // body
 // }
 
-// Function tanpa parameter dan return
-void salam() {
-    printf("Halo, selamat datang!\n");
+// Function without parameters and return
+void greet() {
+    printf("Hello, welcome!\n");
 }
 
-// Function dengan parameter
-void sapaNama(char nama[]) {
-    printf("Halo, %s!\n", nama);
+// Function with parameters
+void greetName(char name[]) {
+    printf("Hello, %s!\n", name);
 }
 
-// Function dengan return value
-int tambah(int a, int b) {
+// Function with return value
+int add(int a, int b) {
     return a + b;
 }
 
-// Function dengan multiple parameters
-float rataRata(float a, float b, float c) {
+// Function with multiple parameters
+float average(float a, float b, float c) {
     return (a + b + c) / 3.0;
 }</code>
                     </div>
 
-                    <h3>🔧 Menggunakan Function</h3>
+                    <h3>🔧 Using Functions</h3>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
-// Function prototype (deklarasi)
-int kali(int x, int y);
-float bagi(float x, float y);
+// Function prototype (declaration)
+int multiply(int x, int y);
+float divide(float x, float y);
 
 int main() {
-    int hasil1 = kali(5, 3);
-    printf("5 x 3 = %d\n", hasil1);
+    int result1 = multiply(5, 3);
+    printf("5 x 3 = %d\n", result1);
     
-    float hasil2 = bagi(10.0, 3.0);
-    printf("10 / 3 = %.2f\n", hasil2);
+    float result2 = divide(10.0, 3.0);
+    printf("10 / 3 = %.2f\n", result2);
     
     return 0;
 }
 
-// Function definition (implementasi)
-int kali(int x, int y) {
+// Function definition (implementation)
+int multiply(int x, int y) {
     return x * y;
 }
 
-float bagi(float x, float y) {
+float divide(float x, float y) {
     if (y != 0) {
         return x / y;
     } else {
-        printf("Error: Pembagi tidak boleh 0!\n");
+        printf("Error: Divisor cannot be 0!\n");
         return 0;
     }
 }</code>
                     </div>
 
-                    <h3>
-                                        <h3>🎮 Rekursi</h3>
-                    <p>Rekursi adalah teknik di mana sebuah function memanggil dirinya sendiri untuk menyelesaikan tugas. Rekursi sangat berguna untuk masalah yang dapat dipecahkan dengan membagi masalah besar menjadi masalah yang lebih kecil.</p>
+                    <h3>🎮 Recursion</h3>
+                    <p>Recursion is a technique where a function calls itself to solve a task. Recursion is very useful for problems that can be solved by breaking down a large problem into smaller ones.</p>
 
-                    <h4>Contoh Rekursi: Faktorial</h4>
+                    <h4>Recursion Example: Factorial</h4>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
-// Fungsi rekursif untuk menghitung faktorial
-int faktorial(int n) {
+// Recursive function to calculate factorial
+int factorial(int n) {
     if (n == 0) {
-        return 1;  // Basis: 0! = 1
+        return 1;  // Base case: 0! = 1
     } else {
-        return n * faktorial(n - 1);  // Rekursif: n! = n * (n-1)!
+        return n * factorial(n - 1);  // Recursive step: n! = n * (n-1)!
     }
 }
 
 int main() {
-    int angka = 5;
-    printf("Faktorial dari %d adalah %d\n", angka, faktorial(angka));
+    int number = 5;
+    printf("Factorial of %d is %d\n", number, factorial(number));
     return 0;
 }</code>
                     </div>
 
                     <div class="info-box">
-                        <strong>💡 Tips:</strong> Setiap rekursi membutuhkan kondisi dasar (base case) untuk menghentikan pemanggilan berulang.
+                        <strong>💡 Tip:</strong> Every recursion needs a base case to stop the repeated calls.
                     </div>
 
-                    <h3>🔧 Fungsi dalam Program C Lengkap</h3>
+                    <h3>🔧 Functions in a Complete C Program</h3>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
-// Deklarasi fungsi
-int tambah(int a, int b);
+// Function declaration
+int add(int a, int b);
 
 int main() {
-    int hasil = tambah(5, 10);
-    printf("5 + 10 = %d\n", hasil);
+    int result = add(5, 10);
+    printf("5 + 10 = %d\n", result);
     return 0;
 }
 
-// Definisi fungsi
-int tambah(int a, int b) {
+// Function definition
+int add(int a, int b) {
     return a + b;
 }</code>
                     </div>
 
                     <div class="navigation-buttons">
-                        <button class="btn btn-secondary" onclick="showLesson(4)">← Sebelumnya</button>
-                        <button class="btn btn-primary" onclick="showLesson(6)">Selanjutnya →</button>
+                        <button class="btn btn-secondary" onclick="showLesson(4)">← Previous</button>
+                        <button class="btn btn-primary" onclick="showLesson(6)">Next →</button>
                     </div>
                 </div>
 
-                <!-- Lesson 6: Array & Pointer -->
                 <div id="lesson6" class="lesson-content">
-                    <h2>Pelajaran 6: Array & Pointer</h2>
+                    <h2>Lesson 6: Arrays & Pointers</h2>
                     
-                    <h3>📚 Apa itu Array?</h3>
-                    <p>Array adalah kumpulan variabel yang memiliki tipe data yang sama dan disusun dalam urutan tertentu. Array sangat berguna untuk menyimpan banyak nilai dalam satu nama variabel.</p>
+                    <h3>📚 What is an Array?</h3>
+                    <p>An array is a collection of variables of the same data type arranged in a specific order. Arrays are very useful for storing many values under a single variable name.</p>
 
-                    <h3>📋 Deklarasi dan Akses Array</h3>
+                    <h3>📋 Array Declaration and Access</h3>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
 int main() {
-    // Deklarasi array dengan 5 elemen
-    int angka[5] = {10, 20, 30, 40, 50};
+    // Declare an array with 5 elements
+    int numbers[5] = {10, 20, 30, 40, 50};
     
-    // Mengakses elemen array
-    printf("Elemen pertama: %d\n", angka[0]);  // 10
-    printf("Elemen kedua: %d\n", angka[1]);   // 20
+    // Accessing array elements
+    printf("First element: %d\n", numbers[0]);  // 10
+    printf("Second element: %d\n", numbers[1]);  // 20
     
     return 0;
 }</code>
                     </div>
 
-                    <h3>📊 Array Multidimensi</h3>
+                    <h3>📊 Multidimensional Arrays</h3>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
 int main() {
-    // Deklarasi array 2D (matrix)
-    int matriks[2][3] = {{1, 2, 3}, {4, 5, 6}};
+    // Declare a 2D array (matrix)
+    int matrix[2][3] = {{1, 2, 3}, {4, 5, 6}};
     
-    // Mengakses elemen array 2D
-    printf("Matriks[0][1] = %d\n", matriks[0][1]);  // 2
-    printf("Matriks[1][2] = %d\n", matriks[1][2]);  // 6
+    // Accessing 2D array elements
+    printf("Matrix[0][1] = %d\n", matrix[0][1]);  // 2
+    printf("Matrix[1][2] = %d\n", matrix[1][2]);  // 6
     
     return 0;
 }</code>
                     </div>
 
-                    <h3>🔍 Apa itu Pointer?</h3>
-                    <p>Pointer adalah variabel yang menyimpan alamat memori dari variabel lain. Pointer digunakan untuk mengakses dan memanipulasi data di lokasi memori tertentu.</p>
+                    <h3>🔍 What is a Pointer?</h3>
+                    <p>A pointer is a variable that stores the memory address of another variable. Pointers are used to access and manipulate data at a specific memory location.</p>
 
-                    <h3>📋 Deklarasi dan Penggunaan Pointer</h3>
+                    <h3>📋 Pointer Declaration and Usage</h3>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
 int main() {
-    int angka = 10;
-    int *ptr = &angka;  // Pointer ptr menyimpan alamat dari angka
+    int number = 10;
+    int *ptr = &number;  // Pointer ptr stores the address of number
     
-    // Mengakses nilai melalui pointer
-    printf("Nilai angka: %d\n", *ptr);  // Output: 10
-    printf("Alamat angka: %p\n", ptr);  // Output: alamat memori dari angka
+    // Accessing the value through the pointer
+    printf("Value of number: %d\n", *ptr);  // Output: 10
+    printf("Address of number: %p\n", ptr);  // Output: memory address of number
     
     return 0;
 }</code>
                     </div>
 
-                    <h3>📊 Pointer pada Array</h3>
+                    <h3>📊 Pointers on Arrays</h3>
                     <div class="code-block">
                         <code>
 #include &lt;stdio.h&gt;
 
 int main() {
-    int angka[3] = {10, 20, 30};
-    int *ptr = angka;  // Pointer ke array
+    int numbers[3] = {10, 20, 30};
+    int *ptr = numbers;  // Pointer to the array
     
-    // Mengakses elemen array menggunakan pointer
-    printf("Elemen pertama: %d\n", *(ptr + 0)); 
-    printf("Elemen kedua: %d\n", *(ptr + 1)); 
+    // Accessing array elements using a pointer
+    printf("First element: %d\n", *(ptr + 0)); 
+    printf("Second element: %d\n", *(ptr + 1)); 
     
     return 0;
 }</code>
                     </div>
 
-                    <h3>💡 Pentingnya Pointer</h3>
-                    <p>Pointer sangat penting dalam pengelolaan memori dinamis, optimasi performa, dan interaksi dengan sistem operasi atau hardware pada level yang lebih rendah.</p>
+                    <h3>💡 Importance of Pointers</h3>
+                    <p>Pointers are crucial in dynamic memory management, performance optimization, and interacting with the operating system or hardware at a lower level.</p>
 
                     <div class="navigation-buttons">
-                        <button class="btn btn-secondary" onclick="showLesson(5)">← Sebelumnya</button>
-                        <button class="btn btn-primary" onclick="showQuiz()">Selanjutnya →</button>
+                        <button class="btn btn-secondary" onclick="showLesson(5)">← Previous</button>
+                        <button class="btn btn-primary" onclick="showQuiz()">Next →</button>
                     </div>
                 </div>
+
+                <div id="quiz" class="lesson-content">
+                    <h2>Quiz: Test Your Knowledge!</h2>
+                    <div class="quiz-section">
+                        <h3>C Programming Fundamentals Quiz</h3>
+                        <form onsubmit="event.preventDefault(); submitQuiz();">
+                            <div class="quiz-question">
+                                <p>1. What is the main function of the C preprocessor directive <code>#include &lt;stdio.h&gt;</code>?</p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q1" value="a"> A. To declare a main function.</label>
+                                    <label><input type="radio" name="q1" value="b"> B. To include the Standard Input/Output library.</label>
+                                    <label><input type="radio" name="q1" value="c"> C. To define a constant variable.</label>
+                                    <label><input type="radio" name="q1" value="d"> D. To comment out a block of code.</label>
+                                </div>
+                            </div>
+                            
+                            <div class="quiz-question">
+                                <p>2. Which data type in C is typically used to store single characters?</p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q2" value="a"> A. <code>int</code></label>
+                                    <label><input type="radio" name="q2" value="b"> B. <code>float</code></label>
+                                    <label><input type="radio" name="q2" value="c"> C. <code>char</code></label>
+                                    <label><input type="radio" name="q2" value="d"> D. <code>double</code></label>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question">
+                                <p>3. What operator is used to get the remainder of a division in C?</p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q3" value="a"> A. <code>/</code></label>
+                                    <label><input type="radio" name="q3" value="b"> B. <code>*</code></label>
+                                    <label><input type="radio" name="q3" value="c"> C. <code>%</code></label>
+                                    <label><input type="radio" name="q3" value="d"> D. <code>-</code></label>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question">
+                                <p>4. In an <code>if-else if-else</code> chain, which keyword is essential in a <code>switch</code> statement to prevent 'fall-through'?</p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q4" value="a"> A. <code>continue</code></label>
+                                    <label><input type="radio" name="q4" value="b"> B. <code>exit</code></label>
+                                    <label><input type="radio" name="q4" value="c"> C. <code>case</code></label>
+                                    <label><input type="radio" name="q4" value="d"> D. <code>break</code></label>
+                                </div>
+                            </div>
+
+                            <div class="quiz-question">
+                                <p>5. What does the operator <code>*</code> (asterisk) do when used before a pointer variable?</p>
+                                <div class="quiz-options">
+                                    <label><input type="radio" name="q5" value="a"> A. Gets the memory address.</label>
+                                    <label><input type="radio" name="q5" value="b"> B. Declares a new array.</label>
+                                    <label><input type="radio" name="q5" value="c"> C. Dereferences (gets the value at) the address.</label>
+                                    <label><input type="radio" name="q5" value="d"> D. Multiplies the value by itself.</label>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-primary">Submit Answers</button>
+                        </form>
+                    </div>
+
+                    <div class="navigation-buttons">
+                        <button class="btn btn-secondary" onclick="showLesson(6)">← Previous</button>
+                        <button class="btn btn-primary" onclick="showLesson(1)">Restart Course</button>
+                    </div>
+                </div>
+
             </main>
         </div>
     </div>
 
     <script>
-        // Script untuk menampilkan pelajaran
+        // Script to display lessons
         function showLesson(lessonNumber) {
             const lessons = document.querySelectorAll('.lesson-content');
             lessons.forEach(lesson => lesson.classList.remove('active'));
-            document.getElementById('lesson' + lessonNumber).classList.add('active');
+            
+            const targetLessonId = (lessonNumber === 7) ? 'quiz' : 'lesson' + lessonNumber;
+            document.getElementById(targetLessonId).classList.add('active');
 
             const links = document.querySelectorAll('.lesson-link');
             links.forEach(link => link.classList.remove('active'));
-            document.querySelector('.lesson-link:nth-child(' + lessonNumber + ')').classList.add('active');
+            
+            if (lessonNumber <= 6) {
+                document.querySelector('.lesson-link:nth-child(' + lessonNumber + ')').classList.add('active');
+            } else {
+                // If the user navigates to the quiz, no lesson link is active
+            }
         }
 
-        // Script untuk menampilkan kuis
+        // Script to display the quiz
         function showQuiz() {
-            const content = document.querySelectorAll('.lesson-content');
-            content.forEach(lesson => lesson.classList.remove('active'));
-
-            document.getElementById('quiz').classList.add('active');
+            showLesson(7); // Use lesson number 7 to refer to the quiz
+            const links = document.querySelectorAll('.lesson-link');
+            links.forEach(link => link.classList.remove('active'));
         }
 
-        // Script untuk mengirim jawaban kuis
+        // Script to submit quiz answers
         function submitQuiz() {
-            alert('Terima kasih! Jawaban Anda telah dikirim.');
+            alert('Thank you! Your answers have been submitted.');
         }
+
+        // Initialize the page to the correct lesson based on hash (optional, but good practice)
+        document.addEventListener('DOMContentLoaded', () => {
+            const currentHash = window.location.hash;
+            if (currentHash.startsWith('#lesson')) {
+                const lessonNum = parseInt(currentHash.replace('#lesson', ''));
+                if (lessonNum >= 1 && lessonNum <= 6) {
+                    showLesson(lessonNum);
+                }
+            } else if (currentHash === '#quiz') {
+                showQuiz();
+            } else {
+                showLesson(1);
+            }
+        });
     </script>
 </body>
 </html>
